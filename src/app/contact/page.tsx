@@ -3,13 +3,14 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact Us",
   description:
     "Contact Al Safa Taxi by phone, WhatsApp or email to book a ride or ask a question. Our team is available 24/7.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 const contactMethods = [
   {

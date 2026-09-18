@@ -5,13 +5,14 @@ import LocationCard from "@/components/ui/LocationCard";
 import ProcessSteps from "@/components/ui/ProcessSteps";
 import CTASection from "@/components/ui/CTASection";
 import { locations } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Airport Transfers",
   description:
     "Flight-tracked airport transfers at Jeddah, Madinah and Taif International Airports, with meet-and-greet service available.",
-  alternates: { canonical: "/airports" },
-};
+  path: "/airports",
+});
 
 const airportSteps = [
   {

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/site-config";
+import { localBusinessSchema } from "@/lib/schema";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,6 +20,15 @@ export const metadata: Metadata = {
     template: "%s | Al Safa Taxi",
   },
   description: siteConfig.description,
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   keywords: [
     "Al Safa Taxi",
     "Makkah taxi",
@@ -62,6 +72,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={poppins.variable}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

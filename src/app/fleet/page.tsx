@@ -3,13 +3,14 @@ import PageHero from "@/components/ui/PageHero";
 import FleetCard from "@/components/ui/FleetCard";
 import CTASection from "@/components/ui/CTASection";
 import { fleet } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Fleet",
   description:
     "See the Al Safa Taxi fleet: Executive Sedan, Premium SUV, Luxury Van and VIP Chauffeur Car, each maintained to a consistently high standard.",
-  alternates: { canonical: "/fleet" },
-};
+  path: "/fleet",
+});
 
 export default function FleetPage() {
   return (

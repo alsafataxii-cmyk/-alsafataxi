@@ -4,13 +4,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import LocationCard from "@/components/ui/LocationCard";
 import CTASection from "@/components/ui/CTASection";
 import { locations } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Locations",
   description:
     "Al Safa Taxi serves Makkah, Madinah, Jeddah and Taif, plus King Abdulaziz, Prince Mohammad bin Abdulaziz and Taif International Airports.",
-  alternates: { canonical: "/locations" },
-};
+  path: "/locations",
+});
 
 export default function LocationsPage() {
   const cities = locations.filter((location) => location.type === "city");

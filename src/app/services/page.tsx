@@ -3,13 +3,14 @@ import PageHero from "@/components/ui/PageHero";
 import ServiceCard from "@/components/ui/ServiceCard";
 import CTASection from "@/components/ui/CTASection";
 import { services } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Services",
   description:
     "Explore Al Safa Taxi's transportation services: airport transfers, city taxi, intercity transfers, private chauffeur, hotel transfers and business transportation.",
-  alternates: { canonical: "/services" },
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

@@ -5,13 +5,14 @@ import CTASection from "@/components/ui/CTASection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import { stats } from "@/lib/data";
 import { siteConfig } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Us",
   description:
     "Al Safa Taxi provides premium private transportation across Makkah, Madinah, Jeddah and Taif, built on professional drivers, reliable vehicles and consistent service.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
