@@ -23,7 +23,7 @@ export default function Hero() {
 
           <p className="max-w-lg text-lg leading-relaxed text-white/70">
             Al Safa Taxi delivers punctual, professionally driven transport for
-            airport transfers, city travel and journeys between Makkah, Madinah,
+            airport transfers, Ziyarat tours and journeys between Makkah, Madinah,
             Jeddah and Taif — available around the clock.
           </p>
 

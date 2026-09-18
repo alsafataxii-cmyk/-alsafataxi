@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Services",
   description:
-    "Explore Al Safa Taxi's transportation services: airport transfers, city taxi, intercity transfers, private chauffeur, hotel transfers and business transportation.",
+    "Explore Al Safa Taxi's transportation services: airport transfers, Ziyarat tours, city taxi, intercity transfers, private chauffeur, hotel transfers and business transportation.",
   path: "/services",
 });
 
@@ -23,7 +23,7 @@ export default function ServicesPage() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {services.map((service) => (
               <ServiceCard key={service.slug} service={service} detailed />
             ))}

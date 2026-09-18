@@ -13,10 +13,12 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const defaultTitle = "Al Safa Taxi | Taxi & Ziyarat Tours in Makkah, Madinah, Jeddah, Taif";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Al Safa Taxi | Premium Private Transportation in Makkah, Madinah, Jeddah & Taif",
+    default: defaultTitle,
     template: "%s | Al Safa Taxi",
   },
   description: siteConfig.description,
@@ -35,6 +37,10 @@ export const metadata: Metadata = {
     "Madinah taxi",
     "Jeddah taxi",
     "Taif taxi",
+    "Makkah Ziyarat",
+    "Madinah Ziyarat",
+    "Ziyarat taxi service",
+    "Ziyarat tour Makkah Madinah",
     "airport transfer Jeddah",
     "airport transfer Madinah",
     "private chauffeur Saudi Arabia",
@@ -49,7 +55,7 @@ export const metadata: Metadata = {
     locale: "en_SA",
     url: "/",
     siteName: siteConfig.name,
-    title: "Al Safa Taxi | Premium Private Transportation in Makkah, Madinah, Jeddah & Taif",
+    title: defaultTitle,
     description: siteConfig.description,
     images: [
       {
@@ -62,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Al Safa Taxi | Premium Private Transportation in Makkah, Madinah, Jeddah & Taif",
+    title: defaultTitle,
     description: siteConfig.description,
     images: ["/brand/og-image.png"],
   },

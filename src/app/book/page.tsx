@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Book Your Ride",
   description:
-    "Book your Al Safa Taxi ride online, by phone or WhatsApp. Available 24/7 for airport transfers, city taxi and intercity travel.",
+    "Book your Al Safa Taxi ride online, by phone or WhatsApp. Available 24/7 for airport transfers, Ziyarat tours, city taxi and intercity travel.",
   path: "/book",
 });
 

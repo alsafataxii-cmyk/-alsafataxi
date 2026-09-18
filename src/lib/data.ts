@@ -36,6 +36,15 @@ export const services: Service[] = [
     icon: Plane,
   },
   {
+    slug: "ziyarat-tours",
+    title: "Ziyarat Tours",
+    description:
+      "Guided taxi tours to the historic and religious sites of Makkah and Madinah.",
+    longDescription:
+      "Visit the significant historical and religious sites of Makkah and Madinah — including Jabal al-Noor, Jabal Uhud, Quba Mosque and more — with a patient driver and a private, comfortable vehicle at your own pace.",
+    icon: Landmark,
+  },
+  {
     slug: "city-taxi",
     title: "City Taxi",
     description: "On-demand rides across the city in clean, comfortable vehicles.",
