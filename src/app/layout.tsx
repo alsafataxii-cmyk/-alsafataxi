@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },
+  verification: {
+    google: "HlsZoIOx1pv6iuFthnbptdw5Do-B_3FisMYkdeE28aQ",
+  },
   robots: {
     index: true,
     follow: true,
