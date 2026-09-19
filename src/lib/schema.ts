@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
-import { services } from "@/lib/data";
+import { services, umrahService } from "@/lib/data";
 import type { Faq } from "@/lib/content/types";
 
 export function absoluteUrl(path: string) {
@@ -47,7 +47,7 @@ export function localBusinessSchema() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Transportation Services",
-      itemListElement: services.map((service) => ({
+      itemListElement: [...services, umrahService].map((service) => ({
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",

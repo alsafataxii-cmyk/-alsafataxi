@@ -1,7 +1,7 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Button from "@/components/ui/Button";
-import { services } from "@/lib/data";
+import { serviceCards } from "@/lib/data";
 
 export default function Services() {
   return (
@@ -19,8 +19,8 @@ export default function Services() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
+          {serviceCards.map(({ service, href }) => (
+            <ServiceCard key={service.slug} service={service} href={href} />
           ))}
         </div>
       </div>

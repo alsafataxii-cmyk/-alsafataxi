@@ -51,6 +51,11 @@ export default function Routes() {
             </Link>
           ))}
         </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-brand-dark/60">
+          Distances and journey times are approximate. They vary with traffic, the time of day and
+          your exact pickup and drop-off points.
+        </p>
       </div>
     </section>
   );

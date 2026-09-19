@@ -15,6 +15,7 @@ import {
   HeartHandshake,
   Landmark,
   PlaneTakeoff,
+  Route,
 } from "lucide-react";
 
 export type Service = {
@@ -85,6 +86,26 @@ export const services: Service[] = [
       "From single executive transfers to transportation for delegations and corporate events, planned around your guest numbers, arrival times and venues.",
     icon: Briefcase,
   },
+];
+
+export const umrahService: Service = {
+  slug: "umrah-transportation",
+  title: "Umrah Transportation",
+  description:
+    "Airport, hotel, Makkah to Madinah and Ziyarat transport for every stage of your Umrah trip.",
+  longDescription:
+    "Private transport for each stage of an Umrah trip: airport transfers, hotel transfers, journeys between Makkah and Madinah with stops planned, and Ziyarat visits, for individuals, families and groups.",
+  icon: Route,
+};
+
+export type ServiceCardEntry = { service: Service; href: string };
+
+const [airportService, ...otherServices] = services;
+
+export const serviceCards: ServiceCardEntry[] = [
+  { service: airportService, href: `/services/${airportService.slug}` },
+  { service: umrahService, href: "/umrah-transportation" },
+  ...otherServices.map((service) => ({ service, href: `/services/${service.slug}` })),
 ];
 
 export type FleetVehicle = {

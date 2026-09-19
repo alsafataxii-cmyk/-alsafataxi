@@ -4,11 +4,13 @@ import type { Service } from "@/lib/data";
 
 type ServiceCardProps = {
   service: Service;
+  href?: string;
   detailed?: boolean;
 };
 
-export default function ServiceCard({ service, detailed = false }: ServiceCardProps) {
+export default function ServiceCard({ service, href, detailed = false }: ServiceCardProps) {
   const Icon = service.icon;
+  const target = href ?? `/services/${service.slug}`;
 
   return (
     <div className="group flex flex-col gap-5 border border-brand-gray bg-white p-8 transition-colors duration-200 hover:border-brand-gold">
@@ -18,10 +20,7 @@ export default function ServiceCard({ service, detailed = false }: ServiceCardPr
 
       <div className="flex flex-col gap-2">
         <h3 className="text-xl font-semibold text-brand-dark">
-          <Link
-            href={`/services/${service.slug}`}
-            className="transition-colors hover:text-brand-primary"
-          >
+          <Link href={target} className="transition-colors hover:text-brand-primary">
             {service.title}
           </Link>
         </h3>
@@ -31,12 +30,11 @@ export default function ServiceCard({ service, detailed = false }: ServiceCardPr
       </div>
 
       <Link
-        href={`/services/${service.slug}`}
-        aria-label={`Learn more about ${service.title}`}
+        href={target}
         className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-gold"
       >
-        Learn more
-        <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+        Explore {service.title}
+        <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
       </Link>
     </div>
   );

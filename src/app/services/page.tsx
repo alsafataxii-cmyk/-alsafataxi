@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import FaqSection from "@/components/ui/FaqSection";
 import CTASection from "@/components/ui/CTASection";
-import { services } from "@/lib/data";
+import { serviceCards } from "@/lib/data";
 import { servicesFaqs } from "@/lib/content/index-faqs";
 import { pageMetadata } from "@/lib/seo";
 
@@ -77,8 +77,8 @@ export default function ServicesPage() {
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} detailed />
+            {serviceCards.map(({ service, href }) => (
+              <ServiceCard key={service.slug} service={service} href={href} detailed />
             ))}
           </div>
         </div>

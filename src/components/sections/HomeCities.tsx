@@ -35,10 +35,9 @@ export default function HomeCities() {
               </p>
               <Link
                 href={`/locations/${location.slug}`}
-                aria-label={`Explore ${location.name} taxi service`}
                 className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-gold"
               >
-                Explore {location.name}
+                Explore {location.name} taxi service
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
