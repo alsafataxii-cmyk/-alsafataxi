@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FloatingContact from "@/components/layout/FloatingContact";
 import { siteConfig } from "@/lib/site-config";
 import JsonLd from "@/components/ui/JsonLd";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
@@ -97,6 +98,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

@@ -153,7 +153,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-white/50 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-3 px-4 pb-40 pt-6 text-xs text-white/50 md:pb-24 sm:flex-row sm:px-6 lg:px-8">
           <p>
             © {year} {siteConfig.legalName}. All rights reserved.
           </p>

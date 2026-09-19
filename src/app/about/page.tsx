@@ -44,7 +44,23 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h2 className="text-lg font-semibold text-brand-dark">Where we work</h2>
+              <h2 className="text-lg font-semibold text-brand-dark">Business details</h2>
+              <dl className="divide-y divide-brand-gray border-y border-brand-gray text-sm">
+                {[
+                  { label: "Business", value: siteConfig.legalName },
+                  { label: "Owner", value: siteConfig.owner },
+                  { label: "Service area", value: "Makkah, Madinah, Jeddah and Taif" },
+                  { label: "Phone / WhatsApp", value: siteConfig.phone },
+                  { label: "Email", value: siteConfig.email },
+                  { label: "Booking line", value: siteConfig.hours },
+                ].map((row) => (
+                  <div key={row.label} className="flex flex-col gap-1 py-3 sm:flex-row sm:gap-6">
+                    <dt className="w-40 shrink-0 font-semibold text-brand-dark">{row.label}</dt>
+                    <dd className="text-brand-dark/70 [overflow-wrap:anywhere]">{row.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <h2 className="mt-6 text-lg font-semibold text-brand-dark">Where we work</h2>
               <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {locationPages.map((location) => (
                   <li key={location.slug}>

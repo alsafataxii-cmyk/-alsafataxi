@@ -6,6 +6,7 @@ export type NavLink = {
 export const siteConfig = {
   name: "Al Safa Taxi",
   legalName: "Al Safa Taxi",
+  owner: "Ahsan Khan",
   tagline: "Safe Journeys, Greater Destinations",
   description:
     "Al Safa Taxi delivers premium private transportation and Ziyarat tours across Makkah, Madinah, Jeddah and Taif — airport transfers, city taxi, intercity travel and professional chauffeur service, available 24/7.",

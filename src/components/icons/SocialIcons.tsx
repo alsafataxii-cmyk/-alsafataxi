@@ -1,3 +1,5 @@
+import { MessageCircle, Phone } from "lucide-react";
+
 type IconProps = {
   className?: string;
   "aria-hidden"?: boolean | "true" | "false";
@@ -40,5 +42,17 @@ export function FacebookGlyph({ className }: IconProps) {
       <line x1="10" y1="7" x2="15" y2="7" />
       <line x1="10" y1="12" x2="14" y2="12" />
     </svg>
+  );
+}
+
+export function WhatsAppGlyph({ className }: IconProps) {
+  return (
+    <span className={`relative inline-flex ${className ?? ""}`} aria-hidden="true">
+      <MessageCircle className="h-full w-full" strokeWidth={1.6} />
+      <Phone
+        className="absolute left-1/2 top-[46%] h-[42%] w-[42%] -translate-x-1/2 -translate-y-1/2"
+        strokeWidth={2.4}
+      />
+    </span>
   );
 }
