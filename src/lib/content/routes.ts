@@ -448,7 +448,7 @@ export const routePages: RoutePage[] = [
     locationSlugs: ["madinah", "makkah"],
     airportSlug: "madinah-airport",
     serviceSlugs: ["intercity-transfers", "hotel-transfers"],
-    relatedRouteSlugs: ["makkah-to-madinah", "madinah-to-jeddah", "jeddah-airport-to-makkah"],
+    relatedRouteSlugs: ["makkah-to-madinah", "madinah-airport-to-makkah", "madinah-to-jeddah"],
     faqs: [
       {
         question: "Can you stop at the miqat on the way to Makkah?",
@@ -701,7 +701,7 @@ export const routePages: RoutePage[] = [
     locationSlugs: ["taif", "makkah"],
     airportSlug: "taif-airport",
     serviceSlugs: ["intercity-transfers", "hotel-transfers"],
-    relatedRouteSlugs: ["makkah-to-taif", "taif-to-jeddah", "jeddah-to-makkah"],
+    relatedRouteSlugs: ["makkah-to-taif", "taif-airport-to-makkah", "taif-to-jeddah"],
     faqs: [
       {
         question: "Can you stop at the miqat between Taif and Makkah?",
@@ -847,6 +847,146 @@ export const routePages: RoutePage[] = [
       },
       {
         question: "How much is a taxi from Taif to Jeddah?",
+        answer: quoteAnswer,
+      },
+    ],
+  },
+  {
+    slug: "madinah-airport-to-makkah",
+    from: "Madinah Airport",
+    to: "Makkah",
+    distance: "Roughly 450 km",
+    duration: "About 4.5 to 5 hours, plus any planned stops",
+    metaDescription:
+      "Private taxi from Madinah Airport (MED) to Makkah with a planned miqat stop if needed. Roughly 450 km, about 4.5 to 5 hours. Book 24/7 with Al Safa Taxi.",
+    h1: "Madinah Airport to Makkah Taxi",
+    heroDescription:
+      "A private transfer from Madinah Airport straight to Makkah, with a planned stop at the miqat for pilgrims travelling for Umrah.",
+    intro:
+      "Some pilgrims land in Madinah first and continue directly to Makkah for Umrah. It is a long journey after a flight, so it helps to have one vehicle waiting at Prince Mohammad bin Abdulaziz International Airport that takes your group all the way, with the miqat stop planned into the schedule.",
+    sections: [
+      {
+        heading: "Meeting your driver at the airport",
+        paragraphs: [
+          "Share your flight number and arrival time when you book. After immigration and baggage collection your driver takes you to the vehicle. Tell us your group size and luggage so that a suitable car, SUV or van is sent.",
+        ],
+      },
+      {
+        heading: "Stopping at the miqat",
+        paragraphs: [
+          "Pilgrims travelling on to Makkah for Umrah commonly enter ihram at Dhul Hulayfah (Abyar Ali), on the road out of Madinah. Tell us in advance so the stop is built into the schedule, with time to prepare and pray. We arrange the transport only; for questions about the rites, follow the guidance of your group leader or a qualified scholar.",
+        ],
+      },
+      {
+        heading: "The journey and your arrival in Makkah",
+        paragraphs: [
+          "The road distance is roughly 450 km and takes about four and a half to five hours without stops. Plan for prayer, meals and rest, especially after a flight. In Makkah, vehicle access near the Masjid al-Haram is restricted, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
+        ],
+      },
+      {
+        heading: "Prefer to rest in Madinah first?",
+        paragraphs: [
+          "If you would rather spend time in Madinah before travelling on, we can take you from the airport to your Madinah hotel and arrange the journey to Makkah for a later day.",
+        ],
+      },
+    ],
+    locationSlugs: ["madinah", "makkah"],
+    airportSlug: "madinah-airport",
+    serviceSlugs: ["airport-transfers", "intercity-transfers"],
+    relatedRouteSlugs: ["madinah-to-makkah", "makkah-to-madinah", "jeddah-airport-to-makkah"],
+    faqs: [
+      {
+        question: "How far is Madinah Airport from Makkah?",
+        answer:
+          "Roughly 450 km by road, which takes about four and a half to five hours without stops.",
+      },
+      {
+        question: "Can we stop at the miqat on the way from Madinah Airport to Makkah?",
+        answer:
+          "Yes. Pilgrims from Madinah commonly stop at Dhul Hulayfah (Abyar Ali). Tell us when you book so the stop is planned.",
+      },
+      {
+        question: "Can you collect us from Madinah Airport at night?",
+        answer:
+          "Yes. Our booking line is open 24 hours a day, so night and early-morning arrivals can be arranged.",
+      },
+      {
+        question: "Can we go to our Madinah hotel first and travel to Makkah later?",
+        answer:
+          "Yes. Book the airport transfer to your Madinah hotel and arrange the Madinah to Makkah journey separately for the day you choose.",
+      },
+      {
+        question: "How much is a taxi from Madinah Airport to Makkah?",
+        answer: quoteAnswer,
+      },
+    ],
+  },
+  {
+    slug: "taif-airport-to-makkah",
+    from: "Taif Airport",
+    to: "Makkah",
+    distance: "Roughly 100 km",
+    duration: "About 1.5 to 2 hours",
+    metaDescription:
+      "Private taxi from Taif Airport (TIF) to Makkah hotels, with a planned miqat stop for Umrah if needed. Roughly 100 km. Book 24/7 with Al Safa Taxi.",
+    h1: "Taif Airport to Makkah Taxi",
+    heroDescription:
+      "A private transfer from Taif International Airport down to your Makkah hotel, with a planned stop at the miqat for pilgrims.",
+    intro:
+      "Taif International Airport serves visitors to the Sarawat highlands, and many onward passengers are heading down to Makkah. The road descends through the mountains, so a calm driver and a planned schedule help, especially after a flight.",
+    sections: [
+      {
+        heading: "Pickup at Taif Airport",
+        paragraphs: [
+          "Share your flight number and arrival time when you book, along with your group size and luggage, so that a suitable vehicle is sent. Your driver collects you after you have cleared the terminal.",
+        ],
+      },
+      {
+        heading: "The mountain road down to Makkah",
+        paragraphs: [
+          "The distance is roughly 100 km and takes about an hour and a half to two hours. Much of the road descends through the Sarawat mountains on steep, winding sections. Allow extra time for traffic as you approach Makkah, particularly on Fridays and during the Umrah and Hajj seasons.",
+        ],
+      },
+      {
+        heading: "Stopping at the miqat",
+        paragraphs: [
+          "Travellers on the Taif road commonly pass Qarn al-Manazil, also known as As-Sayl al-Kabir. If you are travelling for Umrah, tell us when you book so the stop is planned, with time to prepare and pray.",
+        ],
+      },
+      {
+        heading: "Arriving in Makkah",
+        paragraphs: [
+          "Vehicle access near the Masjid al-Haram is restricted, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
+        ],
+      },
+    ],
+    locationSlugs: ["taif", "makkah"],
+    airportSlug: "taif-airport",
+    serviceSlugs: ["airport-transfers", "intercity-transfers"],
+    relatedRouteSlugs: ["taif-to-makkah", "makkah-to-taif", "taif-to-jeddah"],
+    faqs: [
+      {
+        question: "How far is Taif Airport from Makkah?",
+        answer:
+          "Roughly 100 km by road, which takes about an hour and a half to two hours depending on traffic.",
+      },
+      {
+        question: "Can you stop at the miqat between Taif and Makkah?",
+        answer:
+          "Yes. Travellers on the Taif road commonly stop at Qarn al-Manazil (As-Sayl al-Kabir). Tell us when you book so the stop is planned.",
+      },
+      {
+        question: "Is the road from Taif to Makkah difficult?",
+        answer:
+          "It includes steep, winding mountain sections, which is why many visitors prefer to be driven.",
+      },
+      {
+        question: "Can I book a Taif Airport pickup for a family?",
+        answer:
+          "Yes. Tell us the number of passengers and bags and we will suggest a suitable vehicle.",
+      },
+      {
+        question: "How much is a taxi from Taif Airport to Makkah?",
         answer: quoteAnswer,
       },
     ],

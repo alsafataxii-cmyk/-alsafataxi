@@ -10,7 +10,7 @@ export default function Fleet() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Our Fleet"
-            title="A Vehicle for Every Journey"
+            title="Our Taxi Fleet: Sedans, SUVs & Vans"
             description="Cars, SUVs and vans for individuals, families and groups, with room for luggage. Tell us your group size and we will suggest the right vehicle."
           />
           <Button href="/fleet" variant="outline-dark" className="shrink-0">

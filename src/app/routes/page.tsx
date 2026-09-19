@@ -5,6 +5,8 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTASection from "@/components/ui/CTASection";
+import FaqSection from "@/components/ui/FaqSection";
+import { routesFaqs } from "@/lib/content/index-faqs";
 import { pageMetadata } from "@/lib/seo";
 import { routePages } from "@/lib/content/routes";
 
@@ -29,6 +31,15 @@ export default function RoutesPage() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mb-16 flex max-w-3xl flex-col gap-5">
+            <SectionHeading eyebrow="Journeys" title="Private Taxi Journeys Between the Cities" />
+            <p className="text-base leading-relaxed text-brand-dark/70">
+              Most visitors move between Jeddah, Makkah and Madinah, and many add Taif for a cooler
+              stay. Each route below has its own page covering the distance, the practical details
+              of the journey and answers to the questions travellers ask most, including stops for
+              prayer and for the miqat when travelling for Umrah.
+            </p>
+          </div>
           <div className="flex flex-col gap-16">
             {origins.map((origin) => (
               <div key={origin}>
@@ -69,6 +80,8 @@ export default function RoutesPage() {
           </p>
         </div>
       </section>
+
+      <FaqSection faqs={routesFaqs} tone="gray" title="Taxi Route FAQs" />
 
       <CTASection
         title="Need a Route Not Listed?"

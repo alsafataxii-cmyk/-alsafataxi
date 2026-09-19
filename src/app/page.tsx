@@ -9,6 +9,7 @@ import HomeUmrah from "@/components/sections/HomeUmrah";
 import Fleet from "@/components/sections/Fleet";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Routes from "@/components/sections/Routes";
+import HomeHowItWorks from "@/components/sections/HomeHowItWorks";
 import FaqSection from "@/components/ui/FaqSection";
 import CTASection from "@/components/ui/CTASection";
 import { homeFaqs } from "@/lib/content/home";
@@ -37,7 +38,8 @@ export default function Home() {
       <Fleet />
       <WhyChooseUs />
       <Routes />
-      <FaqSection faqs={homeFaqs} tone="gray" title="Taxi Service FAQs" />
+      <HomeHowItWorks />
+      <FaqSection faqs={homeFaqs} title="Taxi Service FAQs" />
       <CTASection
         title="Ready to Book Your Ride?"
         description="Call or message us to arrange your airport transfer, city ride, Umrah trip or intercity journey. Our booking line is open around the clock."

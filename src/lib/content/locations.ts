@@ -153,7 +153,12 @@ export const locationPages: LocationPage[] = [
       },
     ],
     airportSlug: "madinah-airport",
-    routeSlugs: ["madinah-to-makkah", "madinah-to-jeddah", "jeddah-airport-to-madinah"],
+    routeSlugs: [
+      "madinah-airport-to-makkah",
+      "madinah-to-makkah",
+      "madinah-to-jeddah",
+      "jeddah-airport-to-madinah",
+    ],
     faqs: [
       {
         question: "How much does a taxi cost in Madinah?",
@@ -293,7 +298,12 @@ export const locationPages: LocationPage[] = [
       },
     ],
     airportSlug: "taif-airport",
-    routeSlugs: ["taif-to-makkah", "taif-to-jeddah", "makkah-to-taif", "jeddah-to-taif"],
+    routeSlugs: [
+      "taif-airport-to-makkah",
+      "taif-to-makkah",
+      "taif-to-jeddah",
+      "makkah-to-taif",
+    ],
     faqs: [
       {
         question: "How far is Taif from Makkah?",

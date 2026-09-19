@@ -9,7 +9,7 @@ type WhyChooseUsProps = {
 
 export default function WhyChooseUs({
   eyebrow = "Why Al Safa Taxi",
-  title = "The Practical Reasons Riders Choose Us",
+  title = "Why Choose Al Safa Taxi",
   description = "Premium transportation is about consistency, not just comfort. Here's how we deliver it on every trip.",
 }: WhyChooseUsProps) {
   return (

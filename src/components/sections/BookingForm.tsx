@@ -178,7 +178,7 @@ export default function BookingForm() {
 
       <div className="flex flex-col gap-2 sm:col-span-2">
         <label htmlFor="notes" className={labelClasses}>
-          Notes (optional)
+          Special requirements or notes (optional)
         </label>
         <textarea id="notes" name="notes" rows={3} className={inputClasses} />
       </div>

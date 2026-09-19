@@ -1,26 +1,50 @@
 import type { Metadata } from "next";
 import { MessageCircle, Phone } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import SectionHeading from "@/components/ui/SectionHeading";
+import ProcessSteps from "@/components/ui/ProcessSteps";
+import FaqSection from "@/components/ui/FaqSection";
 import Button from "@/components/ui/Button";
 import BookingForm from "@/components/sections/BookingForm";
+import { bookFaqs } from "@/lib/content/index-faqs";
 import { siteConfig } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Book Your Ride",
+  title: "Book a Taxi in Makkah, Madinah, Jeddah & Taif",
   description:
-    "Book your Al Safa Taxi ride online, by phone or WhatsApp. Available 24/7 for airport transfers, Ziyarat tours, city taxi and intercity travel.",
+    "Book a private taxi online, by phone or WhatsApp. Airport transfers, Umrah and Ziyarat transportation, city taxi and intercity travel, available 24/7.",
   path: "/book",
 });
+
+const bookingSteps = [
+  {
+    title: "Send Your Trip Details",
+    description:
+      "Fill in the form, message us on WhatsApp or call, with pickup, destination, date, passengers and flight number if needed.",
+  },
+  {
+    title: "Confirm Vehicle and Price",
+    description:
+      "We reply with the vehicle that suits your group and luggage, and the price, before you travel.",
+  },
+  {
+    title: "Meet Your Driver",
+    description:
+      "Your driver collects you at the agreed time and place. Message us if your plans change.",
+  },
+];
 
 export default function BookPage() {
   return (
     <>
       <PageHero
         eyebrow="Book Your Ride"
-        title="Let's Get You Moving"
+        title="Book a Taxi in Makkah, Madinah, Jeddah & Taif"
         description="Fill in your trip details below and send them straight to us on WhatsApp, or call us directly for immediate assistance."
       />
+      <Breadcrumbs items={[{ label: "Book", href: "/book" }]} />
 
       <section className="bg-white">
         <div className="mx-auto grid max-w-8xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-3 lg:px-8">
@@ -58,6 +82,21 @@ export default function BookPage() {
           </div>
         </div>
       </section>
+
+      <section className="bg-brand-gray/40">
+        <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="How It Works"
+            title="How Booking Works"
+            description="Three simple steps from your first message to your pickup."
+          />
+          <div className="mt-12">
+            <ProcessSteps steps={bookingSteps} />
+          </div>
+        </div>
+      </section>
+
+      <FaqSection faqs={bookFaqs} title="Booking FAQs" />
     </>
   );
 }

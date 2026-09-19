@@ -10,8 +10,8 @@ export default function Services() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="What We Offer"
-            title="Transportation Services Built Around You"
-            description="From a single airport pickup to coordinated corporate travel, our services are tailored to how you move around Makkah, Madinah, Jeddah and Taif."
+            title="Taxi & Private Transportation Services in Makkah, Madinah, Jeddah & Taif"
+            description="From a single airport pickup to coordinated corporate travel, our services are tailored to how you move around the four cities."
           />
           <Button href="/services" variant="outline-dark" className="shrink-0">
             View All Services

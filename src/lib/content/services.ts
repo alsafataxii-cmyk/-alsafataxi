@@ -134,6 +134,22 @@ export const servicePages: ServicePage[] = [
         ],
       },
       {
+        heading: "What each place is",
+        paragraphs: [
+          "Knowing a little about each place helps you decide how much time to give it. These are brief, general descriptions; your group leader or a guide can tell you more.",
+        ],
+        bullets: [
+          "Jabal al-Noor: the mountain near Makkah that holds the Cave of Hira, where the first revelation came to the Prophet Muhammad (peace be upon him). Reaching the cave means a steep climb on steps, so allow time and energy.",
+          "Jabal Thawr: the mountain south of Makkah with the cave where the Prophet and Abu Bakr sheltered at the start of the journey of Hijrah to Madinah.",
+          "Mina, Arafat and Muzdalifah: the places where the rites of Hajj are performed. Arafat includes Jabal al-Rahmah, a hill on the plain. Many visitors see them outside the Hajj season.",
+          "Jannat al-Mu'alla: the historic cemetery of Makkah, where Khadijah bint Khuwaylid, the Prophet's first wife, is buried.",
+          "Quba Mosque: the first mosque built in Islam, on the edge of Madinah. Many visitors pray there.",
+          "Masjid al-Qiblatain: the mosque where the direction of prayer is said to have changed from Jerusalem to the Kaaba, which is why it has two qiblas.",
+          "Mount Uhud and the Uhud martyrs' cemetery: the site of the Battle of Uhud, where Hamza ibn Abd al-Muttalib and other companions are buried.",
+          "The Seven Mosques area (Al-Khandaq): a group of small mosques near the site associated with the Battle of the Trench.",
+        ],
+      },
+      {
         heading: "How a Ziyarat trip is planned",
         paragraphs: [
           "Tell us which places you want to visit and roughly how long you would like to spend at each. We plan the route and timing around prayer times, and the driver waits while you visit. Access to some places can change on the day, so the order of visits may be adjusted.",

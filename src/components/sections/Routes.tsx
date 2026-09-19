@@ -25,7 +25,7 @@ export default function Routes() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Popular Routes"
-            title="Taxi Routes Between the Holy Cities"
+            title="Popular Taxi Routes Between Makkah, Madinah, Jeddah & Taif"
             description="The journeys our customers book most, with distances and typical journey times."
           />
           <Button href="/routes" variant="outline-dark" className="shrink-0">

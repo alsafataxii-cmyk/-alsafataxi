@@ -5,11 +5,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import CTASection from "@/components/ui/CTASection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import { locationPages } from "@/lib/content/locations";
+import { services } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Us",
+  title: "About Our Private Taxi & Transfer Service",
   description:
     "Al Safa Taxi provides private taxi, airport transfer, Umrah and Ziyarat transportation across Makkah, Madinah, Jeddah and Taif.",
   path: "/about",
@@ -63,7 +64,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <WhyChooseUs eyebrow="Our Commitment" title="What Guides Every Ride" />
+      <section className="bg-brand-gray/40">
+        <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="What We Do"
+            title="Private Transportation for Visitors and Residents"
+            description="We arrange the journeys that pilgrims, families, business travellers and residents make between the airports, hotels and cities of the Western Region."
+          />
+          <ul className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="block border border-brand-gray bg-white p-5 text-sm font-semibold text-brand-dark transition-colors hover:border-brand-gold"
+                >
+                  {service.title}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/umrah-transportation"
+                className="block border border-brand-gray bg-white p-5 text-sm font-semibold text-brand-dark transition-colors hover:border-brand-gold"
+              >
+                Umrah Transportation
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <WhyChooseUs eyebrow="Our Commitment" title="Why Choose Al Safa Taxi" />
 
       <CTASection
         title="Experience the Al Safa Standard"

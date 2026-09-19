@@ -150,7 +150,12 @@ export const airportPages: AirportPage[] = [
         ],
       },
     ],
-    routeSlugs: ["madinah-to-makkah", "madinah-to-jeddah", "jeddah-airport-to-madinah"],
+    routeSlugs: [
+      "madinah-airport-to-makkah",
+      "madinah-to-makkah",
+      "madinah-to-jeddah",
+      "jeddah-airport-to-madinah",
+    ],
     faqs: [
       {
         question: "How far is Madinah Airport from the Prophet's Mosque?",
@@ -222,7 +227,12 @@ export const airportPages: AirportPage[] = [
         ],
       },
     ],
-    routeSlugs: ["taif-to-makkah", "taif-to-jeddah", "makkah-to-taif", "jeddah-to-taif"],
+    routeSlugs: [
+      "taif-airport-to-makkah",
+      "taif-to-makkah",
+      "taif-to-jeddah",
+      "makkah-to-taif",
+    ],
     faqs: [
       {
         question: "Which airport serves Taif?",
