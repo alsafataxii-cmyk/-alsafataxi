@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import SectionHeading from "@/components/ui/SectionHeading";
 import LocationCard from "@/components/ui/LocationCard";
 import ProcessSteps from "@/components/ui/ProcessSteps";
@@ -8,24 +9,27 @@ import { locations } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Airport Transfers",
+  title: "Saudi Airport Transfers | Jeddah, Madinah & Taif",
   description:
-    "Flight-tracked airport transfers at Jeddah, Madinah and Taif International Airports, with meet-and-greet service available.",
+    "Private airport transfers at Jeddah (JED), Madinah (MED) and Taif (TIF) airports, with onward travel to Makkah and Madinah hotels. Book 24/7.",
   path: "/airports",
 });
 
 const airportSteps = [
   {
     title: "Share Your Flight Details",
-    description: "Provide your flight number and terminal when you book, so we can track your arrival.",
+    description:
+      "Send your flight number, arrival time, passenger count and hotel name when you book.",
   },
   {
-    title: "We Track Your Flight",
-    description: "Your chauffeur monitors your flight in real time and adjusts pickup timing automatically.",
+    title: "Confirm Your Vehicle",
+    description:
+      "We confirm the vehicle and price before you travel, sized to your group and luggage.",
   },
   {
-    title: "Meet & Greet on Arrival",
-    description: "Your driver is waiting at the agreed point, ready to assist with luggage and departure.",
+    title: "Meet Your Driver",
+    description:
+      "Your driver collects you for the transfer to your hotel or onward destination. Message us if your plans change.",
   },
 ];
 
@@ -37,12 +41,17 @@ export default function AirportsPage() {
       <PageHero
         eyebrow="Airport Transfers"
         title="Punctual Transfers at Jeddah, Madinah & Taif Airports"
-        description="Flight tracking and meet-and-greet service mean your ride is ready whether you land early, on time, or delayed."
+        description="Private pickups and drop-offs planned around your flight, with onward travel to Makkah, Madinah, Jeddah and Taif."
       />
+      <Breadcrumbs items={[{ label: "Airports", href: "/airports" }]} />
 
       <section className="bg-white">
         <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Airports We Serve" title="Served Airports" />
+          <SectionHeading
+            eyebrow="Airports We Serve"
+            title="Choose Your Airport"
+            description="Makkah has no commercial airport, so most Makkah-bound travellers arrive through Jeddah. Select an airport for transfer details, journey times and FAQs."
+          />
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {airports.map((airport) => (
               <LocationCard key={airport.slug} location={airport} />
@@ -55,8 +64,8 @@ export default function AirportsPage() {
         <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="How It Works"
-            title="A Simple, Reliable Airport Pickup"
-            description="From booking to arrival, here's how we make sure your transfer runs on time."
+            title="A Simple Airport Pickup"
+            description="From booking to arrival, here is how an airport transfer with Al Safa Taxi works."
           />
           <div className="mt-12">
             <ProcessSteps steps={airportSteps} />

@@ -30,9 +30,9 @@ export const services: Service[] = [
     slug: "airport-transfers",
     title: "Airport Transfers",
     description:
-      "Reliable, flight-tracked pickups and drop-offs at Jeddah and Madinah airports.",
+      "Private pickups and drop-offs at Jeddah, Madinah and Taif airports, with onward travel to Makkah.",
     longDescription:
-      "Our airport transfer service tracks your flight in real time, so your chauffeur is always ready, whether you land early or your flight is delayed. Meet-and-greet service is available at King Abdulaziz International (Jeddah) and Prince Mohammad bin Abdulaziz International (Madinah).",
+      "Book a private pickup or drop-off at King Abdulaziz International (Jeddah), Prince Mohammad bin Abdulaziz International (Madinah) or Taif International Airport, with onward travel to hotels in Makkah, Madinah, Jeddah and Taif. Share your flight number when you book so the pickup is planned around your arrival.",
     icon: Plane,
   },
   {
@@ -47,9 +47,9 @@ export const services: Service[] = [
   {
     slug: "city-taxi",
     title: "City Taxi",
-    description: "On-demand rides across the city in clean, comfortable vehicles.",
+    description: "Pre-booked private taxis for everyday journeys within the city.",
     longDescription:
-      "For everyday journeys around town, Al Safa Taxi offers dependable metered and pre-booked city rides with professional, background-checked drivers who know the fastest routes.",
+      "For everyday journeys around town, Al Safa Taxi offers pre-booked private rides with a driver who arrives at an agreed time, in Makkah, Madinah, Jeddah and Taif.",
     icon: Car,
   },
   {
@@ -57,7 +57,7 @@ export const services: Service[] = [
     title: "Intercity Transfers",
     description: "Comfortable, direct travel between Makkah, Madinah, Jeddah and Taif.",
     longDescription:
-      "Travel between Makkah, Madinah, Jeddah and Taif in a private vehicle, with a fixed price agreed before departure and a professional driver for the entire journey.",
+      "Travel between Makkah, Madinah, Jeddah and Taif in a private vehicle, door to door, with your group and luggage together and stops planned for prayer and rest.",
     icon: MapPinned,
   },
   {
@@ -65,16 +65,16 @@ export const services: Service[] = [
     title: "Private Chauffeur",
     description: "Dedicated, professionally trained drivers for your schedule.",
     longDescription:
-      "Engage a private chauffeur by the hour, day or for a multi-day itinerary. Ideal for executives, families and visitors who want one trusted driver for the duration of their stay.",
+      "Engage a private chauffeur by the hour, day or for a multi-day itinerary. Ideal for executives, families and visitors who want one driver for the duration of their stay.",
     icon: UserRound,
   },
   {
     slug: "hotel-transfers",
     title: "Hotel Transfers",
     description:
-      "Seamless transport coordinated with hotels and resorts across Makkah, Madinah, Jeddah and Taif.",
+      "Airport pickups, hotel-to-hotel moves and departures across Makkah, Madinah, Jeddah and Taif.",
     longDescription:
-      "We coordinate directly with hotel concierge teams to schedule punctual pickups and drop-offs, so your stay begins and ends without friction.",
+      "Private transfers to and from your hotel, planned around your check-in and checkout times, including hotels near the Haram and the Prophet's Mosque where vehicle access is restricted.",
     icon: Building2,
   },
   {
@@ -82,7 +82,7 @@ export const services: Service[] = [
     title: "Business Transportation",
     description: "Polished transportation for corporate travel and events.",
     longDescription:
-      "From single executive transfers to coordinated transportation for delegations and corporate events, we provide account billing, dedicated dispatch and consistently presented vehicles.",
+      "From single executive transfers to transportation for delegations and corporate events, planned around your guest numbers, arrival times and venues.",
     icon: Briefcase,
   },
 ];
@@ -107,7 +107,7 @@ export const fleet: FleetVehicle[] = [
     luggage: 2,
     description:
       "A refined, efficient choice for city travel and business transfers.",
-    features: ["Professional driver", "Bottled water", "Climate control"],
+    features: ["Professional driver", "Air-conditioned cabin", "Suited to city and business travel"],
     icon: Car,
   },
   {
@@ -117,7 +117,7 @@ export const fleet: FleetVehicle[] = [
     passengers: 5,
     luggage: 4,
     description: "Extra space and elevated comfort for families and small groups.",
-    features: ["Spacious cabin", "Extra luggage capacity", "Child seat on request"],
+    features: ["Spacious cabin", "Extra luggage capacity", "Suited to families"],
     icon: CarFront,
   },
   {
@@ -137,7 +137,7 @@ export const fleet: FleetVehicle[] = [
     passengers: 3,
     luggage: 2,
     description: "Our top-tier vehicle and driver pairing for executives and VIP guests.",
-    features: ["Senior chauffeur", "Premium interior", "Priority dispatch"],
+    features: ["Professional chauffeur", "Premium comfort", "Suited to executives and VIP guests"],
     icon: Car,
   },
 ];
@@ -147,30 +147,40 @@ export type LocationEntry = {
   name: string;
   subtitle: string;
   type: "city" | "airport";
+  href: string;
 };
 
 export const locations: LocationEntry[] = [
-  { slug: "makkah", name: "Makkah", subtitle: "Holy City", type: "city" },
-  { slug: "madinah", name: "Madinah", subtitle: "Holy City", type: "city" },
-  { slug: "jeddah", name: "Jeddah", subtitle: "Red Sea Gateway", type: "city" },
-  { slug: "taif", name: "Taif", subtitle: "Highland City", type: "city" },
+  { slug: "makkah", name: "Makkah", subtitle: "Holy City", type: "city", href: "/locations/makkah" },
+  { slug: "madinah", name: "Madinah", subtitle: "Holy City", type: "city", href: "/locations/madinah" },
   {
-    slug: "jed",
+    slug: "jeddah",
+    name: "Jeddah",
+    subtitle: "Red Sea Gateway",
+    type: "city",
+    href: "/locations/jeddah",
+  },
+  { slug: "taif", name: "Taif", subtitle: "Highland City", type: "city", href: "/locations/taif" },
+  {
+    slug: "jeddah-airport",
     name: "King Abdulaziz International",
     subtitle: "Jeddah · JED",
     type: "airport",
+    href: "/airports/jeddah-airport",
   },
   {
-    slug: "med",
+    slug: "madinah-airport",
     name: "Prince Mohammad bin Abdulaziz International",
     subtitle: "Madinah · MED",
     type: "airport",
+    href: "/airports/madinah-airport",
   },
   {
-    slug: "tif",
+    slug: "taif-airport",
     name: "Taif International Airport",
     subtitle: "Taif · TIF",
     type: "airport",
+    href: "/airports/taif-airport",
   },
 ];
 
@@ -195,46 +205,38 @@ export type WhyItem = {
 
 export const whyAlSafa: WhyItem[] = [
   {
-    title: "Vetted, Professional Drivers",
+    title: "Professional Drivers",
     description:
-      "Every driver is background-checked, licensed and trained in courteous, professional service.",
+      "Courteous, professionally presented drivers for airport transfers, city rides and long journeys.",
     icon: UserRound,
   },
   {
-    title: "Punctual & Reliable",
+    title: "Planned Around Your Schedule",
     description:
-      "Flight tracking and disciplined dispatch mean your driver arrives on time, every time.",
+      "Share your flight, hotel and timings and we plan the pickup around them, not the other way round.",
     icon: Clock,
   },
   {
-    title: "Transparent Pricing",
+    title: "Clear Pricing",
     description:
-      "Know your fare before you travel, with no hidden fees or last-minute surprises.",
+      "Ask for a quote by call or WhatsApp and confirm the price and vehicle before you travel.",
     icon: Gauge,
   },
   {
-    title: "Well-Maintained Fleet",
+    title: "Comfortable Vehicles",
     description:
-      "Vehicles are cleaned, inspected and maintained to a consistently high standard.",
+      "Cars, SUVs and vans to suit individuals, families and groups, with room for luggage.",
     icon: Car,
   },
   {
-    title: "Makkah Region Coverage",
+    title: "Makkah, Madinah, Jeddah & Taif",
     description:
-      "From the Holy Cities to Jeddah and Taif, our network covers the Western Region.",
+      "We focus on the Western Region, from airport transfers to Ziyarat and journeys between the Holy Cities.",
     icon: Landmark,
   },
   {
     title: "Always Available",
-    description:
-      "Our booking line and dispatch team operate around the clock, every day of the year.",
+    description: "Call or message us at any time. Our booking line is open 24 hours a day.",
     icon: HeartHandshake,
   },
-];
-
-export const stats = [
-  { label: "Years of Service", value: "10+" },
-  { label: "Cities Covered", value: "4" },
-  { label: "Daily Rides", value: "500+" },
-  { label: "Customer Rating", value: "4.9/5" },
 ];

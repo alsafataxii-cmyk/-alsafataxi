@@ -2,7 +2,13 @@ import Link from "next/link";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import Logo from "@/components/layout/Logo";
 import { FacebookGlyph, InstagramGlyph, XGlyph } from "@/components/icons/SocialIcons";
-import { footerServiceLinks, mainNav, siteConfig, socialLinks } from "@/lib/site-config";
+import {
+  footerExtraNav,
+  footerServiceLinks,
+  mainNav,
+  siteConfig,
+  socialLinks,
+} from "@/lib/site-config";
 import { locations } from "@/lib/data";
 
 const socialIcons = {
@@ -14,13 +20,21 @@ const socialIcons = {
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const featuredLocations = locations.filter((location) => location.type === "city");
+  const footerNav = [...mainNav, ...footerExtraNav];
+  const footerLocations = locations.map((location) => ({
+    slug: location.slug,
+    href: location.href,
+    label:
+      location.type === "airport"
+        ? `${location.subtitle.split(" · ")[0]} Airport`
+        : location.name,
+  }));
 
   return (
     <footer className="bg-brand-dark text-white">
       <div className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-6">
-          <div className="col-span-2 flex flex-col gap-5 sm:col-span-3 lg:col-span-2">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 xl:grid-cols-[1.6fr_1fr_1.2fr_1fr_1.3fr]">
+          <div className="col-span-2 flex flex-col gap-5 sm:col-span-3 xl:col-span-1">
             <Logo plate className="h-14 w-auto" />
             <p className="max-w-xs text-sm leading-relaxed text-white/70">
               {siteConfig.description}
@@ -47,7 +61,7 @@ export default function Footer() {
               Navigation
             </h3>
             <ul className="mt-5 flex flex-col gap-3">
-              {mainNav.map((item) => (
+              {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -83,13 +97,13 @@ export default function Footer() {
               Locations
             </h3>
             <ul className="mt-5 flex flex-col gap-3">
-              {featuredLocations.map((location) => (
+              {footerLocations.map((location) => (
                 <li key={location.slug}>
                   <Link
-                    href={`/locations#${location.slug}`}
+                    href={location.href}
                     className="text-sm text-white/70 transition-colors hover:text-white"
                   >
-                    {location.name}
+                    {location.label}
                   </Link>
                 </li>
               ))}
@@ -104,7 +118,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-gold">
               Contact
             </h3>
@@ -121,7 +135,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-start gap-2 text-sm text-white/70 transition-colors hover:text-white"
+                  className="flex items-start gap-2 text-sm text-white/70 transition-colors [overflow-wrap:anywhere] hover:text-white"
                 >
                   <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                   {siteConfig.email}

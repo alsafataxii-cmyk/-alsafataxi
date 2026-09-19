@@ -11,9 +11,8 @@ export default function LocationCard({ location }: LocationCardProps) {
 
   return (
     <Link
-      id={location.slug}
-      href="/book"
-      className="group flex items-center justify-between gap-4 border border-brand-gray bg-white p-6 transition-colors duration-200 hover:border-brand-gold scroll-mt-28"
+      href={location.href}
+      className="group flex items-center justify-between gap-4 border border-brand-gray bg-white p-6 transition-colors duration-200 hover:border-brand-gold"
     >
       <div className="flex items-center gap-4">
         <span className="inline-flex h-11 w-11 items-center justify-center bg-brand-beige text-brand-primary">

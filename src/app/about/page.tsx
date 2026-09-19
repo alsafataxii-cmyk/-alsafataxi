@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTASection from "@/components/ui/CTASection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import { stats } from "@/lib/data";
-import { siteConfig } from "@/lib/site-config";
+import { locationPages } from "@/lib/content/locations";
 import { pageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = pageMetadata({
   title: "About Us",
   description:
-    "Al Safa Taxi provides premium private transportation across Makkah, Madinah, Jeddah and Taif, built on professional drivers, reliable vehicles and consistent service.",
+    "Al Safa Taxi provides private taxi, airport transfer, Umrah and Ziyarat transportation across Makkah, Madinah, Jeddah and Taif.",
   path: "/about",
 });
 
@@ -20,41 +21,44 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="Premium Transportation, Built on Trust"
-        description="Al Safa Taxi was founded to bring a consistent, professional standard of private transportation to travelers and residents across Makkah, Madinah, Jeddah and Taif."
+        description="Al Safa Taxi provides private transportation for travellers and residents across Makkah, Madinah, Jeddah and Taif."
       />
 
       <section className="bg-white">
         <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
             <div className="flex flex-col gap-5">
-              <SectionHeading
-                eyebrow="Our Story"
-                title="Safe Journeys, Greater Destinations"
-              />
+              <SectionHeading eyebrow="Who We Are" title="Safe Journeys, Greater Destinations" />
               <p className="text-base leading-relaxed text-brand-dark/70">
-                {siteConfig.name} was built around a simple idea: every ride should feel
-                dependable, from the moment you book to the moment you arrive. What began
-                as a small city taxi service has grown into a trusted network covering
-                Makkah, Madinah, Jeddah and Taif.
+                {siteConfig.name} is a private transportation service focused on the Western
+                Region of Saudi Arabia. We arrange airport transfers, Umrah transportation,
+                Ziyarat tours, city rides and journeys between Makkah, Madinah, Jeddah and Taif.
               </p>
               <p className="text-base leading-relaxed text-brand-dark/70">
-                Today, we serve residents, business travelers and visitors who expect
-                punctuality, comfort and a professional driver they can trust — every
-                time they book.
+                Our approach is simple: understand your plans, confirm the vehicle and price
+                before you travel, and be available when you need us. Our booking line is open 24
+                hours a day.
               </p>
             </div>
 
-            <dl className="grid grid-cols-2 gap-6">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col gap-1 border border-brand-gray p-6"
-                >
-                  <dt className="text-sm font-medium text-brand-dark/60">{stat.label}</dt>
-                  <dd className="text-3xl font-bold text-brand-primary">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
+            <div className="flex flex-col gap-4">
+              <h2 className="text-lg font-semibold text-brand-dark">Where we work</h2>
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {locationPages.map((location) => (
+                  <li key={location.slug}>
+                    <Link
+                      href={`/locations/${location.slug}`}
+                      className="block border border-brand-gray p-5 transition-colors hover:border-brand-gold"
+                    >
+                      <span className="block font-semibold text-brand-dark">{location.name}</span>
+                      <span className="mt-1 block text-sm text-brand-dark/60">
+                        {location.tagline}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -63,7 +67,7 @@ export default function AboutPage() {
 
       <CTASection
         title="Experience the Al Safa Standard"
-        description="Book your next ride and see why riders across Makkah, Madinah, Jeddah and Taif trust us for premium transportation."
+        description="Book your next ride in Makkah, Madinah, Jeddah or Taif and tell us how we can help."
       />
     </>
   );

@@ -29,14 +29,19 @@ export const mainNav: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const footerExtraNav: NavLink[] = [
+  { label: "Umrah Transportation", href: "/umrah-transportation" },
+  { label: "Popular Routes", href: "/routes" },
+];
+
 export const footerServiceLinks: NavLink[] = [
-  { label: "Airport Transfers", href: "/services#airport-transfers" },
-  { label: "Ziyarat Tours", href: "/services#ziyarat-tours" },
-  { label: "City Taxi", href: "/services#city-taxi" },
-  { label: "Intercity Transfers", href: "/services#intercity-transfers" },
-  { label: "Private Chauffeur", href: "/services#private-chauffeur" },
-  { label: "Hotel Transfers", href: "/services#hotel-transfers" },
-  { label: "Business Transportation", href: "/services#business-transportation" },
+  { label: "Airport Transfers", href: "/services/airport-transfers" },
+  { label: "Ziyarat Tours", href: "/services/ziyarat-tours" },
+  { label: "City Taxi", href: "/services/city-taxi" },
+  { label: "Intercity Transfers", href: "/services/intercity-transfers" },
+  { label: "Private Chauffeur", href: "/services/private-chauffeur" },
+  { label: "Hotel Transfers", href: "/services/hotel-transfers" },
+  { label: "Business Transportation", href: "/services/business-transportation" },
 ];
 
 export const socialLinks = [

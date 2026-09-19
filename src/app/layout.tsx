@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/site-config";
-import { localBusinessSchema } from "@/lib/schema";
+import JsonLd from "@/components/ui/JsonLd";
+import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -78,10 +79,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={poppins.variable}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
-        />
+        <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

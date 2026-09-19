@@ -39,12 +39,12 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact Us"
         title="We're Available Around the Clock"
-        description="Reach our dispatch team by phone or WhatsApp for the fastest response, or send us an email for general enquiries."
+        description="Reach us by phone or WhatsApp for the fastest response, or send us an email for general enquiries."
       />
 
       <section className="bg-white">
         <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {contactMethods.map((method) => {
               const Icon = method.icon;
               return (
@@ -60,7 +60,9 @@ export default function ContactPage() {
                     <p className="text-sm font-semibold uppercase tracking-wide text-brand-gold">
                       {method.label}
                     </p>
-                    <p className="mt-1 text-lg font-medium text-brand-dark">{method.value}</p>
+                    <p className="mt-1 text-lg font-medium text-brand-dark [overflow-wrap:anywhere]">
+                      {method.value}
+                    </p>
                   </div>
                 </a>
               );

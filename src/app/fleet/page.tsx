@@ -6,9 +6,9 @@ import { fleet } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fleet",
+  title: "Taxi Fleet: Sedans, SUVs & Vans",
   description:
-    "See the Al Safa Taxi fleet: Executive Sedan, Premium SUV, Luxury Van and VIP Chauffeur Car, each maintained to a consistently high standard.",
+    "Executive sedans, premium SUVs, luxury vans and VIP chauffeur cars for airport transfers, Umrah trips and intercity travel in Makkah, Madinah, Jeddah and Taif.",
   path: "/fleet",
 });
 
@@ -18,7 +18,7 @@ export default function FleetPage() {
       <PageHero
         eyebrow="Our Fleet"
         title="A Vehicle for Every Journey"
-        description="Every vehicle in our fleet is cleaned, inspected and maintained to a consistently high standard before it reaches the road."
+        description="Cars, SUVs and vans for individuals, families and groups, with room for luggage. Tell us your group size and we will suggest the right vehicle."
       />
 
       <section className="bg-white">

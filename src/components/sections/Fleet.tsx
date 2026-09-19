@@ -11,7 +11,7 @@ export default function Fleet() {
           <SectionHeading
             eyebrow="Our Fleet"
             title="A Vehicle for Every Journey"
-            description="Every vehicle in our fleet is cleaned, inspected and maintained to a consistently high standard before it reaches the road."
+            description="Cars, SUVs and vans for individuals, families and groups, with room for luggage. Tell us your group size and we will suggest the right vehicle."
           />
           <Button href="/fleet" variant="outline-dark" className="shrink-0">
             View Full Fleet

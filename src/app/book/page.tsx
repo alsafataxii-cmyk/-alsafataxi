@@ -19,7 +19,7 @@ export default function BookPage() {
       <PageHero
         eyebrow="Book Your Ride"
         title="Let's Get You Moving"
-        description="Fill in your trip details below and send them straight to our dispatch team on WhatsApp, or call us directly for immediate assistance."
+        description="Fill in your trip details below and send them straight to us on WhatsApp, or call us directly for immediate assistance."
       />
 
       <section className="bg-white">
@@ -32,8 +32,8 @@ export default function BookPage() {
             <div className="border border-brand-gray p-8">
               <h2 className="text-lg font-semibold text-brand-dark">Prefer to talk?</h2>
               <p className="mt-2 text-sm leading-relaxed text-brand-dark/70">
-                Our dispatch team is available 24/7 for immediate bookings and changes to
-                existing trips.
+                Call or message us at any time for immediate bookings and changes to existing
+                trips.
               </p>
               <div className="mt-6 flex flex-col gap-3">
                 <Button href={siteConfig.phoneHref} variant="outline-dark">
@@ -50,9 +50,9 @@ export default function BookPage() {
             <div className="bg-brand-beige p-8">
               <h2 className="text-lg font-semibold text-brand-dark">What to Expect</h2>
               <ul className="mt-4 flex flex-col gap-3 text-sm text-brand-dark/70">
-                <li>Confirmation within minutes, day or night</li>
-                <li>A fixed fare agreed before you travel</li>
-                <li>A professional driver assigned to your trip</li>
+                <li>Your vehicle and price confirmed before you travel</li>
+                <li>A booking line open 24 hours a day</li>
+                <li>Your flight, hotel and luggage details used to plan the pickup</li>
               </ul>
             </div>
           </div>
