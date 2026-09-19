@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   verification: {
     google: "HlsZoIOx1pv6iuFthnbptdw5Do-B_3FisMYkdeE28aQ",
+    other: {
+      "msvalidate.01": "3C9354DD9C0D39A4B916CB3C823A4FD4",
+      "p:domain_verify": "6744f9a5f9d4fae2cf46bc7fbcab3643",
+    },
   },
   robots: {
     index: true,
@@ -83,6 +87,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={poppins.variable}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
         <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
+        {process.env.NODE_ENV === "production" ? (
+          <script
+            src="https://analytics.ahrefs.com/analytics.js"
+            data-key="twaC2o2Bg6JSguFlIM9swQ"
+            async
+          />
+        ) : null}
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

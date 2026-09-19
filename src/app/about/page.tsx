@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTASection from "@/components/ui/CTASection";
+import ReviewButton from "@/components/ui/ReviewButton";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import { locationPages } from "@/lib/content/locations";
 import { services } from "@/lib/data";
@@ -95,6 +96,19 @@ export default function AboutPage() {
       </section>
 
       <WhyChooseUs eyebrow="Our Commitment" title="Why Choose Al Safa Taxi" />
+
+      <section className="bg-white">
+        <div className="mx-auto flex max-w-8xl flex-col items-start gap-6 px-4 py-16 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-bold text-brand-dark">Travelled With Us?</h2>
+            <p className="mt-2 text-base leading-relaxed text-brand-dark/70">
+              Your feedback helps other travellers choose with confidence and helps us improve.
+              Tell us how your journey went by leaving a review on Trustpilot.
+            </p>
+          </div>
+          <ReviewButton variant="primary" className="shrink-0" />
+        </div>
+      </section>
 
       <CTASection
         title="Experience the Al Safa Standard"

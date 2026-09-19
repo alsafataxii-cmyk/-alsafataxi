@@ -16,6 +16,7 @@ export const siteConfig = {
   whatsappNumber: "966500488604",
   email: "booking@alsafataxi.com",
   address: "Jeddah, Kingdom of Saudi Arabia",
+  trustpilotUrl: "https://www.trustpilot.com/review/alsafataxi.com",
   hours: "Available 24 hours a day, 7 days a week",
 } as const;
 

@@ -23,6 +23,7 @@ export function localBusinessSchema() {
     image: `${siteConfig.url}/brand/og-image.png`,
     telephone: siteConfig.phoneHref.replace("tel:", ""),
     email: siteConfig.email,
+    sameAs: [siteConfig.trustpilotUrl],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jeddah",

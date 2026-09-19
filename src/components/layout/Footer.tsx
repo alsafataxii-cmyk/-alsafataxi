@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import Logo from "@/components/layout/Logo";
+import ReviewButton from "@/components/ui/ReviewButton";
 import { FacebookGlyph, InstagramGlyph, XGlyph } from "@/components/icons/SocialIcons";
 import {
   footerExtraNav,
@@ -54,6 +55,7 @@ export default function Footer() {
                 );
               })}
             </div>
+            <ReviewButton variant="outline-light" className="w-fit" />
           </div>
 
           <div>

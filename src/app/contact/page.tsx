@@ -5,6 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import ReviewButton from "@/components/ui/ReviewButton";
 import { locationPages } from "@/lib/content/locations";
 import { siteConfig } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/seo";
@@ -146,7 +147,17 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-16 flex flex-col items-start gap-6 bg-brand-dark p-10 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-16 flex flex-col items-start gap-4 border border-brand-gray p-8 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 className="text-lg font-semibold text-brand-dark">Already travelled with us?</h2>
+              <p className="mt-1 text-sm text-brand-dark/70">
+                Leave a review on Trustpilot and help other travellers choose.
+              </p>
+            </div>
+            <ReviewButton variant="outline-dark" className="shrink-0" />
+          </div>
+
+          <div className="mt-6 flex flex-col items-start gap-6 bg-brand-dark p-10 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="text-2xl font-bold text-white">Ready to ride?</h2>
               <p className="mt-2 text-white/70">
