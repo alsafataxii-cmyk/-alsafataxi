@@ -74,7 +74,7 @@ export const services: Service[] = [
     description:
       "Airport pickups, hotel-to-hotel moves and departures across Makkah, Madinah, Jeddah and Taif.",
     longDescription:
-      "Private transfers to and from your hotel, planned around your check-in and checkout times, including hotels near the Haram and the Prophet's Mosque where vehicle access is restricted.",
+      "Private transfers to and from your hotel, planned around your check-in and checkout times, including hotels near the Haram and the Prophet's Mosque where vehicle access can vary.",
     icon: Building2,
   },
   {

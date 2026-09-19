@@ -35,8 +35,8 @@ export default function LocationsPage() {
           <div className="flex max-w-3xl flex-col gap-5">
             <SectionHeading eyebrow="Cities" title="Taxi Service in Four Cities" />
             <p className="text-base leading-relaxed text-brand-dark/70">
-              We focus on the Western Region of Saudi Arabia. Each city has its own roads,
-              restrictions and routines: vehicle access is limited around the Haram in Makkah and
+              We focus on the Western Region of Saudi Arabia. Each city has its own roads
+              and routines: vehicle access can be limited around the Haram in Makkah and
               the Prophet&apos;s Mosque in Madinah, Jeddah is spread along the coast, and Taif sits
               in the mountains. Choose a city for practical details on how we plan journeys there.
             </p>

@@ -127,7 +127,7 @@ export const airportPages: AirportPage[] = [
       {
         heading: "Airport to your Madinah hotel",
         paragraphs: [
-          "The airport is roughly 15 to 20 km from central Madinah, and the transfer usually takes 20 to 30 minutes outside peak times. Many hotels sit close to Al-Masjid an-Nabawi (the Prophet's Mosque), where vehicle access is limited and the last part of the journey may be on foot from the nearest practical drop-off point.",
+          "The airport is roughly 15 to 20 km from central Madinah, and the transfer usually takes 20 to 30 minutes outside peak times. Many hotels sit close to Al-Masjid an-Nabawi (the Prophet's Mosque), where vehicle access can be limited and the last part of the journey may be on foot from the nearest practical drop-off point.",
           "Share your hotel name when you book so that the drop-off can be planned in advance, and tell us if anyone in your group needs extra help with the walk.",
         ],
       },
@@ -160,7 +160,7 @@ export const airportPages: AirportPage[] = [
       {
         question: "How far is Madinah Airport from the Prophet's Mosque?",
         answer:
-          "Roughly 15 to 20 km, which is usually 20 to 30 minutes depending on traffic. Streets around the mosque are restricted, so the final drop-off point depends on your hotel's location.",
+          "Roughly 15 to 20 km, which is usually 20 to 30 minutes depending on traffic. Access around the mosque can be restricted, so the final drop-off point depends on your hotel's location.",
       },
       {
         question: "Can you take us from Madinah Airport straight to Makkah?",

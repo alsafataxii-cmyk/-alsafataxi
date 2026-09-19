@@ -31,7 +31,7 @@ export const locationPages: LocationPage[] = [
     heroDescription:
       "Private taxis in Makkah for hotel transfers, Umrah journeys, Ziyarat visits and travel to Jeddah, Madinah and Taif.",
     intro:
-      "Getting around Makkah is unlike any other city. Roads near the Masjid al-Haram are congested at peak prayer times and during the Umrah and Hajj seasons, and hotels can sit some distance from the nearest place a vehicle is allowed to stop. Al Safa Taxi provides private taxi service in Makkah for pilgrims, families and visitors who want a reliable driver at an agreed time.",
+      "Getting around Makkah is unlike any other city. Roads near the Masjid al-Haram can be congested at peak prayer times and during the Umrah and Hajj seasons, and hotels can sit some distance from where a vehicle can stop. Al Safa Taxi provides private taxi service in Makkah for pilgrims, families and visitors who want a reliable driver at an agreed time.",
     facts: [
       { label: "Nearest airport", value: "King Abdulaziz International (JED), Jeddah" },
       { label: "Jeddah Airport", value: "Roughly 100 km, usually 1 to 1.5 hours" },
@@ -43,7 +43,7 @@ export const locationPages: LocationPage[] = [
       {
         heading: "Taxi in Makkah for hotels and the Haram",
         paragraphs: [
-          "Many Makkah hotels are within walking distance of the Masjid al-Haram, but vehicle access to the central area is restricted and can change with crowd levels. Tell us which hotel you are staying at and we will plan pickups and drop-offs around the closest practical point.",
+          "Many Makkah hotels are within walking distance of the Masjid al-Haram, but vehicle access to the central area can be restricted and can change with crowd levels. Tell us which hotel you are staying at and we will plan pickups and drop-offs around the closest practical point.",
           "For families with young children or older passengers, planning departures around prayer times can make a noticeable difference to how comfortable the journey is.",
         ],
       },
@@ -129,7 +129,7 @@ export const locationPages: LocationPage[] = [
       {
         heading: "Madinah airport and hotel transfers",
         paragraphs: [
-          "We arrange private transfers between Madinah Airport and hotels across the city. The central area around the Prophet's Mosque has limited vehicle access, so your hotel's location decides where the car can stop and how far you walk. Give us the hotel name when you book and we will plan around it.",
+          "We arrange private transfers between Madinah Airport and hotels across the city. Vehicle access around the Prophet's Mosque can be limited, so your hotel's location can decide where the car stops and how far you walk. Give us the hotel name when you book and we will plan around it.",
         ],
       },
       {

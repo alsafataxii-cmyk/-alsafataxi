@@ -41,7 +41,7 @@ export default function Home() {
       <HomeHowItWorks />
       <FaqSection faqs={homeFaqs} title="Taxi Service FAQs" />
       <CTASection
-        title="Ready to Book Your Ride?"
+        title="Book Your Private Taxi"
         description="Call or message us to arrange your airport transfer, city ride, Umrah trip or intercity journey. Our booking line is open around the clock."
       />
     </>

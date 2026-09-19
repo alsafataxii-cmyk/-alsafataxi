@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="flex flex-col gap-8 lg:col-span-7">
           <span className="inline-flex w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-brand-gold">
             <span className="h-px w-8 bg-brand-gold" aria-hidden="true" />
-            Premium Private Transportation
+            Private Taxi &amp; Transfers
           </span>
 
           <h1 className="max-w-xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
@@ -28,9 +28,9 @@ export default function Hero() {
           </h1>
 
           <p className="max-w-lg text-lg leading-relaxed text-white/70">
-            Al Safa Taxi arranges private airport transfers, Umrah transportation, Ziyarat
-            tours and journeys between Makkah, Madinah, Jeddah and Taif, with bookings taken
-            around the clock.
+            Al Safa Taxi provides private taxi and transportation services in the Western Region
+            of Saudi Arabia: airport transfers, Umrah transportation, Ziyarat tours and journeys
+            between Makkah, Madinah, Jeddah and Taif, with bookings taken around the clock.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">

@@ -46,10 +46,10 @@ export default function HomeIntro() {
             and rest.
           </p>
           <p className="text-base leading-relaxed text-brand-dark/70">
-            Roads and vehicle access near the Haram and the Prophet&apos;s Mosque are restricted,
-            so we ask for your hotel name and plan pickups and drop-offs in advance. Tell us your
-            flight, hotel, passenger count and luggage, and we confirm the vehicle and price before
-            you travel.
+            Vehicle access and pickup arrangements can vary around the Haram and the
+            Prophet&apos;s Mosque, so we confirm your hotel and pickup point in advance. Tell us
+            your flight, hotel, passenger count and luggage, and we confirm the vehicle and price
+            before you travel.
           </p>
         </div>
 

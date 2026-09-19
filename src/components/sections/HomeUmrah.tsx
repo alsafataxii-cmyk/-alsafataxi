@@ -35,9 +35,9 @@ export default function HomeUmrah() {
           </h2>
           <p className="text-base leading-relaxed text-white/70 sm:text-lg">
             An Umrah trip involves several journeys, from the airport to your hotel, between the
-            Holy Cities and to places of Ziyarat. We arrange private transport for each one, for
-            individuals, families and groups, and you can book the whole trip or only the stages
-            you need.
+            Holy Cities and to places of Ziyarat. We provide private Umrah transportation in
+            Saudi Arabia&apos;s Western Region for each one, for individuals, families and groups,
+            and you can book the whole trip or only the stages you need.
           </p>
           <p className="text-base leading-relaxed text-white/70">
             Most pilgrims land at Jeddah and continue to Makkah, then travel on to Madinah. Tell us

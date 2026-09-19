@@ -9,7 +9,7 @@ export const siteConfig = {
   owner: "Ahsan Khan",
   tagline: "Safe Journeys, Greater Destinations",
   description:
-    "Al Safa Taxi delivers premium private transportation and Ziyarat tours across Makkah, Madinah, Jeddah and Taif — airport transfers, city taxi, intercity travel and professional chauffeur service, available 24/7.",
+    "Al Safa Taxi provides private transportation and Ziyarat tours across Makkah, Madinah, Jeddah and Taif — airport transfers, city taxi, intercity travel and professional chauffeur service, available 24/7.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://alsafataxi.com",
   phone: "+966 50 048 8604",
   phoneHref: "tel:+966500488604",

@@ -48,7 +48,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "The drive to Makkah",
         paragraphs: [
-          "The journey is roughly 100 km and usually takes between one and one and a half hours. It can take longer at peak times, on Fridays and during the Umrah and Hajj seasons. Vehicle access near the Masjid al-Haram is restricted, so your driver will take you to the closest practical drop-off point for your hotel.",
+          "The journey is roughly 100 km and usually takes between one and one and a half hours. It can take longer at peak times, on Fridays and during the Umrah and Hajj seasons. Vehicle access near the Masjid al-Haram can vary, so we confirm your hotel and pickup point in advance and your driver takes you to the closest practical drop-off point.",
         ],
       },
       {
@@ -76,7 +76,7 @@ export const routePages: RoutePage[] = [
       {
         question: "Will the driver take us to the hotel door?",
         answer:
-          "Your driver will go to the closest practical drop-off point. Roads around the Masjid al-Haram are restricted and can change with crowd levels, so share your hotel name in advance.",
+          "Your driver will go to the closest practical drop-off point. Roads and vehicle access around the Masjid al-Haram can be restricted and can change with crowd levels, so share your hotel name in advance.",
       },
       {
         question: "Can we stop on the way to Makkah?",
@@ -111,7 +111,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "Hotel pickup in Makkah",
         paragraphs: [
-          "Give us your hotel name and checkout time when you book. Vehicle access near the Haram is restricted, so the pickup point may be a short walk from the hotel entrance. Confirm it in advance so you are not searching for the car with your luggage.",
+          "Give us your hotel name and checkout time when you book. Vehicle access near the Haram can vary, so the pickup point may be a short walk from the hotel entrance. Confirm it in advance so you are not searching for the car with your luggage.",
         ],
       },
       {
@@ -187,7 +187,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "Arriving in Madinah",
         paragraphs: [
-          "Many hotels near the Prophet's Mosque have restricted vehicle access, so the drop-off point depends on your hotel's location. Share the hotel name when you book.",
+          "Vehicle access near the Prophet's Mosque can vary by hotel, so the drop-off point depends on your hotel's location. Share the hotel name when you book.",
         ],
       },
     ],
@@ -379,7 +379,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "Arriving in Madinah",
         paragraphs: [
-          "The area around Al-Masjid an-Nabawi has limited vehicle access. Share your hotel name when you book so we can plan the drop-off point in advance.",
+          "Vehicle access around Al-Masjid an-Nabawi can be limited. Share your hotel name when you book so we can plan the drop-off point in advance.",
         ],
       },
     ],
@@ -441,7 +441,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "Arriving in Makkah",
         paragraphs: [
-          "Vehicle access near the Masjid al-Haram is restricted and changes with crowd levels, so your driver will take you to the closest practical drop-off for your hotel. Share the hotel name when you book.",
+          "Vehicle access near the Masjid al-Haram can be restricted and changes with crowd levels, so your driver will take you to the closest practical drop-off for your hotel. Share the hotel name when you book.",
         ],
       },
     ],
@@ -694,7 +694,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "Arriving in Makkah",
         paragraphs: [
-          "Vehicle access near the Masjid al-Haram is restricted, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
+          "Vehicle access near the Masjid al-Haram can vary, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
         ],
       },
     ],
@@ -880,7 +880,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "The journey and your arrival in Makkah",
         paragraphs: [
-          "The road distance is roughly 450 km and takes about four and a half to five hours without stops. Plan for prayer, meals and rest, especially after a flight. In Makkah, vehicle access near the Masjid al-Haram is restricted, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
+          "The road distance is roughly 450 km and takes about four and a half to five hours without stops. Plan for prayer, meals and rest, especially after a flight. In Makkah, vehicle access near the Masjid al-Haram can vary, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
         ],
       },
       {
@@ -956,7 +956,7 @@ export const routePages: RoutePage[] = [
       {
         heading: "Arriving in Makkah",
         paragraphs: [
-          "Vehicle access near the Masjid al-Haram is restricted, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
+          "Vehicle access near the Masjid al-Haram can vary, so the drop-off is at the closest practical point to your hotel. Share the hotel name when you book.",
         ],
       },
     ],

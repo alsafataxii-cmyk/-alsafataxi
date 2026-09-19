@@ -218,7 +218,7 @@ export const servicePages: ServicePage[] = [
       {
         heading: "City by city",
         paragraphs: [
-          "In Makkah, we plan pickups around the Haram-area restrictions. In Madinah, we plan around the streets near the Prophet's Mosque. In Jeddah, rides range from Al-Balad and the Corniche to hotels and malls, and in Taif from the airport to hotels, resorts and viewpoints.",
+          "In Makkah, we plan pickups around vehicle access near the Haram, which can vary. In Madinah, we plan around the streets near the Prophet's Mosque. In Jeddah, rides range from Al-Balad and the Corniche to hotels and malls, and in Taif from the airport to hotels, resorts and viewpoints.",
         ],
       },
     ],
@@ -419,7 +419,7 @@ export const servicePages: ServicePage[] = [
       {
         heading: "Arriving at your hotel",
         paragraphs: [
-          "We collect you from the airport or another starting point and take you to your hotel. Vehicle access near the Masjid al-Haram and Al-Masjid an-Nabawi is restricted, so the drop-off point depends on your hotel's location. Share the hotel name in advance so it can be planned.",
+          "We collect you from the airport or another starting point and take you to your hotel. Vehicle access near the Masjid al-Haram and Al-Masjid an-Nabawi can vary, so the drop-off point depends on your hotel's location and the conditions on the day. Share the hotel name in advance so it can be planned.",
         ],
       },
       {
@@ -448,7 +448,7 @@ export const servicePages: ServicePage[] = [
       {
         question: "Can you pick me up from a hotel near the Haram?",
         answer:
-          "Yes. Vehicle access near the Haram is restricted, so tell us your hotel and we will confirm the closest practical pickup point.",
+          "Yes. Vehicle access near the Haram can vary, so tell us your hotel and we will confirm the pickup point in advance.",
       },
       {
         question: "Can you move me between a Makkah hotel and a Madinah hotel?",

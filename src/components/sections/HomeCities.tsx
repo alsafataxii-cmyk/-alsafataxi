@@ -10,7 +10,7 @@ export default function HomeCities() {
         <SectionHeading
           eyebrow="Where We Work"
           title="Taxi Service by City"
-          description="Each city has its own roads, restrictions and routines. Choose yours for practical details and how we plan the journey."
+          description="Each city has its own roads and routines. Choose yours for practical details and how we plan the journey."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

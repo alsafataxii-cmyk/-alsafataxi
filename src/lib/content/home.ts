@@ -17,6 +17,11 @@ export const homeFaqs: Faq[] = [
       "No. Makkah has no commercial airport. Most visitors fly into Jeddah and continue to Makkah by road, roughly 100 km from the airport.",
   },
   {
+    question: "Do you provide private taxi service from Jeddah Airport to Makkah?",
+    answer:
+      "Yes. We arrange private transfers from King Abdulaziz International Airport (JED) to hotels in Makkah, roughly 100 km and usually one to one and a half hours. Share your flight number, passenger count and hotel name when you book.",
+  },
+  {
     question: "Do you provide Umrah transportation?",
     answer:
       "Yes. We arrange airport transfers, hotel transfers, travel between Makkah and Madinah and Ziyarat trips for individuals, families and groups.",
@@ -40,6 +45,11 @@ export const homeFaqs: Faq[] = [
     question: "Can I book intercity travel between the cities?",
     answer:
       "Yes. We run private journeys between Makkah, Madinah, Jeddah and Taif, for example Makkah to Madinah or Jeddah Airport to Makkah.",
+  },
+  {
+    question: "Can I book a taxi from Makkah to Madinah?",
+    answer:
+      "Yes. The road journey is roughly 450 km and takes about four and a half to five hours. A private car lets your group travel together with luggage, with stops planned for prayer and rest.",
   },
   {
     question: "How does an airport pickup work?",

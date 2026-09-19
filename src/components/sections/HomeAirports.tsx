@@ -9,7 +9,7 @@ export default function HomeAirports() {
       <div className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Airport Transfers"
-          title="Airport Taxi & Transfers at Jeddah, Madinah & Taif"
+          title="Airport Taxi & Transfers in Jeddah, Madinah & Taif"
           description="Makkah has no commercial airport, so most Makkah-bound travellers land in Jeddah. Share your flight number and hotel and we plan the pickup around your arrival."
         />
 

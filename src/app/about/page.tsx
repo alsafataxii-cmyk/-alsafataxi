@@ -22,7 +22,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="Premium Transportation, Built on Trust"
+        title="Private Transportation, Built on Trust"
         description="Al Safa Taxi provides private transportation for travellers and residents across Makkah, Madinah, Jeddah and Taif."
       />
 

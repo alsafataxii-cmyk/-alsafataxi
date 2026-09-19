@@ -53,7 +53,7 @@ export const umrahPage = {
       bullets: [
         "Book airport transfers early during the Umrah and Hajj seasons",
         "Share your flight number and hotel names",
-        "Allow extra time near the Haram, where roads and vehicle access are restricted",
+        "Allow extra time near the Haram, where roads and vehicle access can be restricted",
         "Tell us about any mobility needs or a child seat when you book",
       ],
     },

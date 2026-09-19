@@ -9,8 +9,8 @@ type WhyChooseUsProps = {
 
 export default function WhyChooseUs({
   eyebrow = "Why Al Safa Taxi",
-  title = "Why Choose Al Safa Taxi",
-  description = "Premium transportation is about consistency, not just comfort. Here's how we deliver it on every trip.",
+  title = "Why Choose Al Safa Taxi for Private Transportation?",
+  description = "Good private transportation is about consistency, not just comfort. Here is what we aim for on every trip.",
 }: WhyChooseUsProps) {
   return (
     <section className="bg-brand-gray/40">

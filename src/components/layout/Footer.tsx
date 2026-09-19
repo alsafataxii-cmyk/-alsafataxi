@@ -11,6 +11,16 @@ import {
   socialLinks,
 } from "@/lib/site-config";
 import { locations } from "@/lib/data";
+import { routeLinks } from "@/lib/content/links";
+
+const footerRoutes = routeLinks([
+  "jeddah-airport-to-makkah",
+  "makkah-to-madinah",
+  "madinah-to-makkah",
+  "jeddah-to-makkah",
+  "jeddah-to-madinah",
+  "makkah-to-jeddah",
+]);
 
 const socialIcons = {
   instagram: InstagramGlyph,
@@ -150,6 +160,24 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+
+        <div className="mt-12 border-t border-white/10 pt-8">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-gold">
+            Popular Routes
+          </h3>
+          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+            {footerRoutes.map((route) => (
+              <li key={route.href}>
+                <Link
+                  href={route.href}
+                  className="text-sm text-white/70 transition-colors hover:text-white"
+                >
+                  {route.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="border-t border-white/10">
@@ -157,7 +185,7 @@ export default function Footer() {
           <p>
             © {year} {siteConfig.legalName}. All rights reserved.
           </p>
-          <p>Premium private transportation across Makkah, Madinah, Jeddah &amp; Taif.</p>
+          <p>Private taxi and transfers across Makkah, Madinah, Jeddah &amp; Taif.</p>
         </div>
       </div>
     </footer>
