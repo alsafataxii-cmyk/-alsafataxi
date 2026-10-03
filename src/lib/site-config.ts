@@ -19,22 +19,23 @@ export const siteConfig = {
   address: "Jeddah, Kingdom of Saudi Arabia",
   trustpilotUrl: "https://www.trustpilot.com/review/alsafataxi.com",
   hours: "Available 24 hours a day, 7 days a week",
+  // Bump when site content changes meaningfully; used as the sitemap lastModified date.
+  contentUpdated: "2026-10-03",
 } as const;
 
 export const mainNav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Umrah", href: "/umrah-transportation" },
   { label: "Fleet", href: "/fleet" },
   { label: "Airports", href: "/airports" },
   { label: "Locations", href: "/locations" },
+  { label: "Routes", href: "/routes" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
-export const footerExtraNav: NavLink[] = [
-  { label: "Umrah Transportation", href: "/umrah-transportation" },
-  { label: "Popular Routes", href: "/routes" },
-];
+export const footerExtraNav: NavLink[] = [];
 
 export const footerServiceLinks: NavLink[] = [
   { label: "Airport Transfers", href: "/services/airport-transfers" },
@@ -46,9 +47,10 @@ export const footerServiceLinks: NavLink[] = [
   { label: "Business Transportation", href: "/services/business-transportation" },
 ];
 
+// Leave href empty until the real profile URL exists; empty entries are not rendered.
 export const socialLinks = [
-  { label: "Instagram", href: "#", icon: "instagram" as const },
-  { label: "X (Twitter)", href: "#", icon: "twitter" as const },
-  { label: "Facebook", href: "#", icon: "facebook" as const },
-  { label: "WhatsApp", href: "#", icon: "whatsapp" as const },
+  { label: "Instagram", href: "", icon: "instagram" as const },
+  { label: "X (Twitter)", href: "", icon: "twitter" as const },
+  { label: "Facebook", href: "", icon: "facebook" as const },
+  { label: "WhatsApp", href: "https://wa.me/966500488604", icon: "whatsapp" as const },
 ];

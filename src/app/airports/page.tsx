@@ -10,9 +10,11 @@ import CTASection from "@/components/ui/CTASection";
 import { locations } from "@/lib/data";
 import { airportsFaqs } from "@/lib/content/index-faqs";
 import { pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/ui/JsonLd";
+import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Saudi Airport Transfers | Jeddah, Madinah & Taif",
+  title: "Airport Transfers: Jeddah, Madinah & Taif",
   description:
     "Private airport transfers at Jeddah (JED), Madinah (MED) and Taif (TIF) airports, with onward travel to Makkah and Madinah hotels. Book 24/7.",
   path: "/airports",
@@ -72,6 +74,14 @@ export default function AirportsPage() {
 
   return (
     <>
+      <JsonLd
+        data={collectionSchema({
+          name: "Airport Transfers",
+          description: "Private airport transfers at Jeddah, Madinah and Taif airports.",
+          path: "/airports",
+          items: airports.map((item) => ({ name: `${item.name} Taxi`, href: item.href })),
+        })}
+      />
       <PageHero
         eyebrow="Airport Transfers"
         title="Punctual Transfers at Jeddah, Madinah & Taif Airports"

@@ -10,7 +10,7 @@ import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     template: "%s | Al Safa Taxi",
   },
   description: siteConfig.description,
-  alternates: { canonical: "/" },
   verification: {
     google: "HlsZoIOx1pv6iuFthnbptdw5Do-B_3FisMYkdeE28aQ",
     other: {
@@ -40,21 +39,6 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  keywords: [
-    "Al Safa Taxi",
-    "Makkah taxi",
-    "Madinah taxi",
-    "Jeddah taxi",
-    "Taif taxi",
-    "Makkah Ziyarat",
-    "Madinah Ziyarat",
-    "Ziyarat taxi service",
-    "Ziyarat tour Makkah Madinah",
-    "airport transfer Jeddah",
-    "airport transfer Madinah",
-    "private chauffeur Saudi Arabia",
-    "intercity transfer Makkah Madinah Jeddah",
-  ],
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",

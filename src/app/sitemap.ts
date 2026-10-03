@@ -23,16 +23,14 @@ const entries: Entry[] = [
   { path: "/fleet", priority: 0.6 },
   { path: "/about", priority: 0.5 },
   { path: "/contact", priority: 0.5 },
-  { path: "/book", priority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = new Date(siteConfig.contentUpdated);
 
   return entries.map(({ path, priority }) => ({
     url: `${siteConfig.url}${path}`,
     lastModified,
-    changeFrequency: "monthly",
     priority,
   }));
 }

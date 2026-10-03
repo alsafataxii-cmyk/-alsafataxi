@@ -51,7 +51,7 @@ export default function Footer() {
               {siteConfig.description}
             </p>
             <div className="flex items-center gap-3">
-              {socialLinks.map((social) => {
+              {socialLinks.filter((social) => social.href).map((social) => {
                 const Icon = socialIcons[social.icon];
                 return (
                   <a

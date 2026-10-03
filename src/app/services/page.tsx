@@ -9,9 +9,11 @@ import CTASection from "@/components/ui/CTASection";
 import { serviceCards } from "@/lib/data";
 import { servicesFaqs } from "@/lib/content/index-faqs";
 import { pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/ui/JsonLd";
+import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Taxi Services in Makkah, Madinah, Jeddah & Taif",
+  title: "Taxi & Transfer Services in Saudi Arabia",
   description:
     "Airport transfers, Ziyarat tours, city taxi, intercity, chauffeur, hotel and business transportation in Makkah, Madinah, Jeddah and Taif. Book 24/7.",
   path: "/services",
@@ -20,6 +22,14 @@ export const metadata: Metadata = pageMetadata({
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={collectionSchema({
+          name: "Taxi & Transfer Services",
+          description: "Private taxi and transfer services across Makkah, Madinah, Jeddah and Taif.",
+          path: "/services",
+          items: serviceCards.map(({ service, href }) => ({ name: service.title, href })),
+        })}
+      />
       <PageHero
         eyebrow="What We Offer"
         title="Taxi & Private Transportation Services in Makkah, Madinah, Jeddah & Taif"

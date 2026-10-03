@@ -39,7 +39,7 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-8xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo className="h-14 w-auto sm:h-16" priority />
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
           {mainNav.map((item) => {
             const isActive = pathname === item.href;
             return (
