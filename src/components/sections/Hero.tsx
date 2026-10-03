@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import HeroIllustration from "@/components/icons/HeroIllustration";
 
 const heroLinks = [
   { label: "Airport transfers", href: "/services/airport-transfers" },
@@ -66,15 +66,8 @@ export default function Hero() {
         </div>
 
         <div className="relative flex justify-center lg:col-span-5 lg:justify-end">
-          <div className="anim-float relative w-64 sm:w-80 lg:w-96">
-            <Image
-              src="/brand/al-safa-taxi-icon.webp"
-              alt="Al Safa Taxi emblem"
-              width={512}
-              height={512}
-              priority
-              className="relative z-10 w-full drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
-            />
+          <div className="relative w-72 sm:w-96 lg:w-[30rem]">
+            <HeroIllustration className="relative z-10 h-auto w-full" />
             <div
               style={{ "--delay": "700ms" } as CSSProperties}
               className="anim-fade-up absolute -bottom-6 left-1/2 z-20 w-56 -translate-x-1/2 rounded-lg bg-white px-5 py-4 text-center shadow-xl sm:left-auto sm:right-0 sm:translate-x-0 sm:text-left"

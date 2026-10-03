@@ -1,5 +1,15 @@
 import SectionHeading from "@/components/ui/SectionHeading";
+import BenefitIcon, { type BenefitName } from "@/components/icons/BenefitIcon";
 import { whyAlSafa } from "@/lib/data";
+
+const benefitIcons: Record<string, BenefitName> = {
+  "Professional Drivers": "driver",
+  "Planned Around Your Schedule": "schedule",
+  "Clear Pricing": "pricing",
+  "Comfortable Vehicles": "vehicle",
+  "Makkah, Madinah, Jeddah & Taif": "region",
+  "Always Available": "available",
+};
 
 type WhyChooseUsProps = {
   eyebrow?: string;
@@ -25,10 +35,15 @@ export default function WhyChooseUs({
         <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {whyAlSafa.map((item) => {
             const Icon = item.icon;
+            const benefit = benefitIcons[item.title];
             return (
               <div key={item.title} className="flex gap-4">
                 <span className="mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand-gold/40 text-brand-primary">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                  {benefit ? (
+                    <BenefitIcon name={benefit} className="h-7 w-7" />
+                  ) : (
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  )}
                 </span>
                 <div className="flex flex-col gap-1.5">
                   <h3 className="text-base font-semibold text-brand-dark">{item.title}</h3>

@@ -1,6 +1,9 @@
+import type { ReactNode } from "react";
+
 type Step = {
   title: string;
   description: string;
+  icon?: ReactNode;
 };
 
 type ProcessStepsProps = {
@@ -9,9 +12,14 @@ type ProcessStepsProps = {
 
 export default function ProcessSteps({ steps }: ProcessStepsProps) {
   return (
-    <ol className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+    <ol
+      className={`grid grid-cols-1 gap-8 ${
+        steps.length === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-3"
+      }`}
+    >
       {steps.map((step, index) => (
         <li key={step.title} data-reveal className="flex flex-col gap-3">
+          {step.icon ? <div className="h-20 w-20">{step.icon}</div> : null}
           <span className="text-4xl font-bold text-brand-gold">
             {String(index + 1).padStart(2, "0")}
           </span>

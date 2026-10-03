@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { serviceIllustrations } from "@/components/icons/ServiceIllustrations";
 import type { Service } from "@/lib/data";
 
 type ServiceCardProps = {
@@ -10,6 +11,7 @@ type ServiceCardProps = {
 
 export default function ServiceCard({ service, href, detailed = false }: ServiceCardProps) {
   const Icon = service.icon;
+  const Illustration = serviceIllustrations[service.slug];
   const target = href ?? `/services/${service.slug}`;
 
   return (
@@ -17,9 +19,13 @@ export default function ServiceCard({ service, href, detailed = false }: Service
       data-reveal
       className="card-lift group flex flex-col gap-5 border border-brand-gray bg-white p-8 hover:border-brand-gold"
     >
-      <span className="inline-flex h-12 w-12 items-center justify-center bg-brand-primary text-white transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-brand-dark">
-        <Icon className="h-6 w-6" aria-hidden="true" />
-      </span>
+      {Illustration ? (
+        <Illustration className="aspect-[160/112] w-full" />
+      ) : (
+        <span className="inline-flex h-12 w-12 items-center justify-center bg-brand-primary text-white transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-brand-dark">
+          <Icon className="h-6 w-6" aria-hidden="true" />
+        </span>
+      )}
 
       <div className="flex flex-col gap-2">
         <h3 className="text-xl font-semibold text-brand-dark">

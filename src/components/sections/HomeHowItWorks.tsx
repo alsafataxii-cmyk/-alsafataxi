@@ -1,22 +1,32 @@
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProcessSteps from "@/components/ui/ProcessSteps";
+import BookingStepIcon from "@/components/icons/BookingStepIcon";
 
 const steps = [
   {
     title: "Send Your Trip Details",
     description:
       "Use the booking form, message us on WhatsApp or call. Include your pickup, destination, date, number of passengers and luggage, and your flight number for airport trips.",
+    icon: <BookingStepIcon step={1} className="h-full w-full" />,
   },
   {
     title: "Confirm Vehicle and Price",
     description:
       "We reply with the vehicle that suits your group and the price, so both are agreed before you travel.",
+    icon: <BookingStepIcon step={2} className="h-full w-full" />,
   },
   {
     title: "Meet Your Driver",
     description:
       "Your driver collects you at the agreed time and place. If your plans change, message us and we will adjust.",
+    icon: <BookingStepIcon step={3} className="h-full w-full" />,
+  },
+  {
+    title: "Complete Your Journey",
+    description:
+      "Travel to your destination. If you need a return trip or a further journey, message us and we will arrange it.",
+    icon: <BookingStepIcon step={4} className="h-full w-full" />,
   },
 ];
 

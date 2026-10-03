@@ -13,6 +13,7 @@ import HomeHowItWorks from "@/components/sections/HomeHowItWorks";
 import FaqSection from "@/components/ui/FaqSection";
 import CTASection from "@/components/ui/CTASection";
 import { homeFaqs } from "@/lib/content/home";
+import CtaIllustration from "@/components/icons/CtaIllustration";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function Home() {
       <HomeHowItWorks />
       <FaqSection faqs={homeFaqs} title="Taxi Service FAQs" />
       <CTASection
+        illustration={<CtaIllustration className="h-auto w-full" />}
         title="Book Your Private Taxi"
         description="Call or message us to arrange your airport transfer, city ride, Umrah trip or intercity journey. Our booking line is open around the clock."
       />

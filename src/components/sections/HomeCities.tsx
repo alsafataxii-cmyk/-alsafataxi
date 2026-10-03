@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { locationIllustrations } from "@/components/icons/LocationIllustrations";
 import { locationPages } from "@/lib/content/locations";
 
 export default function HomeCities() {
@@ -14,12 +15,15 @@ export default function HomeCities() {
         />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {locationPages.map((location) => (
+          {locationPages.map((location) => {
+            const Illustration = locationIllustrations[location.slug];
+            return (
             <div
               key={location.slug}
               data-reveal
               className="card-lift group flex flex-col gap-4 border border-brand-gray p-8 hover:border-brand-gold"
             >
+              {Illustration ? <Illustration className="aspect-[160/100] w-full" /> : null}
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
                 {location.tagline}
               </span>
@@ -42,7 +46,8 @@ export default function HomeCities() {
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

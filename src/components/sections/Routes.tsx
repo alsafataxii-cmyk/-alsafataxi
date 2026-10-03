@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import RouteIllustration from "@/components/icons/RouteIllustration";
 import { routeLinks } from "@/lib/content/links";
 
 const popularRoutes = [
@@ -33,7 +34,9 @@ export default function Routes() {
           </Button>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <RouteIllustration className="mt-10 hidden h-auto w-full max-w-3xl sm:block" />
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {links.map((link) => (
             <Link
               key={link.href}

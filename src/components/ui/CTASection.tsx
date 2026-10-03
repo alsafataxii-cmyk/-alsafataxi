@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Button from "@/components/ui/Button";
 
 type CTASectionProps = {
@@ -8,6 +9,7 @@ type CTASectionProps = {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  illustration?: ReactNode;
 };
 
 export default function CTASection({
@@ -18,11 +20,17 @@ export default function CTASection({
   primaryHref = "/book",
   secondaryLabel = "Contact Us",
   secondaryHref = "/contact",
+  illustration,
 }: CTASectionProps) {
   return (
     <section className="relative overflow-hidden bg-brand-dark">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute right-0 top-0 h-full w-1/3 bg-brand-gold/5" />
+        {illustration ? (
+          <div className="absolute bottom-0 right-[26rem] hidden w-64 xl:block">
+            {illustration}
+          </div>
+        ) : null}
       </div>
 
       <div className="relative mx-auto flex max-w-8xl flex-col items-start gap-8 px-4 py-20 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
