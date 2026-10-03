@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact Al Safa Taxi: Call or WhatsApp",
+  title: "Contact Us: Call or WhatsApp to Book a Taxi",
   description:
     "Contact Al Safa Taxi by phone, WhatsApp or email to book a taxi or ask a question in Makkah, Madinah, Jeddah or Taif. Our booking line is open 24/7.",
   path: "/contact",

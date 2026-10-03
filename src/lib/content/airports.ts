@@ -17,9 +17,6 @@ export type AirportPage = {
   faqs: Faq[];
 };
 
-const quoteAnswer =
-  "Fares depend on the route, the vehicle and the number of passengers. Send your pickup, drop-off, date and passenger count through our booking page or on WhatsApp and we will confirm the price and vehicle before you travel.";
-
 export const airportPages: AirportPage[] = [
   {
     slug: "jeddah-airport",
@@ -29,12 +26,12 @@ export const airportPages: AirportPage[] = [
     locationSlug: "jeddah",
     metaTitle: "Jeddah Airport Taxi & Transfers (JED)",
     metaDescription:
-      "Private taxi and transfers from King Abdulaziz International Airport (JED) to Jeddah, Makkah, Madinah and Taif. Book pickup or drop-off 24/7 with Al Safa Taxi.",
+      "Arrange a private pickup or drop-off at Jeddah Airport (JED) for Makkah, Madinah, Jeddah or Taif. Send your flight number and we plan around your arrival.",
     h1: "Jeddah Airport Taxi & Private Transfers (JED)",
     heroDescription:
       "Private pickups and drop-offs at King Abdulaziz International Airport, with onward travel to Makkah, Madinah, Jeddah and Taif.",
     intro:
-      "King Abdulaziz International Airport (JED) is the main gateway for travellers heading to Makkah, as well as to Jeddah and Taif. Al Safa Taxi arranges private transfers from the airport, so the journey to your hotel or home starts as soon as you have collected your bags.",
+      "King Abdulaziz International Airport (JED) is the main entry point to the Western Region, and for Makkah it is the only one that matters: Makkah has no commercial airport. Pilgrims, tourists and Jeddah residents all use it, and the first decision after landing is where the road goes next: Makkah, Madinah, Jeddah itself or Taif. This page explains how pickups and drop-offs work and what to tell us.",
     facts: [
       { label: "Airport code", value: "JED" },
       { label: "Jeddah city", value: "Roughly 30 to 40 km from the airport" },
@@ -44,29 +41,84 @@ export const airportPages: AirportPage[] = [
     ],
     sections: [
       {
-        heading: "Jeddah Airport to Makkah",
+        heading: "Arrival pickups",
         paragraphs: [
-          "Makkah does not have a commercial airport, so most visitors to Makkah, including Umrah pilgrims, fly into Jeddah and continue by road. The drive is roughly 100 km and usually takes between one and one and a half hours, though it can take longer at busy times of day, on Fridays and during the Umrah and Hajj seasons.",
-          "A private transfer takes you directly to your Makkah hotel without changing vehicles or carrying luggage between transport connections. If you are travelling for Umrah, mention it when you book so the journey can be planned around any stop you need to make on the way.",
+          "Send us your flight number, the date, the number of passengers and bags, and where you are going. We use the flight number to see your scheduled arrival, so the driver is arranged around the flight rather than a fixed time. If it is delayed or early, message us and we will adjust.",
+          "You do not need to know your terminal in advance. The airport has more than one terminal, and your airline decides which you use. Pilgrim flights may use a different terminal from other flights, so check with your airline if you want to know where you will arrive.",
+        ],
+        subsections: [
+          {
+            heading: "How long before you are out",
+            paragraphs: [
+              "Immigration and baggage collection can take from under an hour to several hours depending on how many flights land together. That is why the pickup follows your actual arrival and not the schedule. Message us when you have landed and when your bags are on the belt.",
+            ],
+          },
+          {
+            heading: "Night and early-morning landings",
+            paragraphs: [
+              "Many flights land through the night. Our booking line is open at all hours, so a pickup at any time is possible. Give us the flight number and keep your phone on after you land.",
+            ],
+          },
+        ],
+        cta: true,
+      },
+      {
+        heading: "Where passengers go from Jeddah Airport",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "To Makkah",
+            paragraphs: [
+              "Most Umrah pilgrims go straight to Makkah, about 100 km away. It usually takes one to one and a half hours, longer on Fridays and in the Umrah and Hajj seasons. See [Jeddah Airport to Makkah](/routes/jeddah-airport-to-makkah) for the hotel drop-off and what to expect near the Haram.",
+            ],
+          },
+          {
+            heading: "To Madinah",
+            paragraphs: [
+              "Madinah is about 430 km and four to five hours away. After a flight it is a hard drive, so plan the stops and think about whether to rest first. See [Jeddah Airport to Madinah](/routes/jeddah-airport-to-madinah). If you are going to Madinah first, remember the airport there as an alternative: [Madinah Airport](/airports/madinah-airport).",
+            ],
+          },
+          {
+            heading: "To Jeddah hotels and addresses",
+            paragraphs: [
+              "The airport is on the northern side of the city, so a hotel on the Corniche or in Al-Balad is a drive across Jeddah. Give us the hotel or address. See [Jeddah taxi service](/locations/jeddah) for city travel and business travel in Jeddah.",
+            ],
+          },
+          {
+            heading: "To Taif",
+            paragraphs: [
+              "Visitors going up to the mountains can go directly from the airport. The journey is about 170 km. See [Jeddah to Taif](/routes/jeddah-to-taif).",
+            ],
+          },
         ],
       },
       {
-        heading: "Jeddah Airport to Madinah",
+        heading: "Departures to Jeddah Airport",
         paragraphs: [
-          "Madinah is roughly 430 km from Jeddah Airport and the road journey takes about four to five hours. Many families choose a private car for this leg because everyone travels together with their luggage, and comfort stops can be planned around the group.",
+          "For a flight out, tell us the flight number, the departure time and where you are staying. We work back from your airline's check-in rules and add the driving time. From Makkah allow for the one to one and a half hour drive and the traffic near your hotel: see [Makkah to Jeddah Airport](/routes/makkah-to-jeddah-airport). From Madinah the drive is four to four and a half hours: see [Madinah to Jeddah](/routes/madinah-to-jeddah).",
         ],
       },
       {
-        heading: "Arrivals and departures",
+        heading: "Luggage and group size",
         paragraphs: [
-          "For arrivals, give us your flight number, arrival date and terminal. Jeddah's airport has more than one terminal and your airline determines which one you use, so if you are unsure, your flight number is enough for us to check.",
-          "For departures, we schedule the pickup from your hotel so that you reach the airport with time to spare. Allow extra time when travelling from Makkah and during busy travel periods.",
+          "A Luxury Van takes eight passengers and six bags and a Premium SUV five passengers and four bags. Pilgrims often have more luggage on the way home, with gifts and Zamzam water, so count the bags for the return too. For groups bigger than a van, we can plan more than one vehicle. See [the fleet](/fleet).",
         ],
+      },
+      {
+        heading: "Train or car from the airport",
+        paragraphs: [
+          "The Haramain high-speed railway has a station at the airport, with services to Makkah and Madinah. A private car suits families, older passengers and anyone with a lot of luggage who would rather not change at a station. Both are legitimate choices.",
+        ],
+      },
+      {
+        heading: "What to send when you book",
+        paragraphs: ["The more you send before you land, the fewer messages are needed later."],
         bullets: [
-          "Flight number, arrival date and time",
+          "Flight number, date and arrival time",
           "Number of passengers and pieces of luggage",
-          "Hotel name or address for the drop-off",
-          "Any need for a child seat or a larger vehicle",
+          "The hotel name or address",
+          "Whether you need a child seat or a larger vehicle",
+          "Whether you will be in ihram or stopping on the way",
         ],
       },
     ],
@@ -78,28 +130,34 @@ export const airportPages: AirportPage[] = [
     ],
     faqs: [
       {
-        question: "How far is Jeddah Airport from Makkah?",
+        question: "Which terminal will I arrive at?",
         answer:
-          "It is roughly 100 km, and the drive typically takes one to one and a half hours depending on traffic and where in Makkah your hotel is located.",
+          "That depends on your airline. You do not need to tell us. The flight number is enough for us to plan your pickup.",
       },
       {
-        question: "Can I book a taxi from Jeddah Airport to Makkah in advance?",
+        question: "Is there an airport in Makkah?",
         answer:
-          "Yes. Book through our booking page, on WhatsApp or by phone with your flight number, arrival time, number of passengers and hotel name. We take bookings 24 hours a day.",
+          "No. Makkah has no commercial airport. Most visitors fly into Jeddah and travel on by road, about 100 km.",
       },
       {
-        question: "Do you provide transfers from Jeddah Airport to Madinah?",
+        question: "What if my flight is delayed or arrives early?",
         answer:
-          "Yes. The journey is roughly 430 km and takes about four to five hours by road. Tell us your group size and luggage so we can match the right vehicle.",
+          "Message us and we will adjust the pickup. The pickup follows your actual arrival.",
       },
       {
-        question: "What if my flight lands late at night?",
+        question: "Can you collect a large group?",
         answer:
-          "Our booking line is available around the clock, so night and early-morning arrivals can be arranged. Share your flight number and message us if your flight is delayed.",
+          "Yes. A Luxury Van takes eight passengers and six bags. For bigger groups we plan more vehicles with coordinated pickups.",
       },
       {
-        question: "How much does a Jeddah Airport transfer cost?",
-        answer: quoteAnswer,
+        question: "Do you also take people to the airport?",
+        answer:
+          "Yes. See the departures section above and tell us your flight time, the hotel and the number of bags.",
+      },
+      {
+        question: "How is the price decided?",
+        answer:
+          "It depends on where you are going, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
     ],
   },
@@ -111,12 +169,12 @@ export const airportPages: AirportPage[] = [
     locationSlug: "madinah",
     metaTitle: "Madinah Airport Taxi & Transfers (MED)",
     metaDescription:
-      "Private taxi from Prince Mohammad bin Abdulaziz International Airport (MED) to Madinah hotels and onward to Makkah and Jeddah. Book 24/7 with Al Safa Taxi.",
+      "Private transfers from Madinah Airport (MED) to hotels near the Prophet's Mosque, or on to Makkah with a miqat stop. Ziyarat can be added on arrival day.",
     h1: "Madinah Airport Taxi & Private Transfers (MED)",
     heroDescription:
       "Private transfers from Prince Mohammad bin Abdulaziz International Airport to your Madinah hotel, and onward to Makkah or Jeddah.",
     intro:
-      "Prince Mohammad bin Abdulaziz International Airport (MED) is the gateway for pilgrims and visitors travelling to Madinah. Al Safa Taxi provides private airport transfers to hotels in Madinah, and onward journeys to Makkah, Jeddah and Taif.",
+      "Prince Mohammad bin Abdulaziz International Airport (MED) is for pilgrims and visitors who start their trip in Madinah. The airport is close to the city and most of the journey is the last stretch to a hotel in the central area, where the roads around the Prophet's Mosque are restricted. This page covers that arrival and the journeys that follow from it.",
     facts: [
       { label: "Airport code", value: "MED" },
       { label: "Central Madinah", value: "Roughly 15 to 20 km, about 20 to 30 minutes" },
@@ -125,28 +183,54 @@ export const airportPages: AirportPage[] = [
     ],
     sections: [
       {
-        heading: "Airport to your Madinah hotel",
+        heading: "From the airport to your hotel",
         paragraphs: [
-          "The airport is roughly 15 to 20 km from central Madinah, and the transfer usually takes 20 to 30 minutes outside peak times. Many hotels sit close to Al-Masjid an-Nabawi (the Prophet's Mosque), where vehicle access can be limited and the last part of the journey may be on foot from the nearest practical drop-off point.",
-          "Share your hotel name when you book so that the drop-off can be planned in advance, and tell us if anyone in your group needs extra help with the walk.",
+          "The drive to central Madinah is roughly 15 to 20 km and takes 20 to 30 minutes outside peak times. Most pilgrims stay in hotels around Al-Masjid an-Nabawi, where cars cannot always reach the door and the last part may be a short walk. Send us the hotel name before you land and we will confirm the drop-off point.",
+          "If someone in your group finds walking hard, say so when you book, and we will look for the closest practical stop.",
+        ],
+        subsections: [
+          {
+            heading: "Prayer times and arrivals",
+            paragraphs: [
+              "The streets near the mosque are at their busiest around the congregational prayers, and most of all for the Friday prayer. If you have a choice, avoid those times for check-in.",
+            ],
+          },
+        ],
+        cta: true,
+      },
+      {
+        heading: "Adding Ziyarat on the day you arrive",
+        paragraphs: [
+          "Some visitors go to the places of Madinah before checking in, others the next morning. Quba Mosque, Masjid al-Qiblatain and Mount Uhud are the ones people ask for most. The driver can wait while you visit. See [Ziyarat tours](/services/ziyarat-tours) for what each place is, and tell us which you want.",
         ],
       },
       {
-        heading: "Madinah to Makkah",
+        heading: "Going on to Makkah",
         paragraphs: [
-          "Many pilgrims spend several days in Madinah before continuing to Makkah, or the other way round. The road journey is roughly 450 km and takes about four and a half to five hours. If you are entering ihram for Umrah, let us know in advance so a stop at the miqat, such as Dhul Hulayfah (Abyar Ali), can be built into the plan.",
+          "Makkah is about 450 km from Madinah, four and a half to five hours without stops. Pilgrims going for Umrah commonly enter ihram at Dhul Hulayfah (Abyar Ali) on the way out of Madinah, and we plan a stop there if you ask. You can go straight from the airport, see [Madinah Airport to Makkah](/routes/madinah-airport-to-makkah), or visit Madinah first and travel with [Madinah to Makkah](/routes/madinah-to-makkah).",
         ],
       },
       {
-        heading: "What to include when you book",
+        heading: "Going to Jeddah",
         paragraphs: [
-          "The more we know before you land, the smoother the pickup. Please include:",
+          "If your onward flight is from [Jeddah Airport](/airports/jeddah-airport), the drive is about 420 km and four to four and a half hours. See [Madinah to Jeddah](/routes/madinah-to-jeddah) for how to time it around your flight.",
         ],
+      },
+      {
+        heading: "Departures from Madinah",
+        paragraphs: [
+          "For a flight from MED, tell us the flight number, the time and the hotel. The airport is close to the city, so the time you leave depends more on your airline's check-in rules and the crowds near the mosque than on the drive.",
+        ],
+      },
+      {
+        heading: "What to send when you book",
+        paragraphs: ["Please include:"],
         bullets: [
-          "Flight number, arrival date and time",
+          "Flight number, date and arrival time",
           "Number of passengers and pieces of luggage",
           "Hotel name and area in Madinah",
-          "Whether you are continuing to Makkah, or want Ziyarat visits added",
+          "Whether you are continuing to Makkah or adding Ziyarat",
+          "Any mobility needs or a child seat",
         ],
       },
     ],
@@ -160,26 +244,32 @@ export const airportPages: AirportPage[] = [
       {
         question: "How far is Madinah Airport from the Prophet's Mosque?",
         answer:
-          "Roughly 15 to 20 km, which is usually 20 to 30 minutes depending on traffic. Access around the mosque can be restricted, so the final drop-off point depends on your hotel's location.",
+          "Roughly 15 to 20 km, usually 20 to 30 minutes. Access around the mosque is restricted, so the final drop-off depends on your hotel.",
       },
       {
-        question: "Can you take us from Madinah Airport straight to Makkah?",
+        question: "Can we go to Makkah straight from the airport?",
         answer:
-          "Yes. The road journey is roughly 450 km and takes about four and a half to five hours. Tell us if you need a stop on the way, for example at the miqat.",
+          "Yes. It is about 450 km and four and a half to five hours without stops. Tell us if you want a miqat stop.",
       },
       {
-        question: "Can I add Ziyarat to my airport transfer?",
+        question: "Can we visit Quba or Uhud before checking in?",
         answer:
-          "Yes. Madinah Ziyarat commonly includes places such as Quba Mosque, Masjid Qiblatain and Mount Uhud. Mention this when you book and we will plan the timing with you.",
+          "Yes. Tell us which places and we will plan the order. The driver waits while you visit.",
       },
       {
-        question: "Do you cover late-night arrivals at Madinah Airport?",
+        question: "Does it matter which prayer time we arrive at?",
         answer:
-          "Yes, our booking line is available 24 hours a day. Share your flight number and message us if your flight is delayed.",
+          "The streets near the mosque are busy around the congregational prayers, most of all the Friday prayer. We can suggest a check-in time that avoids them.",
       },
       {
-        question: "How do I get a price for a Madinah airport transfer?",
-        answer: quoteAnswer,
+        question: "What if my flight is delayed?",
+        answer:
+          "Message us. We take bookings all day and night and will adjust the pickup.",
+      },
+      {
+        question: "How is the price decided?",
+        answer:
+          "It depends on where you are going, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
     ],
   },
@@ -191,39 +281,61 @@ export const airportPages: AirportPage[] = [
     locationSlug: "taif",
     metaTitle: "Taif Airport Taxi & Transfers (TIF)",
     metaDescription:
-      "Private taxi from Taif International Airport (TIF) to Taif hotels and onward to Makkah and Jeddah. Book pickup or drop-off 24/7 with Al Safa Taxi.",
+      "Private pickups and drop-offs at Taif Airport (TIF) for Taif hotels and resorts, and the mountain road down to Makkah or Jeddah. Send your flight number.",
     h1: "Taif Airport Taxi & Private Transfers (TIF)",
     heroDescription:
       "Private pickups and drop-offs at Taif International Airport, with onward travel to Makkah and Jeddah.",
     intro:
-      "Taif International Airport (TIF) serves the highland city of Taif, in the mountains east of Makkah. Al Safa Taxi arranges private transfers from the airport into Taif, and onward to Makkah and Jeddah.",
+      "Taif International Airport (TIF) serves the highland city of Taif, up in the Sarawat mountains east of Makkah. Visitors using it are usually going to Taif itself, for the cool weather, or going down to Makkah. It is a smaller airport than Jeddah, so it is worth checking that your route has a flight here. This page covers pickups, drop-offs and what the mountain roads mean for planning.",
     facts: [
       { label: "Airport code", value: "TIF" },
-      { label: "Makkah", value: "Roughly 90 km, about 1.5 hours depending on route and traffic" },
-      { label: "Jeddah", value: "Roughly 2 to 2.5 hours by road" },
+      { label: "Makkah", value: "Roughly 100 km, about 1.5 to 2 hours depending on route and traffic" },
+      { label: "Jeddah", value: "Roughly 170 km, about 2 to 2.5 hours by road" },
       { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
-        heading: "Transfers into Taif",
+        heading: "Arriving in Taif",
         paragraphs: [
-          "Taif sits at a much higher elevation than Makkah or Jeddah, so the climate is noticeably cooler, especially in the summer months. That makes it a popular destination for residents of the coast and the Holy Cities looking for a break. We arrange airport pickups to Taif hotels, resorts and private addresses.",
+          "Taif is much cooler than Makkah or Jeddah, especially in summer, which is why many Gulf and Saudi visitors come. Hotels and resorts can be some distance from the main roads, so give us the hotel name and, if you have it, a location pin. The pickup is arranged around your flight number.",
+          "In summer and on school holidays the city and the roads up to it are busy. Book early for those dates.",
+        ],
+        subsections: [
+          {
+            heading: "What to see near Taif",
+            paragraphs: [
+              "If you want a driver for a day, the places people ask for most are Al Hada and its views, Al Shafa, Shubra Palace and the rose farms in spring. See [Taif taxi service](/locations/taif) for getting around the city.",
+            ],
+          },
+        ],
+        cta: true,
+      },
+      {
+        heading: "Down to Makkah",
+        paragraphs: [
+          "The road to Makkah drops from the highlands through steep, winding sections. It is about 100 km and takes one and a half to two hours. If you are going for Umrah, travellers on this road commonly stop at Qarn al-Manazil (As-Sayl al-Kabir) to enter ihram, and we can plan the stop. See [Taif Airport to Makkah](/routes/taif-airport-to-makkah) for the whole journey.",
         ],
       },
       {
-        heading: "Taif to Makkah and Jeddah",
+        heading: "Down to Jeddah",
         paragraphs: [
-          "The road between Taif and Makkah crosses the Sarawat mountains and includes steep, winding sections, so a calm, experienced driver matters, particularly for families and older passengers. If you are heading to Makkah for Umrah, ask us about a stop at the miqat on the Taif road (Qarn al-Manazil, also known as As-Sayl al-Kabir).",
-          "Onward journeys to Jeddah are also available if you are connecting to another flight or continuing to the coast.",
+          "Travellers connecting to flights or going to the coast can go to Jeddah, about 170 km and two to two and a half hours away. Allow a generous buffer if you have a flight. See [Taif to Jeddah](/routes/taif-to-jeddah) and the [Jeddah Airport](/airports/jeddah-airport) page.",
         ],
       },
       {
-        heading: "Booking checklist",
-        paragraphs: ["To arrange your Taif airport transfer, please share:"],
+        heading: "Departures from Taif",
+        paragraphs: [
+          "Give us the flight number, the time and your hotel. Allow for your airline's check-in rules and for the road from your hotel to the airport, which may include mountain driving.",
+        ],
+      },
+      {
+        heading: "What to send when you book",
+        paragraphs: ["To arrange your transfer, please share:"],
         bullets: [
-          "Flight number, arrival date and time",
+          "Flight number, date and arrival time",
           "Number of passengers and pieces of luggage",
-          "Hotel or address in Taif, or your onward destination",
+          "Hotel, resort or address in Taif, or your onward destination",
+          "Whether you need a stop at the miqat on the way to Makkah",
         ],
       },
     ],
@@ -236,26 +348,32 @@ export const airportPages: AirportPage[] = [
     faqs: [
       {
         question: "Which airport serves Taif?",
-        answer: "Taif is served by Taif International Airport (TIF).",
+        answer: "Taif International Airport (TIF).",
       },
       {
-        question: "How far is Taif from Makkah?",
+        question: "Is the road to Makkah steep?",
         answer:
-          "Roughly 90 km by road, which is about one and a half hours depending on the route you take and the traffic.",
+          "It descends through mountains with winding sections. A calm driver and a break help. Tell us if anyone gets car sick.",
       },
       {
-        question: "Can you take us from Taif Airport to Jeddah?",
+        question: "Can we stop at the miqat on the way to Makkah?",
         answer:
-          "Yes. The journey by road usually takes around two to two and a half hours. Tell us if you are connecting to a flight so we can plan the timing.",
+          "Yes. Travellers on the Taif road commonly stop at Qarn al-Manazil (As-Sayl al-Kabir). Tell us when you book and we will plan it.",
       },
       {
-        question: "Do you offer airport drop-offs in Taif?",
+        question: "Do you serve Taif resorts?",
         answer:
-          "Yes. Book your pickup from your hotel or address, and we will schedule it to give you time to reach the airport comfortably. Bookings are taken 24 hours a day.",
+          "Yes. Give us the resort name and a location pin if you have one.",
       },
       {
-        question: "How much does a Taif airport transfer cost?",
-        answer: quoteAnswer,
+        question: "Can you take us to Jeddah for a connecting flight?",
+        answer:
+          "Yes. It is about two to two and a half hours. Tell us your flight and we will help you choose a pickup time with a buffer.",
+      },
+      {
+        question: "How is the price decided?",
+        answer:
+          "It depends on the destination, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
     ],
   },

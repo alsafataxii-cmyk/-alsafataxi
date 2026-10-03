@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   if (!page) return {};
 
   return pageMetadata({
-    title: `${page.from} to ${page.to} Taxi: Private Transfer`,
+    title: `${page.from} to ${page.to} Taxi | Private Transfer`,
     description: page.metaDescription,
     path: `/routes/${slug}`,
   });

@@ -8,6 +8,7 @@ import CTASection from "@/components/ui/CTASection";
 import Button from "@/components/ui/Button";
 import JsonLd from "@/components/ui/JsonLd";
 import { siteConfig } from "@/lib/site-config";
+import { webPageSchema } from "@/lib/schema";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 type DetailPageProps = {
@@ -47,6 +48,7 @@ export default function DetailPage({
 }: DetailPageProps) {
   return (
     <>
+      <JsonLd data={webPageSchema({ name: h1, description: heroDescription, path })} />
       {schema ? <JsonLd data={schema} /> : null}
       <PageHero eyebrow={eyebrow} title={h1} description={heroDescription} />
       <Breadcrumbs items={breadcrumbs} />
@@ -54,7 +56,7 @@ export default function DetailPage({
       <section className="bg-white">
         <div className="mx-auto grid max-w-8xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-3 lg:px-8">
           <article className="lg:col-span-2">
-            <ContentBlocks intro={intro} sections={sections} path={path} />
+            <ContentBlocks intro={intro} sections={sections} />
           </article>
 
           <aside className="flex flex-col gap-6 lg:sticky lg:top-28 lg:self-start">

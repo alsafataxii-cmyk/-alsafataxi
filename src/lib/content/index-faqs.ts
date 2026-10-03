@@ -55,7 +55,7 @@ export const fleetFaqs: Faq[] = [
   {
     question: "How much luggage can I bring?",
     answer:
-      "It depends on the vehicle. Tell us how many bags you have and we will match a vehicle with enough room.",
+      "The Executive Sedan and the VIP Chauffeur Car each take three passengers and two bags, the Premium SUV five passengers and four bags, and the Luxury Van eight passengers and six bags. Bags vary in size, so tell us what you are carrying and we will confirm the vehicle.",
   },
 ];
 

@@ -1,0 +1,139 @@
+// Crawls the built HTML (.next/server/app) and writes seo/content-matrix.md.
+// Run after `next build`: node scripts/audit.mjs
+import { readFileSync, readdirSync, statSync, existsSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
+const root = new URL("..", import.meta.url).pathname;
+const base = join(root, ".next/server/app");
+const locks = JSON.parse(readFileSync(join(root, "seo/locks.json"), "utf8"));
+
+const strip = (s) =>
+  s
+    .replace(/<script[\s\S]*?<\/script>/g, " ")
+    .replace(/<style[\s\S]*?<\/style>/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#x27;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s+/g, " ")
+    .trim();
+
+function walk(dir) {
+  return readdirSync(dir).flatMap((f) => {
+    const p = join(dir, f);
+    return statSync(p).isDirectory() ? walk(p) : p.endsWith(".html") ? [p] : [];
+  });
+}
+
+const pages = {};
+for (const file of walk(base)) {
+  const rel = file.slice(base.length, -5);
+  if (rel.includes("_not-found") || rel.includes("_global")) continue;
+  const url = rel === "/index" ? "/" : rel;
+  const html = readFileSync(file, "utf8");
+  const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "";
+  const article = main.match(/<article[\s\S]*?<\/article>/)?.[0] ?? main;
+  const headings = [...main.matchAll(/<h([1-6])[^>]*>([\s\S]*?)<\/h\1>/g)].map((m) => ({
+    level: Number(m[1]),
+    text: strip(m[2]),
+  }));
+  const ld = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(
+    (m) => {
+      try {
+        const j = JSON.parse(m[1].replace(/\\u003c/g, "<"));
+        return Array.isArray(j) ? j : [j];
+      } catch {
+        return [];
+      }
+    },
+  );
+  const links = [...main.matchAll(/<a [^>]*href="(\/[^"#?]*)/g)].map((m) => m[1]);
+  const bodyLinks = [...article.matchAll(/<a [^>]*href="(\/[^"#?]*)/g)].map((m) => m[1]);
+  pages[url] = {
+    title: strip(html.match(/<title>(.*?)<\/title>/s)?.[1] ?? ""),
+    desc: strip(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? ""),
+    canonical: html.match(/<link rel="canonical" href="([^"]*)"/)?.[1] ?? "",
+    robots: html.match(/<meta name="robots" content="([^"]*)"/)?.[1] ?? "",
+    headings,
+    h1: headings.filter((h) => h.level === 1).map((h) => h.text),
+    words: strip(article).split(" ").length,
+    text: strip(article),
+    links,
+    bodyLinks,
+    ld,
+    imgs: [...html.matchAll(/<img [^>]*>/g)].map((m) => m[0]),
+    faqVisible: (main.match(/<details/g) ?? []).length,
+  };
+}
+
+const known = new Set(Object.keys(pages));
+const issues = [];
+const inbound = Object.fromEntries([...known].map((u) => [u, new Set()]));
+for (const [url, p] of Object.entries(pages)) {
+  for (const l of new Set(p.links)) {
+    const target = l.length > 1 ? l.replace(/\/$/, "") : l;
+    if (!known.has(target) && !existsSync(join(root, "public", target)) && !/^\/(icon|apple-icon|brand|sitemap|robots)/.test(target))
+      issues.push(`BROKEN LINK ${url} -> ${l}`);
+    if (known.has(target) && target !== url) inbound[target].add(url);
+  }
+}
+
+// Heading hierarchy
+for (const [url, p] of Object.entries(pages)) {
+  if (p.h1.length !== 1) issues.push(`H1 COUNT ${url}: ${p.h1.length}`);
+  let prev = 0;
+  for (const h of p.headings) {
+    if (prev && h.level > prev + 1) issues.push(`HEADING JUMP ${url}: h${prev} -> h${h.level} "${h.text}"`);
+    prev = h.level;
+  }
+}
+
+// Duplicate metadata
+const descCount = {};
+for (const [url, p] of Object.entries(pages)) (descCount[p.desc] ??= []).push(url);
+for (const [d, urls] of Object.entries(descCount)) if (urls.length > 1) issues.push(`DUPLICATE DESCRIPTION ${urls.join(", ")}`);
+
+// Near-duplicate body text within a page group
+const group = (u) => (u.startsWith("/routes/") ? "route" : u.startsWith("/services/") ? "service" : u.startsWith("/locations/") ? "location" : u.startsWith("/airports/") ? "airport" : null);
+const shingles = (t) => {
+  const w = t.toLowerCase().replace(/[^a-z0-9 ]/g, "").split(" ");
+  const s = new Set();
+  for (let i = 0; i + 6 <= w.length; i++) s.add(w.slice(i, i + 6).join(" "));
+  return s;
+};
+const sims = [];
+const urls = Object.keys(pages).filter(group);
+for (let i = 0; i < urls.length; i++)
+  for (let j = i + 1; j < urls.length; j++) {
+    if (group(urls[i]) !== group(urls[j])) continue;
+    const a = shingles(pages[urls[i]].text), b = shingles(pages[urls[j]].text);
+    let inter = 0;
+    for (const x of a) if (b.has(x)) inter++;
+    const sim = inter / Math.min(a.size, b.size);
+    sims.push({ a: urls[i], b: urls[j], sim });
+  }
+sims.sort((x, y) => y.sim - x.sim);
+
+// Locks
+for (const [url, lock] of Object.entries(locks)) {
+  const p = pages[url];
+  if (!p) issues.push(`MISSING PAGE ${url}`);
+  else {
+    if (p.title !== lock.title) issues.push(`TITLE CHANGED ${url}`);
+    if (p.h1[0] !== lock.h1) issues.push(`H1 CHANGED ${url}`);
+  }
+}
+
+const types = (p) => [...new Set(p.ld.map((x) => x["@type"]))].join(", ");
+let md = "# Content matrix\n\nGenerated by `node scripts/audit.mjs` after `next build`.\n\n";
+md += "| URL | Words | H2/H3 | Body links | Inbound | Desc len | FAQ | Schema | Lock |\n|---|---|---|---|---|---|---|---|---|\n";
+for (const url of Object.keys(pages).sort()) {
+  const p = pages[url];
+  const lockOk = !locks[url] || (locks[url].title === p.title && locks[url].h1 === p.h1[0]);
+  md += `| ${url} | ${p.words} | ${p.headings.filter((h) => h.level === 2).length}/${p.headings.filter((h) => h.level === 3).length} | ${new Set(p.bodyLinks).size} | ${inbound[url]?.size ?? 0} | ${p.desc.length} | ${p.faqVisible} | ${types(p)} | ${lockOk ? "ok" : "CHANGED"} |\n`;
+}
+md += "\n## Most similar page pairs (6-word shingle overlap, same page type)\n\n";
+for (const s of sims.slice(0, 10)) md += `- ${(s.sim * 100).toFixed(1)}%: ${s.a} vs ${s.b}\n`;
+md += `\n## Issues (${issues.length})\n\n${issues.length ? issues.map((i) => `- ${i}`).join("\n") : "None."}\n`;
+writeFileSync(join(root, "seo/content-matrix.md"), md);
+console.log(md);

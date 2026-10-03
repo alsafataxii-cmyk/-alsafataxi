@@ -1,0 +1,158 @@
+{
+ "/about": {
+  "title": "About Our Private Taxi & Transfer Service | Al Safa Taxi",
+  "h1": "Private Transportation, Built on Trust"
+ },
+ "/airports": {
+  "title": "Saudi Airport Transfers | Jeddah, Madinah & Taif | Al Safa Taxi",
+  "h1": "Punctual Transfers at Jeddah, Madinah & Taif Airports"
+ },
+ "/airports/jeddah-airport": {
+  "title": "Jeddah Airport Taxi & Transfers (JED) | Al Safa Taxi",
+  "h1": "Jeddah Airport Taxi & Private Transfers (JED)"
+ },
+ "/airports/madinah-airport": {
+  "title": "Madinah Airport Taxi & Transfers (MED) | Al Safa Taxi",
+  "h1": "Madinah Airport Taxi & Private Transfers (MED)"
+ },
+ "/airports/taif-airport": {
+  "title": "Taif Airport Taxi & Transfers (TIF) | Al Safa Taxi",
+  "h1": "Taif Airport Taxi & Private Transfers (TIF)"
+ },
+ "/book": {
+  "title": "Book a Taxi in Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "Book a Taxi in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/contact": {
+  "title": "Contact Us: Call or WhatsApp to Book a Taxi | Al Safa Taxi",
+  "h1": "We're Available Around the Clock"
+ },
+ "/fleet": {
+  "title": "Taxi Fleet: Sedans, SUVs & Vans | Al Safa Taxi",
+  "h1": "Our Taxi Fleet: Sedans, SUVs & Vans for Every Journey"
+ },
+ "/": {
+  "title": "Taxi Service in Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "Reliable Taxi & Private Transportation Across Makkah, Madinah, Jeddah & Taif"
+ },
+ "/locations": {
+  "title": "Taxi Locations: Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "Cities & Airports We Serve"
+ },
+ "/locations/jeddah": {
+  "title": "Jeddah Taxi Service | Airport & Private Transfers | Al Safa Taxi",
+  "h1": "Jeddah Taxi Service: Private Taxi & Airport Transfers"
+ },
+ "/locations/madinah": {
+  "title": "Madinah Taxi Service | Airport & Private Transfers | Al Safa Taxi",
+  "h1": "Madinah Taxi Service: Private Taxi, Airport Transfers & Ziyarat"
+ },
+ "/locations/makkah": {
+  "title": "Makkah Taxi Service | Private Taxi & Transfers | Al Safa Taxi",
+  "h1": "Makkah Taxi Service: Private Taxi, Umrah & Ziyarat Transfers"
+ },
+ "/locations/taif": {
+  "title": "Taif Taxi Service | Airport & Private Transfers | Al Safa Taxi",
+  "h1": "Taif Taxi Service: Private Taxi & Airport Transfers"
+ },
+ "/routes": {
+  "title": "Taxi Routes: Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "Taxi Routes Between Makkah, Madinah, Jeddah & Taif"
+ },
+ "/routes/jeddah-airport-to-madinah": {
+  "title": "Jeddah Airport to Madinah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Jeddah Airport to Madinah Taxi"
+ },
+ "/routes/jeddah-airport-to-makkah": {
+  "title": "Jeddah Airport to Makkah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Jeddah Airport to Makkah Taxi"
+ },
+ "/routes/jeddah-to-madinah": {
+  "title": "Jeddah to Madinah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Jeddah to Madinah Taxi"
+ },
+ "/routes/jeddah-to-makkah": {
+  "title": "Jeddah to Makkah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Jeddah to Makkah Taxi"
+ },
+ "/routes/jeddah-to-taif": {
+  "title": "Jeddah to Taif Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Jeddah to Taif Taxi"
+ },
+ "/routes/madinah-airport-to-makkah": {
+  "title": "Madinah Airport to Makkah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Madinah Airport to Makkah Taxi"
+ },
+ "/routes/madinah-to-jeddah": {
+  "title": "Madinah to Jeddah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Madinah to Jeddah Taxi"
+ },
+ "/routes/madinah-to-makkah": {
+  "title": "Madinah to Makkah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Madinah to Makkah Taxi"
+ },
+ "/routes/makkah-to-jeddah-airport": {
+  "title": "Makkah to Jeddah Airport Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Makkah to Jeddah Airport Taxi"
+ },
+ "/routes/makkah-to-jeddah": {
+  "title": "Makkah to Jeddah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Makkah to Jeddah Taxi"
+ },
+ "/routes/makkah-to-madinah": {
+  "title": "Makkah to Madinah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Makkah to Madinah Taxi"
+ },
+ "/routes/makkah-to-taif": {
+  "title": "Makkah to Taif Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Makkah to Taif Taxi"
+ },
+ "/routes/taif-airport-to-makkah": {
+  "title": "Taif Airport to Makkah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Taif Airport to Makkah Taxi"
+ },
+ "/routes/taif-to-jeddah": {
+  "title": "Taif to Jeddah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Taif to Jeddah Taxi"
+ },
+ "/routes/taif-to-makkah": {
+  "title": "Taif to Makkah Taxi | Private Transfer | Al Safa Taxi",
+  "h1": "Taif to Makkah Taxi"
+ },
+ "/services": {
+  "title": "Taxi Services in Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "Taxi & Private Transportation Services in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/services/airport-transfers": {
+  "title": "Airport Transfers in Jeddah, Madinah & Taif | Al Safa Taxi",
+  "h1": "Private Airport Transfers in Jeddah, Madinah & Taif"
+ },
+ "/services/business-transportation": {
+  "title": "Corporate Taxi in Makkah, Madinah & Jeddah | Al Safa Taxi",
+  "h1": "Business & Corporate Transportation in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/services/city-taxi": {
+  "title": "City Taxi in Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "City Taxi Service in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/services/hotel-transfers": {
+  "title": "Hotel Transfers in Makkah, Madinah & Jeddah | Al Safa Taxi",
+  "h1": "Hotel Transfers in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/services/intercity-transfers": {
+  "title": "Intercity Taxi: Makkah, Madinah, Jeddah & Taif | Al Safa Taxi",
+  "h1": "Intercity Transfers Between Makkah, Madinah, Jeddah & Taif"
+ },
+ "/services/private-chauffeur": {
+  "title": "Private Chauffeur in Makkah, Madinah & Jeddah | Al Safa Taxi",
+  "h1": "Private Chauffeur Service in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/services/ziyarat-tours": {
+  "title": "Ziyarat Tours in Makkah & Madinah | Al Safa Taxi",
+  "h1": "Ziyarat Tours in Makkah & Madinah by Private Taxi"
+ },
+ "/umrah-transportation": {
+  "title": "Umrah Transportation in Makkah & Madinah | Al Safa Taxi",
+  "h1": "Umrah Transportation in Makkah, Madinah, Jeddah & Taif"
+ }
+}

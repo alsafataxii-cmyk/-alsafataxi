@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Al Safa Taxi: Private Transfers",
+  title: "About Our Private Taxi & Transfer Service",
   description:
     "Al Safa Taxi provides private taxi, airport transfer, Umrah and Ziyarat transportation across Makkah, Madinah, Jeddah and Taif.",
   path: "/about",
@@ -108,6 +108,43 @@ export default function AboutPage() {
               </Link>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-8xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="flex flex-col gap-4">
+            <SectionHeading eyebrow="Booking" title="How a Booking Works" />
+            <ol className="mt-4 flex list-decimal flex-col gap-3 pl-5 text-base leading-relaxed text-brand-dark/70">
+              <li>
+                You send the pickup, the destination, the date and time, the number of passengers
+                and bags, and the flight number if it is an airport pickup.
+              </li>
+              <li>We reply with the vehicle that fits and the price, before you travel.</li>
+              <li>
+                Your driver meets you at the agreed time and place. If your plans change, message
+                us on WhatsApp or call.
+              </li>
+            </ol>
+          </div>
+          <div className="flex flex-col gap-4">
+            <SectionHeading eyebrow="Good to Know" title="What We Can and Cannot Promise" />
+            <ul className="mt-4 flex flex-col gap-3 text-base leading-relaxed text-brand-dark/70">
+              <li>
+                We arrange transport. For questions about the rites of Umrah, follow your group
+                leader or a qualified scholar.
+              </li>
+              <li>
+                Journey times are estimates. Traffic, prayer times, Fridays and the Umrah and Hajj
+                seasons change them.
+              </li>
+              <li>
+                Vehicle access near the Masjid al-Haram and Al-Masjid an-Nabawi is restricted and
+                changes with the crowds, so the drop-off may be a short walk from your hotel.
+              </li>
+              <li>Entry to Makkah is restricted to Muslims.</li>
+            </ul>
+          </div>
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import { Plus } from "lucide-react";
 import JsonLd from "@/components/ui/JsonLd";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { faqSchema } from "@/lib/schema";
+import { RichText } from "@/lib/content/rich-text";
 import type { Faq } from "@/lib/content/types";
 
 type FaqSectionProps = {
@@ -32,7 +33,8 @@ export default function FaqSection({
                   aria-hidden="true"
                 />
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-brand-dark/70">{faq.answer}</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-dark/70"><RichText text={faq.answer} />
+              </p>
             </details>
           ))}
         </div>

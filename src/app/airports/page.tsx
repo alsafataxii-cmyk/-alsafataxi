@@ -14,7 +14,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Airport Transfers: Jeddah, Madinah & Taif",
+  title: "Saudi Airport Transfers | Jeddah, Madinah & Taif",
   description:
     "Private airport transfers at Jeddah (JED), Madinah (MED) and Taif (TIF) airports, with onward travel to Makkah and Madinah hotels. Book 24/7.",
   path: "/airports",

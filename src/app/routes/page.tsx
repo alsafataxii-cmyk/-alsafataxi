@@ -13,7 +13,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Taxi Routes: Makkah, Madinah, Jeddah, Taif",
+  title: "Taxi Routes: Makkah, Madinah, Jeddah & Taif",
   description:
     "Private taxi routes between Makkah, Madinah, Jeddah, Taif and Jeddah Airport, with distances, journey times and booking information. Al Safa Taxi, 24/7.",
   path: "/routes",

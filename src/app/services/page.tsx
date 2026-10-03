@@ -13,7 +13,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Taxi & Transfer Services in Saudi Arabia",
+  title: "Taxi Services in Makkah, Madinah, Jeddah & Taif",
   description:
     "Airport transfers, Ziyarat tours, city taxi, intercity, chauffeur, hotel and business transportation in Makkah, Madinah, Jeddah and Taif. Book 24/7.",
   path: "/services",

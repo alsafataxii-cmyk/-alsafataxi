@@ -1,6 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 import { services, umrahService } from "@/lib/data";
 import type { Faq } from "@/lib/content/types";
+import { stripLinks } from "@/lib/content/rich-text";
 
 export function absoluteUrl(path: string) {
   return `${siteConfig.url}${path === "/" ? "" : path}`;
@@ -30,17 +31,11 @@ export function localBusinessSchema() {
       addressRegion: "Makkah Province",
       addressCountry: "SA",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 21.4858,
-      longitude: 39.1925,
-    },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "reservations",
       telephone: siteConfig.phoneHref.replace("tel:", ""),
       email: siteConfig.email,
-      availableLanguage: ["English", "Arabic"],
     },
     areaServed: serviceAreas,
     openingHoursSpecification: {
@@ -83,6 +78,27 @@ export function websiteSchema() {
   };
 }
 
+export function webPageSchema({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description,
+    url: absoluteUrl(path),
+    inLanguage: "en",
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+    about: { "@id": `${siteConfig.url}/#business` },
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; href: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -105,7 +121,7 @@ export function faqSchema(faqs: Faq[]) {
       name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer,
+        text: stripLinks(faq.answer),
       },
     })),
   };

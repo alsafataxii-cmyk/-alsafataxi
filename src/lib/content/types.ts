@@ -3,10 +3,19 @@ export type Faq = {
   answer: string;
 };
 
+export type ContentSubsection = {
+  heading: string;
+  paragraphs: string[];
+  bullets?: string[];
+};
+
 export type ContentSection = {
   heading: string;
   paragraphs: string[];
   bullets?: string[];
+  subsections?: ContentSubsection[];
+  // Show a short book / WhatsApp / call prompt after this section.
+  cta?: boolean;
 };
 
 export type Fact = {

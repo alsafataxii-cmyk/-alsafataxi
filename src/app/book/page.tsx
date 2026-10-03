@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Book a Taxi: Makkah, Madinah, Jeddah, Taif",
+  title: "Book a Taxi in Makkah, Madinah, Jeddah & Taif",
   description:
     "Book a private taxi online, by phone or WhatsApp. Airport transfers, Umrah and Ziyarat transportation, city taxi and intercity travel, available 24/7.",
   path: "/book",

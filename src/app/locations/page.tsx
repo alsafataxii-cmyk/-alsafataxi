@@ -13,9 +13,9 @@ import JsonLd from "@/components/ui/JsonLd";
 import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Taxi Service Areas: Makkah to Taif",
+  title: "Taxi Locations: Makkah, Madinah, Jeddah & Taif",
   description:
-    "Al Safa Taxi serves Makkah, Madinah, Jeddah and Taif, plus Jeddah (JED), Madinah (MED) and Taif (TIF) airports. Choose your city for taxi and transfer details.",
+    "Al Safa Taxi serves Makkah, Madinah, Jeddah and Taif and the Jeddah (JED), Madinah (MED) and Taif (TIF) airports. Choose your city for details.",
   path: "/locations",
 });
 
