@@ -26,7 +26,7 @@ export default function CTASection({
       </div>
 
       <div className="relative mx-auto flex max-w-8xl flex-col items-start gap-8 px-4 py-20 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div className="flex max-w-xl flex-col gap-4">
+        <div data-reveal className="flex max-w-xl flex-col gap-4">
           <span className="inline-flex w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-brand-gold">
             <span className="h-px w-8 bg-brand-gold" aria-hidden="true" />
             {eyebrow}
@@ -37,7 +37,7 @@ export default function CTASection({
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div data-reveal className="flex flex-col gap-4 sm:flex-row">
           <Button href={primaryHref} variant="gold" size="lg">
             {primaryLabel}
           </Button>

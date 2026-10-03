@@ -38,7 +38,7 @@ type ButtonAsButton = BaseProps & {
 type ButtonProps = ButtonAsLink | ButtonAsButton;
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 font-semibold tracking-wide transition-colors duration-200 whitespace-nowrap";
+  "btn-motion inline-flex items-center justify-center gap-2 font-semibold tracking-wide transition-colors duration-200 whitespace-nowrap";
 
 export default function Button({
   variant = "primary",

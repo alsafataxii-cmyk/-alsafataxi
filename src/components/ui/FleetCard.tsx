@@ -9,9 +9,17 @@ export default function FleetCard({ vehicle }: FleetCardProps) {
   const Icon = vehicle.icon;
 
   return (
-    <div id={vehicle.slug} className="flex flex-col border border-brand-gray bg-white scroll-mt-28">
+    <div
+      id={vehicle.slug}
+      data-reveal
+      className="card-lift group flex flex-col border border-brand-gray bg-white scroll-mt-28 hover:border-brand-gold"
+    >
       <div className="flex items-center justify-center bg-brand-dark py-14">
-        <Icon className="h-20 w-20 text-brand-gold" strokeWidth={1.25} aria-hidden="true" />
+        <Icon
+          className="h-20 w-20 text-brand-gold transition-transform duration-500 group-hover:scale-110"
+          strokeWidth={1.25}
+          aria-hidden="true"
+        />
       </div>
 
       <div className="flex flex-1 flex-col gap-4 p-7">

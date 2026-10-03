@@ -11,7 +11,7 @@ export default function ProcessSteps({ steps }: ProcessStepsProps) {
   return (
     <ol className="grid grid-cols-1 gap-8 sm:grid-cols-3">
       {steps.map((step, index) => (
-        <li key={step.title} className="flex flex-col gap-3">
+        <li key={step.title} data-reveal className="flex flex-col gap-3">
           <span className="text-4xl font-bold text-brand-gold">
             {String(index + 1).padStart(2, "0")}
           </span>

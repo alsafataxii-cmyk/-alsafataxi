@@ -38,7 +38,8 @@ export default function Routes() {
             <Link
               key={link.href}
               href={link.href}
-              className="group flex items-start justify-between gap-4 border border-brand-gray bg-white p-6 transition-colors hover:border-brand-gold"
+              data-reveal
+              className="card-lift group flex items-start justify-between gap-4 border border-brand-gray bg-white p-6 hover:border-brand-gold"
             >
               <span>
                 <span className="block font-semibold text-brand-dark">{link.label}</span>

@@ -17,7 +17,8 @@ export default function HomeCities() {
           {locationPages.map((location) => (
             <div
               key={location.slug}
-              className="group flex flex-col gap-4 border border-brand-gray p-8 transition-colors hover:border-brand-gold"
+              data-reveal
+              className="card-lift group flex flex-col gap-4 border border-brand-gray p-8 hover:border-brand-gold"
             >
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
                 {location.tagline}

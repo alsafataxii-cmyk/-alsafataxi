@@ -31,7 +31,8 @@ export default function RelatedLinks({ groups }: RelatedLinksProps) {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="group flex items-start justify-between gap-3 border border-brand-gray bg-white p-4 transition-colors hover:border-brand-gold"
+                      data-reveal
+                      className="card-lift group flex items-start justify-between gap-3 border border-brand-gray bg-white p-4 hover:border-brand-gold"
                     >
                       <span>
                         <span className="block text-sm font-semibold text-brand-dark">

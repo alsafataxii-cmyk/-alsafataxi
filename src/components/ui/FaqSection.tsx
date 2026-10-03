@@ -22,7 +22,7 @@ export default function FaqSection({
       <JsonLd data={faqSchema(faqs)} />
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading eyebrow={eyebrow} title={title} align="center" />
-        <div className="mt-12 divide-y divide-brand-gray border-y border-brand-gray">
+        <div data-reveal className="mt-12 divide-y divide-brand-gray border-y border-brand-gray">
           {faqs.map((faq) => (
             <details key={faq.question} className="group py-5">
               <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">

@@ -21,7 +21,7 @@ export default function SectionHeading({
   const descriptionColor = tone === "dark" ? "text-brand-dark/70" : "text-white/75";
 
   return (
-    <div className={`flex flex-col gap-4 ${alignClasses} max-w-2xl`}>
+    <div data-reveal className={`flex flex-col gap-4 ${alignClasses} max-w-2xl`}>
       {eyebrow ? (
         <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
           <span className="h-px w-8 bg-brand-gold" aria-hidden="true" />

@@ -29,3 +29,158 @@
     color: var(--color-brand-dark);
   }
 }
+
+/*
+ * Motion. Everything below is gated behind prefers-reduced-motion and only hides content
+ * after ScrollReveal has run, so pages stay fully visible without JavaScript.
+ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-24px, 18px, 0) scale(1.08);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Page-load entrance. The h1 only moves (no opacity) so it is never hidden for LCP. */
+  .anim-fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  .anim-rise {
+    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  .anim-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .anim-drift {
+    animation: drift 14s ease-in-out infinite;
+  }
+
+  .anim-pulse-ring {
+    animation: pulse-ring 2.4s ease-out infinite;
+  }
+
+  .anim-line {
+    transform-origin: left;
+    animation: line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--delay, 200ms);
+  }
+
+  /* Scroll reveal */
+  [data-reveal] {
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+      translate 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.2s ease,
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  [data-reveal]:nth-child(2) {
+    --d: 80ms;
+  }
+  [data-reveal]:nth-child(3) {
+    --d: 160ms;
+  }
+  [data-reveal]:nth-child(4) {
+    --d: 240ms;
+  }
+  [data-reveal]:nth-child(5) {
+    --d: 320ms;
+  }
+  [data-reveal]:nth-child(n + 6) {
+    --d: 400ms;
+  }
+
+  html.reveal-ready [data-reveal]:not(.is-visible) {
+    opacity: 0;
+    translate: 0 24px;
+  }
+
+  /* Hover lift for cards */
+  .card-lift {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.2s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -18px rgba(15, 47, 35, 0.35);
+  }
+
+  .btn-motion:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-motion:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+@media print {
+  [data-reveal] {
+    opacity: 1 !important;
+    translate: none !important;
+  }
+}

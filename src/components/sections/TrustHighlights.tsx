@@ -8,8 +8,8 @@ export default function TrustHighlights() {
           {trustHighlights.map((item) => {
             const Icon = item.icon;
             return (
-              <li key={item.title} className="flex flex-col items-center gap-3 text-center">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+              <li key={item.title} data-reveal className="group flex flex-col items-center gap-3 text-center">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-white">
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <span className="text-sm font-semibold text-brand-dark">{item.title}</span>

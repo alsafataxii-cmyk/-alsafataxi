@@ -32,7 +32,7 @@ export default function FloatingContact() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Chat with ${siteConfig.name} on WhatsApp (opens in a new tab)`}
-        className={`inline-flex h-14 w-14 items-center justify-center gap-2.5 rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 md:w-auto md:px-6 ${focusClasses}`}
+        className={`inline-flex h-14 w-14 items-center justify-center gap-2.5 anim-pulse-ring rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 md:w-auto md:px-6 ${focusClasses}`}
       >
         <WhatsAppGlyph className="h-7 w-7" />
         <span className="hidden text-sm font-semibold md:inline">Chat on WhatsApp</span>

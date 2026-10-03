@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingContact from "@/components/layout/FloatingContact";
+import ScrollReveal from "@/components/layout/ScrollReveal";
 import { siteConfig } from "@/lib/site-config";
 import JsonLd from "@/components/ui/JsonLd";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingContact />
+        <ScrollReveal />
       </body>
     </html>
   );

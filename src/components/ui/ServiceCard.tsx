@@ -13,8 +13,11 @@ export default function ServiceCard({ service, href, detailed = false }: Service
   const target = href ?? `/services/${service.slug}`;
 
   return (
-    <div className="group flex flex-col gap-5 border border-brand-gray bg-white p-8 transition-colors duration-200 hover:border-brand-gold">
-      <span className="inline-flex h-12 w-12 items-center justify-center bg-brand-primary text-white">
+    <div
+      data-reveal
+      className="card-lift group flex flex-col gap-5 border border-brand-gray bg-white p-8 hover:border-brand-gold"
+    >
+      <span className="inline-flex h-12 w-12 items-center justify-center bg-brand-primary text-white transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-brand-dark">
         <Icon className="h-6 w-6" aria-hidden="true" />
       </span>
 
@@ -34,7 +37,10 @@ export default function ServiceCard({ service, href, detailed = false }: Service
         className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-gold"
       >
         Explore {service.title}
-        <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+        <ArrowUpRight
+          className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          aria-hidden="true"
+        />
       </Link>
     </div>
   );

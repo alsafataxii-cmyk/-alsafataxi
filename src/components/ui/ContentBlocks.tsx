@@ -34,7 +34,7 @@ export default function ContentBlocks({ intro, sections, path }: ContentBlocksPr
       ) : null}
 
       {sections.map((section) => (
-        <section key={section.heading} className="flex flex-col gap-4">
+        <section key={section.heading} data-reveal className="flex flex-col gap-4">
           <h2 className="text-2xl font-bold text-brand-dark">{section.heading}</h2>
           {section.paragraphs.map((paragraph) => (
             <p key={paragraph} className="text-base leading-relaxed text-brand-dark/70">
