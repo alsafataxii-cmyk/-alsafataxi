@@ -23,11 +23,24 @@ export function localBusinessSchema() {
     image: `${siteConfig.url}/brand/og-image.png`,
     telephone: siteConfig.phoneHref.replace("tel:", ""),
     email: siteConfig.email,
-    sameAs: [siteConfig.trustpilotUrl],
+    sameAs: [siteConfig.trustpilotUrl, `https://wa.me/${siteConfig.whatsappNumber}`],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jeddah",
+      addressRegion: "Makkah Province",
       addressCountry: "SA",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 21.4858,
+      longitude: 39.1925,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "reservations",
+      telephone: siteConfig.phoneHref.replace("tel:", ""),
+      email: siteConfig.email,
+      availableLanguage: ["English", "Arabic"],
     },
     areaServed: serviceAreas,
     openingHoursSpecification: {
@@ -115,5 +128,35 @@ export function serviceSchema({ name, description, path, areas }: ServiceSchemaI
     serviceType: "Taxi and private transportation",
     provider: { "@id": `${siteConfig.url}/#business` },
     areaServed: areas ? areas.map((area) => ({ "@type": "City", name: area })) : serviceAreas,
+  };
+}
+
+export function collectionSchema({
+  name,
+  description,
+  path,
+  items,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  items: { name: string; href: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: absoluteUrl(path),
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(item.href),
+      })),
+    },
   };
 }

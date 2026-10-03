@@ -17,6 +17,7 @@ export default function UmrahTransportationPage() {
       eyebrow="Umrah Transportation"
       h1={umrahPage.h1}
       heroDescription={umrahPage.heroDescription}
+      path={"/umrah-transportation"}
       breadcrumbs={[{ label: "Umrah Transportation", href: "/umrah-transportation" }]}
       intro={umrahPage.intro}
       sections={umrahPage.sections}

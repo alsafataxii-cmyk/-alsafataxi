@@ -9,9 +9,11 @@ import FaqSection from "@/components/ui/FaqSection";
 import { locationsFaqs } from "@/lib/content/index-faqs";
 import { locations } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/ui/JsonLd";
+import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Taxi Locations: Makkah, Madinah, Jeddah & Taif",
+  title: "Taxi Service Areas: Makkah to Taif",
   description:
     "Al Safa Taxi serves Makkah, Madinah, Jeddah and Taif, plus Jeddah (JED), Madinah (MED) and Taif (TIF) airports. Choose your city for taxi and transfer details.",
   path: "/locations",
@@ -23,6 +25,14 @@ export default function LocationsPage() {
 
   return (
     <>
+      <JsonLd
+        data={collectionSchema({
+          name: "Taxi Service Areas",
+          description: "Private taxi service in Makkah, Madinah, Jeddah and Taif, plus their airports.",
+          path: "/locations",
+          items: [...cities, ...airports].map((item) => ({ name: item.name, href: item.href })),
+        })}
+      />
       <PageHero
         eyebrow="Where We Drive"
         title="Cities & Airports We Serve"

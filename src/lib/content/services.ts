@@ -23,7 +23,7 @@ const allLocations = ["makkah", "madinah", "jeddah", "taif"];
 export const servicePages: ServicePage[] = [
   {
     slug: "airport-transfers",
-    metaTitle: "Airport Transfers in Jeddah, Madinah & Taif",
+    metaTitle: "Airport Transfers: Jeddah, Madinah, Taif",
     metaDescription:
       "Private airport taxi and transfers at Jeddah, Madinah and Taif airports, with onward travel to Makkah and Madinah hotels. Book 24/7 with Al Safa Taxi.",
     h1: "Private Airport Transfers in Jeddah, Madinah & Taif",
@@ -190,7 +190,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "city-taxi",
-    metaTitle: "City Taxi in Makkah, Madinah, Jeddah & Taif",
+    metaTitle: "City Taxi: Makkah, Madinah, Jeddah, Taif",
     metaDescription:
       "Pre-booked city taxi service in Makkah, Madinah, Jeddah and Taif for hotels, shopping, appointments and everyday trips. Book 24/7 with Al Safa Taxi.",
     h1: "City Taxi Service in Makkah, Madinah, Jeddah & Taif",
@@ -252,7 +252,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "intercity-transfers",
-    metaTitle: "Intercity Taxi: Makkah, Madinah, Jeddah & Taif",
+    metaTitle: "Intercity Taxi: Makkah, Madinah & Jeddah",
     metaDescription:
       "Private intercity taxi between Makkah, Madinah, Jeddah and Taif. Comfortable long-distance transfers for families and groups with Al Safa Taxi, 24/7.",
     h1: "Intercity Transfers Between Makkah, Madinah, Jeddah & Taif",
@@ -332,7 +332,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "private-chauffeur",
-    metaTitle: "Private Chauffeur in Makkah, Madinah & Jeddah",
+    metaTitle: "Private Chauffeur: Makkah, Madinah, Jeddah",
     metaDescription:
       "Hire a private chauffeur in Makkah, Madinah, Jeddah or Taif by the hour or day for Ziyarat, family visits, business and multi-stop itineraries.",
     h1: "Private Chauffeur Service in Makkah, Madinah, Jeddah & Taif",
@@ -402,7 +402,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "hotel-transfers",
-    metaTitle: "Hotel Transfers in Makkah, Madinah & Jeddah",
+    metaTitle: "Hotel Transfers: Makkah, Madinah, Jeddah",
     metaDescription:
       "Private hotel transfers in Makkah, Madinah, Jeddah and Taif: airport pickups, hotel-to-hotel moves and departures. Book 24/7 with Al Safa Taxi.",
     h1: "Hotel Transfers in Makkah, Madinah, Jeddah & Taif",
@@ -471,7 +471,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "business-transportation",
-    metaTitle: "Corporate Taxi in Makkah, Madinah & Jeddah",
+    metaTitle: "Corporate Taxi: Makkah, Madinah, Jeddah",
     metaDescription:
       "Corporate and business transportation in Makkah, Madinah, Jeddah and Taif: executive transfers, delegations and events. Book with Al Safa Taxi, 24/7.",
     h1: "Business & Corporate Transportation in Makkah, Madinah, Jeddah & Taif",

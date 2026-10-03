@@ -39,6 +39,7 @@ export default async function LocationDetailPage({ params }: PageParams) {
       eyebrow={`${page.name} · ${page.tagline}`}
       h1={page.h1}
       heroDescription={page.heroDescription}
+      path={`/locations/${slug}`}
       breadcrumbs={[
         { label: "Locations", href: "/locations" },
         { label: page.name, href: `/locations/${slug}` },

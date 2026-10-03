@@ -40,6 +40,7 @@ export default async function ServiceDetailPage({ params }: PageParams) {
       eyebrow={service.title}
       h1={page.h1}
       heroDescription={page.heroDescription}
+      path={`/services/${slug}`}
       breadcrumbs={[
         { label: "Services", href: "/services" },
         { label: service.title, href: `/services/${slug}` },

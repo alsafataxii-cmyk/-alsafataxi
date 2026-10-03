@@ -545,7 +545,7 @@ export const routePages: RoutePage[] = [
     distance: "Roughly 420 km",
     duration: "About 4 to 4.5 hours",
     metaDescription:
-      "Private taxi from Madinah to Jeddah or Jeddah Airport, roughly 420 km and 4 to 4.5 hours. Book with Al Safa Taxi, 24/7.",
+      "Private taxi from Madinah to Jeddah or Jeddah Airport (JED), roughly 420 km and 4 to 4.5 hours. Flight-timed departures with Al Safa Taxi, 24/7.",
     h1: "Madinah to Jeddah Taxi",
     heroDescription:
       "Private rides from Madinah to Jeddah city or King Abdulaziz International Airport, timed around your flight or schedule.",
@@ -608,7 +608,7 @@ export const routePages: RoutePage[] = [
     distance: "Roughly 90 km",
     duration: "About 1.5 hours",
     metaDescription:
-      "Private taxi from Makkah to Taif, roughly 90 km and about 1.5 hours across the Sarawat mountains. Book with Al Safa Taxi, 24/7.",
+      "Private taxi from Makkah to Taif, roughly 90 km and about 1.5 hours across the Sarawat mountains. Hotel pickups and day trips with Al Safa Taxi, 24/7.",
     h1: "Makkah to Taif Taxi",
     heroDescription:
       "A private journey from Makkah up into the Taif highlands, for day trips or overnight stays.",
@@ -672,7 +672,7 @@ export const routePages: RoutePage[] = [
     distance: "Roughly 90 km",
     duration: "About 1.5 hours",
     metaDescription:
-      "Private taxi from Taif to Makkah, roughly 90 km with a planned miqat stop for Umrah if needed. Book with Al Safa Taxi, 24/7.",
+      "Private taxi from Taif to Makkah, roughly 90 km with a planned miqat stop for Umrah if needed. Hotel and home pickups with Al Safa Taxi, 24/7.",
     h1: "Taif to Makkah Taxi",
     heroDescription:
       "A private journey from Taif down to Makkah, with a planned stop at the miqat for pilgrims travelling for Umrah.",
@@ -796,7 +796,7 @@ export const routePages: RoutePage[] = [
     distance: "Roughly 170 km",
     duration: "About 2 to 2.5 hours",
     metaDescription:
-      "Private taxi from Taif to Jeddah or Jeddah Airport, roughly 170 km and 2 to 2.5 hours. Book with Al Safa Taxi, 24/7.",
+      "Private taxi from Taif to Jeddah or Jeddah Airport (JED), roughly 170 km and 2 to 2.5 hours. Pickups timed to your flight with Al Safa Taxi, 24/7.",
     h1: "Taif to Jeddah Taxi",
     heroDescription:
       "Private rides from Taif down to Jeddah city or King Abdulaziz International Airport, timed around your plans.",

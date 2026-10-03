@@ -9,9 +9,11 @@ import FaqSection from "@/components/ui/FaqSection";
 import { routesFaqs } from "@/lib/content/index-faqs";
 import { pageMetadata } from "@/lib/seo";
 import { routePages } from "@/lib/content/routes";
+import JsonLd from "@/components/ui/JsonLd";
+import { collectionSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Taxi Routes: Makkah, Madinah, Jeddah & Taif",
+  title: "Taxi Routes: Makkah, Madinah, Jeddah, Taif",
   description:
     "Private taxi routes between Makkah, Madinah, Jeddah, Taif and Jeddah Airport, with distances, journey times and booking information. Al Safa Taxi, 24/7.",
   path: "/routes",
@@ -22,6 +24,17 @@ export default function RoutesPage() {
 
   return (
     <>
+      <JsonLd
+        data={collectionSchema({
+          name: "Taxi Routes",
+          description: "Private taxi routes between Makkah, Madinah, Jeddah, Taif and their airports.",
+          path: "/routes",
+          items: routePages.map((route) => ({
+            name: `${route.from} to ${route.to} Taxi`,
+            href: `/routes/${route.slug}`,
+          })),
+        })}
+      />
       <PageHero
         eyebrow="Popular Routes"
         title="Taxi Routes Between Makkah, Madinah, Jeddah & Taif"

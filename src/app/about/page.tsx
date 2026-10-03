@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Our Private Taxi & Transfer Service",
+  title: "About Al Safa Taxi: Private Transfers",
   description:
     "Al Safa Taxi provides private taxi, airport transfer, Umrah and Ziyarat transportation across Makkah, Madinah, Jeddah and Taif.",
   path: "/about",

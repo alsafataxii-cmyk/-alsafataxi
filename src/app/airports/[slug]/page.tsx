@@ -38,6 +38,7 @@ export default async function AirportDetailPage({ params }: PageParams) {
       eyebrow={`${page.name} · ${page.code}`}
       h1={page.h1}
       heroDescription={page.heroDescription}
+      path={`/airports/${slug}`}
       breadcrumbs={[
         { label: "Airports", href: "/airports" },
         { label: `${page.city} Airport`, href: `/airports/${slug}` },

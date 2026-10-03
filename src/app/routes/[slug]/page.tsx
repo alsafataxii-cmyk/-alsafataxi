@@ -5,6 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 import { serviceSchema } from "@/lib/schema";
 import { buildRelated } from "@/lib/content/links";
 import { getRoutePage, routePages } from "@/lib/content/routes";
+import { locationPages } from "@/lib/content/locations";
 
 export const dynamicParams = false;
 
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   if (!page) return {};
 
   return pageMetadata({
-    title: `${page.from} to ${page.to} Taxi | Private Transfer`,
+    title: `${page.from} to ${page.to} Taxi: Private Transfer`,
     description: page.metaDescription,
     path: `/routes/${slug}`,
   });
@@ -39,6 +40,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
       eyebrow={`${page.distance} · ${page.duration}`}
       h1={page.h1}
       heroDescription={page.heroDescription}
+      path={`/routes/${slug}`}
       breadcrumbs={[
         { label: "Routes", href: "/routes" },
         { label, href: `/routes/${slug}` },
@@ -66,7 +68,10 @@ export default async function RouteDetailPage({ params }: PageParams) {
         name: `${label} Taxi`,
         description: page.metaDescription,
         path: `/routes/${slug}`,
-        areas: page.locationSlugs.map((location) => location.charAt(0).toUpperCase() + location.slice(1)),
+        areas: page.locationSlugs.flatMap((location) => {
+          const match = locationPages.find((item) => item.slug === location);
+          return match ? [match.name] : [];
+        }),
       })}
       ctaTitle={`Book Your ${label} Taxi`}
       ctaDescription="Send your pickup, drop-off, date and passenger count and we will confirm the vehicle and price before you travel."

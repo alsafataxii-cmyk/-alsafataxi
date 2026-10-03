@@ -5,6 +5,7 @@ type PageMetadataInput = {
   title: string;
   description: string;
   path: string;
+  noindex?: boolean;
 };
 
 const ogImage = {
@@ -14,13 +15,14 @@ const ogImage = {
   alt: siteConfig.name,
 };
 
-export function pageMetadata({ title, description, path }: PageMetadataInput): Metadata {
+export function pageMetadata({ title, description, path, noindex }: PageMetadataInput): Metadata {
   const fullTitle = `${title} | ${siteConfig.name}`;
 
   return {
     title,
     description,
     alternates: { canonical: path },
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       type: "website",
       locale: "en_SA",

@@ -24,7 +24,7 @@ export const locationPages: LocationPage[] = [
     slug: "makkah",
     name: "Makkah",
     tagline: "Holy City",
-    metaTitle: "Makkah Taxi Service | Private Taxi & Transfers",
+    metaTitle: "Makkah Taxi Service & Private Transfers",
     metaDescription:
       "Book a private Makkah taxi for airport transfers, hotel pickups, Ziyarat tours and intercity travel. 24/7 service with professional drivers.",
     h1: "Makkah Taxi Service: Private Taxi, Umrah & Ziyarat Transfers",
@@ -110,7 +110,7 @@ export const locationPages: LocationPage[] = [
     slug: "madinah",
     name: "Madinah",
     tagline: "Holy City",
-    metaTitle: "Madinah Taxi Service | Airport & Private Transfers",
+    metaTitle: "Madinah Taxi Service & Airport Transfers",
     metaDescription:
       "Private taxi in Madinah for airport transfers, hotel pickups and Ziyarat tours to Quba, Qiblatain and Uhud. Book 24/7 with Al Safa Taxi.",
     h1: "Madinah Taxi Service: Private Taxi, Airport Transfers & Ziyarat",
@@ -190,7 +190,7 @@ export const locationPages: LocationPage[] = [
     slug: "jeddah",
     name: "Jeddah",
     tagline: "Red Sea Gateway",
-    metaTitle: "Jeddah Taxi Service | Airport & Private Transfers",
+    metaTitle: "Jeddah Taxi Service & Airport Transfers",
     metaDescription:
       "Private taxi in Jeddah for airport transfers, city rides and journeys to Makkah, Madinah and Taif. Book 24/7 with Al Safa Taxi.",
     h1: "Jeddah Taxi Service: Private Taxi & Airport Transfers",
@@ -263,7 +263,7 @@ export const locationPages: LocationPage[] = [
     slug: "taif",
     name: "Taif",
     tagline: "Highland City",
-    metaTitle: "Taif Taxi Service | Airport & Private Transfers",
+    metaTitle: "Taif Taxi Service & Airport Transfers",
     metaDescription:
       "Private taxi in Taif for airport transfers, hotel pickups and journeys to Makkah and Jeddah. Book 24/7 with Al Safa Taxi.",
     h1: "Taif Taxi Service: Private Taxi & Airport Transfers",
