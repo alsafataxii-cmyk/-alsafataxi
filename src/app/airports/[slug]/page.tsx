@@ -1,4 +1,4 @@
-import { jeddahAirportPagePhotos } from "@/lib/content/jeddah-airport-images";
+import { airportPagePhotos } from "@/lib/content/airport-photos";
 import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -32,7 +32,7 @@ export default async function AirportDetailPage({ params }: PageParams) {
   const { slug } = await params;
   const page = getAirportPage(slug);
   if (!page) notFound();
-  const photos = jeddahAirportPagePhotos[`airports/${slug}`];
+  const photos = airportPagePhotos[`airports/${slug}`];
 
   const otherAirports = airportPages.map((item) => item.slug).filter((item) => item !== slug);
 

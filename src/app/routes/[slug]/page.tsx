@@ -1,4 +1,4 @@
-import { jeddahAirportPagePhotos } from "@/lib/content/jeddah-airport-images";
+import { airportPagePhotos } from "@/lib/content/airport-photos";
 import { kaabaNightImage } from "@/lib/content/images";
 import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
@@ -36,7 +36,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
   if (!page) notFound();
 
   const label = `${page.from} to ${page.to}`;
-  const photos = jeddahAirportPagePhotos[`routes/${slug}`];
+  const photos = airportPagePhotos[`routes/${slug}`];
   const involvesHolyCity = slug.includes("makkah") || slug.includes("madinah");
 
   return (
@@ -58,7 +58,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
         { label: "From", value: page.from },
         { label: "To", value: page.to },
         { label: "Distance", value: page.distance },
-        { label: "Typical journey time", value: page.duration },
+        { label: "Typical journey time", value: page.duration },
       ]}
       factsTitle="Route at a Glance"
       related={buildRelated({
