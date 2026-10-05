@@ -4,6 +4,7 @@ import { services } from "@/lib/data";
 import { locationPages } from "@/lib/content/locations";
 import { airportPages } from "@/lib/content/airports";
 import { routePages } from "@/lib/content/routes";
+import { vehicleRoutePages } from "@/lib/content/vehicle-routes";
 
 export const dynamic = "force-static";
 
@@ -20,6 +21,7 @@ const entries: Entry[] = [
   ...airportPages.map((airport) => ({ path: `/airports/${airport.slug}`, priority: 0.8 })),
   { path: "/routes", priority: 0.7 },
   ...routePages.map((route) => ({ path: `/routes/${route.slug}`, priority: 0.7 })),
+  ...vehicleRoutePages.map((page) => ({ path: `/routes/${page.route}/${page.vehicle}`, priority: 0.6 })),
   { path: "/fleet", priority: 0.6 },
   { path: "/about", priority: 0.5 },
   { path: "/contact", priority: 0.5 },

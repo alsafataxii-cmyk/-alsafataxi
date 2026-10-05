@@ -8,6 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 import { serviceSchema } from "@/lib/schema";
 import { buildRelated } from "@/lib/content/links";
 import { getRoutePage, routePages } from "@/lib/content/routes";
+import { vehicleLabels, vehicleOptionsFor } from "@/lib/content/vehicle-routes";
 import { locationPages } from "@/lib/content/locations";
 
 export const dynamicParams = false;
@@ -60,13 +61,26 @@ export default async function RouteDetailPage({ params }: PageParams) {
         { label: "Typical journey time", value: page.duration },
       ]}
       factsTitle="Route at a Glance"
-      related={buildRelated({
+      related={[
+        ...(vehicleOptionsFor(slug).length
+          ? [
+              {
+                title: "Vehicle Options for This Route",
+                links: vehicleOptionsFor(slug).map((option) => ({
+                  label: `${vehicleLabels[option.vehicle]}, ${page.from} to ${page.to}`,
+                  href: `/routes/${slug}/${option.vehicle}`,
+                })),
+              },
+            ]
+          : []),
+        ...buildRelated({
         services: page.serviceSlugs,
         locations: page.locationSlugs,
         airports: page.airportSlug ? [page.airportSlug] : [],
         routes: page.relatedRouteSlugs,
         includeUmrah: involvesHolyCity,
-      })}
+      }),
+      ]}
       faqs={page.faqs}
       faqTitle={`${label} Taxi FAQs`}
       schema={serviceSchema({

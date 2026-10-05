@@ -6,6 +6,7 @@ type PageMetadataInput = {
   description: string;
   path: string;
   noindex?: boolean;
+  image?: { url: string; width: number; height: number; alt: string };
 };
 
 const ogImage = {
@@ -15,7 +16,8 @@ const ogImage = {
   alt: siteConfig.name,
 };
 
-export function pageMetadata({ title, description, path, noindex }: PageMetadataInput): Metadata {
+export function pageMetadata({ title, description, path, noindex, image }: PageMetadataInput): Metadata {
+  const shareImage = image ?? ogImage;
   const fullTitle = `${title} | ${siteConfig.name}`;
 
   return {
@@ -30,13 +32,13 @@ export function pageMetadata({ title, description, path, noindex }: PageMetadata
       siteName: siteConfig.name,
       title: fullTitle,
       description,
-      images: [ogImage],
+      images: [shareImage],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [ogImage.url],
+      images: [shareImage.url],
     },
   };
 }

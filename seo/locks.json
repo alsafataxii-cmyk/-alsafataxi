@@ -154,5 +154,45 @@
  "/umrah-transportation": {
   "title": "Umrah Transportation in Makkah & Madinah | Al Safa Taxi",
   "h1": "Umrah Transportation in Makkah, Madinah, Jeddah & Taif"
+ },
+ "/routes/jeddah-to-makkah/7-seater": {
+  "title": "7 Seater Taxi Jeddah to Makkah | Al Safa Taxi",
+  "h1": "7 Seater Taxi from Jeddah to Makkah"
+ },
+ "/routes/jeddah-to-makkah/staria": {
+  "title": "Hyundai Staria Taxi Jeddah to Makkah | Al Safa Taxi",
+  "h1": "Hyundai Staria Taxi from Jeddah to Makkah"
+ },
+ "/routes/jeddah-to-makkah/yukon": {
+  "title": "GMC Yukon Taxi Jeddah to Makkah | Al Safa Taxi",
+  "h1": "GMC Yukon Taxi from Jeddah to Makkah"
+ },
+ "/routes/jeddah-airport-to-makkah/7-seater": {
+  "title": "7 Seater Taxi Jeddah Airport to Makkah | Al Safa Taxi",
+  "h1": "7 Seater Taxi from Jeddah Airport to Makkah"
+ },
+ "/routes/jeddah-airport-to-makkah/staria": {
+  "title": "Staria Taxi Jeddah Airport to Makkah | Al Safa Taxi",
+  "h1": "Staria Taxi from Jeddah Airport to Makkah"
+ },
+ "/routes/makkah-to-madinah/7-seater": {
+  "title": "7 Seater Taxi Makkah to Madinah | Al Safa Taxi",
+  "h1": "7 Seater Taxi from Makkah to Madinah"
+ },
+ "/routes/makkah-to-madinah/staria": {
+  "title": "Staria Makkah to Madinah | Al Safa Taxi",
+  "h1": "Hyundai Staria from Makkah to Madinah"
+ },
+ "/routes/makkah-to-madinah/yukon": {
+  "title": "GMC Yukon Taxi Makkah to Madinah | Al Safa Taxi",
+  "h1": "GMC Yukon Taxi from Makkah to Madinah"
+ },
+ "/routes/madinah-to-makkah/7-seater": {
+  "title": "7 Seater Taxi Madinah to Makkah | Al Safa Taxi",
+  "h1": "7 Seater Taxi from Madinah to Makkah"
+ },
+ "/routes/madinah-to-makkah/staria": {
+  "title": "Staria Madinah to Makkah | Al Safa Taxi",
+  "h1": "Hyundai Staria from Madinah to Makkah"
  }
 }
