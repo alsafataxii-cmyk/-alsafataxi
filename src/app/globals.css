@@ -156,6 +156,17 @@
     translate: 0 24px;
   }
 
+  /* Route diagram lines draw in when the diagram scrolls into view */
+  .draw-line {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+  }
+
+  html.reveal-ready [data-reveal]:not(.is-visible) .draw-line {
+    stroke-dashoffset: 1;
+  }
+
   /* Hover lift for cards */
   .card-lift {
     transition:
@@ -182,5 +193,12 @@
   [data-reveal] {
     opacity: 1 !important;
     translate: none !important;
+  }
+}
+
+/* Keep the footer clear of the sticky mobile Call / WhatsApp bar. */
+@media (max-width: 767px) {
+  body:has(.has-mobile-bar) footer {
+    padding-bottom: calc(3.5rem + env(safe-area-inset-bottom));
   }
 }

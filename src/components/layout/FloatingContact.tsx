@@ -17,8 +17,13 @@ export default function FloatingContact() {
 
   if (pathname === "/book") return null;
 
+  // These pages carry their own sticky Call / WhatsApp bar on small screens.
+  const hasMobileBar = pathname === "/airports" || pathname === "/airports/madinah-airport";
+
   return (
-    <div className="fixed bottom-4 right-4 z-30 flex flex-col items-end gap-3 print:hidden sm:bottom-6 sm:right-6">
+    <div
+      className={`fixed bottom-4 right-4 z-30 flex-col items-end gap-3 print:hidden sm:bottom-6 sm:right-6 ${hasMobileBar ? "hidden md:flex" : "flex"}`}
+    >
       <a
         href={siteConfig.phoneHref}
         aria-label={`Call ${siteConfig.name}`}

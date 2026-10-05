@@ -1,25 +1,11 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
 import { ArrowRight, Building2, Clock, Landmark, MapPin, Plane, Route } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/lib/site-config";
 
-export function Shell({
-  tone = "white",
-  children,
-}: {
-  tone?: "white" | "sand" | "dark";
-  children: ReactNode;
-}) {
-  const background =
-    tone === "sand" ? "bg-brand-beige/60" : tone === "dark" ? "bg-brand-dark" : "bg-white";
-  return (
-    <section className={background}>
-      <div className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">{children}</div>
-    </section>
-  );
-}
+export { default as Shell } from "@/components/ui/Band";
+import Shell from "@/components/ui/Band";
 
 const whatsapp = (text: string) =>
   `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;

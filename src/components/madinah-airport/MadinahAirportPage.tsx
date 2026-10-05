@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Button from "@/components/ui/Button";
 import FaqSection from "@/components/ui/FaqSection";
 import JsonLd from "@/components/ui/JsonLd";
+import MobileContactBar from "@/components/ui/MobileContactBar";
 import MadinahHero from "@/components/madinah-airport/MadinahHero";
 import MadinahGallery from "@/components/madinah-airport/MadinahGallery";
 import {
@@ -51,7 +52,7 @@ export default function MadinahAirportPage() {
   const more = otherMadinahPhotos([madinahPhoto("approach-road"), ...highlights.map((h) => h.image)]);
 
   return (
-    <>
+    <div className="has-mobile-bar">
       <JsonLd
         data={webPageSchema({
           name: "Madinah Airport Taxi & Private Transfers (MED)",
@@ -129,6 +130,8 @@ export default function MadinahAirportPage() {
           </div>
         </div>
       </section>
-    </>
+
+      <MobileContactBar message="Hello Al Safa Taxi, I would like to arrange a Madinah Airport (MED) transfer." />
+    </div>
   );
 }
