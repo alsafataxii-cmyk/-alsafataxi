@@ -1,3 +1,4 @@
+import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/ui/DetailPage";
@@ -66,7 +67,7 @@ export default async function LocationDetailPage({ params }: PageParams) {
         areas: [page.name],
       })}
       ctaTitle={`Book a Taxi in ${page.name}`}
-      ctaDescription="Tell us your pickup, destination and travel date and we will confirm your vehicle. Our booking line is open 24 hours a day."
+      ctaDescription={ctaLines[`locations/${slug}`]}
     />
   );
 }

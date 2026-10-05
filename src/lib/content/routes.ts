@@ -1,5 +1,6 @@
 import { routeExtras } from "@/lib/content/extra-routes";
 import { routeExtrasMore } from "@/lib/content/extra-routes-more";
+import { finalExtras } from "@/lib/content/extra-final";
 import type { ContentSection, Faq } from "@/lib/content/types";
 
 export type RoutePage = {
@@ -429,7 +430,8 @@ const baseRoutePages: RoutePage[] = [
       },
       {
         question: "Can I book a pickup at night?",
-        answer: "Yes. Bookings are taken all day and night.",
+        answer:
+          "Yes. Our booking line is open around the clock, so a pickup after Isha or before Fajr is arranged like any other.",
       },
       {
         question: "What do you need to give me a price?",
@@ -751,8 +753,9 @@ const baseRoutePages: RoutePage[] = [
           "Yes. Give us the hotel or address and we will plan the drop-off.",
       },
       {
-        question: "Is a late-night departure possible?",
-        answer: "Yes. We take bookings all day and night.",
+        question: "Is a late-night departure from Madinah possible?",
+        answer:
+          "Yes. Tell us what time you need to leave Madinah and we will plan back from your flight.",
       },
       {
         question: "Can we stop in Makkah on the way?",
@@ -760,9 +763,9 @@ const baseRoutePages: RoutePage[] = [
           "It is a big detour. We suggest booking separate legs. Tell us your plan and we will help you work out the timing.",
       },
       {
-        question: "How do I get a price?",
+        question: "What do you need to quote Madinah to Jeddah?",
         answer:
-          "Send the pickup hotel, the destination, the date, the number of passengers and bags. We confirm the price before you travel.",
+          "The Madinah pickup point, the date, how many people and bags, and whether you are going to Jeddah Airport or an address in the city. We confirm the price before you travel.",
       },
     ],
   },
@@ -994,7 +997,7 @@ const baseRoutePages: RoutePage[] = [
       {
         question: "Can you collect us from our home in Jeddah?",
         answer:
-          "Yes. Give us the address and a location pin and we will plan the pickup.",
+          "Yes. Send the address and a pin, and tell us what time you want to reach Taif so that we can work back to a pickup.",
       },
       {
         question: "Is it worth a day trip from Jeddah?",
@@ -1007,9 +1010,9 @@ const baseRoutePages: RoutePage[] = [
           "Yes. Tell us the dates and the places you want to visit and we will arrange it.",
       },
       {
-        question: "How do I get a price?",
+        question: "How do I get a price for Jeddah to Taif?",
         answer:
-          "Send the pickup address, the dates, the number of passengers and bags and whether you want a return. We confirm the price before you travel.",
+          "Say whether you want one way or a return, and send the Jeddah address, the dates and the group size, so that we quote the right trip. We confirm the price before you travel.",
       },
     ],
   },
@@ -1085,9 +1088,9 @@ const baseRoutePages: RoutePage[] = [
           "It is a different route. We suggest booking separate legs, and we will help you plan the timing.",
       },
       {
-        question: "How do I get a price?",
+        question: "What should I send for a Taif to Jeddah price?",
         answer:
-          "Send the pickup, the destination (Jeddah address or airport), the date, the number of passengers and bags. We confirm the price before you travel.",
+          "The Taif pickup, whether you finish at a Jeddah address or at the airport, the date, passengers and bags. We confirm the price before you travel.",
       },
     ],
   },
@@ -1156,7 +1159,7 @@ const baseRoutePages: RoutePage[] = [
       {
         question: "What if our flight is late?",
         answer:
-          "Message us. We take bookings all day and night and will adjust the pickup.",
+          "Message us as soon as the airline updates you. We follow the flight and move the pickup, which matters on a long onward drive.",
       },
       {
         question: "Can we carry several bags?",
@@ -1164,9 +1167,9 @@ const baseRoutePages: RoutePage[] = [
           "Tell us how many. A Premium SUV takes five passengers and four bags, and a Luxury Van takes eight passengers and six bags.",
       },
       {
-        question: "How do I get a price?",
+        question: "What do I send for a Madinah Airport to Makkah quote?",
         answer:
-          "Send the flight number, the number of passengers and bags, and the Makkah hotel. Say if you need the miqat stop. We confirm the price before you travel.",
+          "Your flight number, who is travelling and with how many bags, and the Makkah hotel, plus whether you want the Miqat stop. The price is confirmed before you travel.",
       },
     ],
   },
@@ -1235,9 +1238,9 @@ const baseRoutePages: RoutePage[] = [
           "It depends on where you fly from. Check which airport has a flight for your route. We run transfers from Jeddah Airport too.",
       },
       {
-        question: "What if our flight is late?",
+        question: "What if our flight to Taif is late?",
         answer:
-          "Message us. We take bookings all day and night and will adjust the pickup.",
+          "Message us when you hear. Flights into Taif are fewer, so the earlier we know, the easier it is to rearrange the pickup.",
       },
       {
         question: "Do we stop at the miqat?",
@@ -1250,9 +1253,9 @@ const baseRoutePages: RoutePage[] = [
           "Yes, we take bookings all day and night. The road has steep and winding sections, so tell us if you would rather travel in daylight.",
       },
       {
-        question: "How do I get a price?",
+        question: "How do I get a Taif Airport to Makkah price?",
         answer:
-          "Send the flight number, the number of passengers and bags, and the Makkah hotel. We confirm the vehicle and price before you travel.",
+          "Send the flight number, the group size and bags, and the Makkah hotel. We confirm the vehicle and the price before you travel.",
       },
     ],
   },
@@ -1260,7 +1263,12 @@ const baseRoutePages: RoutePage[] = [
 
 export const routePages: RoutePage[] = baseRoutePages.map((page) => ({
   ...page,
-  sections: [...page.sections, ...(routeExtras[page.slug] ?? []), ...(routeExtrasMore[page.slug] ?? [])],
+  sections: [
+    ...page.sections,
+    ...(routeExtras[page.slug] ?? []),
+    ...(routeExtrasMore[page.slug] ?? []),
+    ...(finalExtras[`routes/${page.slug}`] ?? []),
+  ],
 }));
 
 export function getRoutePage(slug: string) {

@@ -39,7 +39,7 @@ export const homeFaqs: Faq[] = [
   {
     question: "What vehicles are available?",
     answer:
-      "Sedans, SUVs, vans and VIP chauffeur cars. Tell us your group size and luggage and we will confirm the vehicle for your trip.",
+      "We have an Executive Sedan, a Premium SUV, a Luxury Van and a VIP Chauffeur Car. Send the number of passengers and bags and we will recommend the one that fits.",
   },
   {
     question: "Can I book intercity travel between the cities?",
@@ -59,7 +59,7 @@ export const homeFaqs: Faq[] = [
   {
     question: "How do I book a ride?",
     answer:
-      "Use our booking page, message us on WhatsApp or call. Our booking line is open 24 hours a day.",
+      "The quickest way is a WhatsApp message with your route, date and group size. You can also use the booking form or call us, at any hour.",
   },
   {
     question: "How can I book through WhatsApp?",

@@ -1,5 +1,6 @@
 import { airportExtras } from "@/lib/content/extra-places";
 import { airportTopups } from "@/lib/content/extra-topups";
+import { finalExtras } from "@/lib/content/extra-final";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 export type AirportPage = {
@@ -39,7 +40,6 @@ const baseAirportPages: AirportPage[] = [
       { label: "Jeddah city", value: "Roughly 30 to 40 km from the airport" },
       { label: "Makkah", value: "Roughly 100 km, usually 1 to 1.5 hours by road" },
       { label: "Madinah", value: "Roughly 430 km, about 4 to 5 hours by road" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -157,9 +157,9 @@ const baseAirportPages: AirportPage[] = [
           "Yes. See the departures section above and tell us your flight time, the hotel and the number of bags.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is a Jeddah Airport transfer priced?",
         answer:
-          "It depends on where you are going, the vehicle and the number of passengers. We confirm the price before you travel.",
+          "By your destination, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
     ],
   },
@@ -181,7 +181,6 @@ const baseAirportPages: AirportPage[] = [
       { label: "Airport code", value: "MED" },
       { label: "Central Madinah", value: "Roughly 15 to 20 km, about 20 to 30 minutes" },
       { label: "Makkah", value: "Roughly 450 km, about 4.5 to 5 hours by road" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -266,12 +265,12 @@ const baseAirportPages: AirportPage[] = [
       {
         question: "What if my flight is delayed?",
         answer:
-          "Message us. We take bookings all day and night and will adjust the pickup.",
+          "Tell us if the airline changes the time. We follow your flight and adjust the pickup to match.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is a Madinah Airport transfer priced?",
         answer:
-          "It depends on where you are going, the vehicle and the number of passengers. We confirm the price before you travel.",
+          "By where you are going from the airport, the vehicle and how many people are travelling. The price is confirmed before you travel.",
       },
     ],
   },
@@ -293,7 +292,6 @@ const baseAirportPages: AirportPage[] = [
       { label: "Airport code", value: "TIF" },
       { label: "Makkah", value: "Roughly 100 km, about 1.5 to 2 hours depending on route and traffic" },
       { label: "Jeddah", value: "Roughly 170 km, about 2 to 2.5 hours by road" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -373,7 +371,7 @@ const baseAirportPages: AirportPage[] = [
           "Yes. It is about two to two and a half hours. Tell us your flight and we will help you choose a pickup time with a buffer.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is a Taif Airport transfer priced?",
         answer:
           "It depends on the destination, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
@@ -383,7 +381,12 @@ const baseAirportPages: AirportPage[] = [
 
 export const airportPages: AirportPage[] = baseAirportPages.map((page) => ({
   ...page,
-  sections: [...page.sections, ...(airportExtras[page.slug] ?? []), ...(airportTopups[page.slug] ?? [])],
+  sections: [
+    ...page.sections,
+    ...(airportExtras[page.slug] ?? []),
+    ...(airportTopups[page.slug] ?? []),
+    ...(finalExtras[`airports/${page.slug}`] ?? []),
+  ],
 }));
 
 export function getAirportPage(slug: string) {

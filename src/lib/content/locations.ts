@@ -1,5 +1,6 @@
 import { locationExtras } from "@/lib/content/extra-places";
 import { placeTopups } from "@/lib/content/extra-topups";
+import { finalExtras } from "@/lib/content/extra-final";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 export type LocationPage = {
@@ -36,7 +37,6 @@ const baseLocationPages: LocationPage[] = [
       { label: "Jeddah Airport", value: "Roughly 100 km, usually 1 to 1.5 hours" },
       { label: "Madinah", value: "Roughly 450 km, about 4.5 to 5 hours" },
       { label: "Taif", value: "Roughly 90 km, about 1.5 hours" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -111,12 +111,12 @@ const baseLocationPages: LocationPage[] = [
       {
         question: "Do you provide child seats?",
         answer:
-          "Tell us when you book and we will confirm what is available for your vehicle.",
+          "Tell us the age of the child when you book and we will confirm what is available for your vehicle.",
       },
       {
-        question: "How do I get a price?",
+        question: "How do I get a price for a Makkah taxi?",
         answer:
-          "Send the pickup, the destination, the date and the number of passengers. We confirm the vehicle and the price before you travel.",
+          "Send the pickup (the hotel name if you are near the Haram), the destination, the date and the number of passengers. We confirm the vehicle and the price before you travel.",
       },
     ],
   },
@@ -137,7 +137,6 @@ const baseLocationPages: LocationPage[] = [
       { label: "Central Madinah", value: "Roughly 15 to 20 km from the airport" },
       { label: "Makkah", value: "Roughly 450 km, about 4.5 to 5 hours" },
       { label: "Jeddah", value: "Roughly 420 km, about 4 to 4.5 hours" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -223,12 +222,12 @@ const baseLocationPages: LocationPage[] = [
       {
         question: "Do you do night pickups from the airport?",
         answer:
-          "Yes. We take bookings all day and night.",
+          "Yes. Late landings are common, and we can arrange the pickup for any hour.",
       },
       {
-        question: "How do I get a price?",
+        question: "What do you need to price a Madinah ride?",
         answer:
-          "Send the pickup, the destination, the date and the number of passengers. We confirm the vehicle and the price before you travel.",
+          "The pickup hotel or airport, the destination, the date and the group size. We confirm the vehicle and the price before you travel.",
       },
     ],
   },
@@ -250,7 +249,6 @@ const baseLocationPages: LocationPage[] = [
       { label: "Makkah", value: "Roughly 80 km, about 1 hour" },
       { label: "Madinah", value: "Roughly 420 km, about 4 to 4.5 hours" },
       { label: "Taif", value: "Roughly 170 km, about 2 to 2.5 hours" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -333,9 +331,9 @@ const baseLocationPages: LocationPage[] = [
           "Yes. Agree the return time in advance so you are not waiting in the crowds.",
       },
       {
-        question: "How do I get a price?",
+        question: "How do I price a taxi in Jeddah?",
         answer:
-          "Send the pickup, the destination, the date and the number of passengers. We confirm the vehicle and the price before you travel.",
+          "Send the pickup address or a map pin, the destination, the date and the number of passengers, since distances inside Jeddah vary widely. We confirm the price before you travel.",
       },
     ],
   },
@@ -355,7 +353,6 @@ const baseLocationPages: LocationPage[] = [
       { label: "Airport", value: "Taif International Airport (TIF)" },
       { label: "Makkah", value: "Roughly 90 km, about 1.5 hours" },
       { label: "Jeddah", value: "Roughly 170 km, about 2 to 2.5 hours" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -444,9 +441,9 @@ const baseLocationPages: LocationPage[] = [
           "Roses are generally harvested in spring. Dates change from year to year, so check before you plan a trip around it.",
       },
       {
-        question: "How do I get a price?",
+        question: "How do I get a Taif taxi price?",
         answer:
-          "Send the pickup, the destination, the date and the number of passengers. We confirm the vehicle and the price before you travel.",
+          "Tell us the pickup, where you want to go, the date and the group size, and whether you want a return. We confirm the vehicle and the price before you travel.",
       },
     ],
   },
@@ -454,7 +451,12 @@ const baseLocationPages: LocationPage[] = [
 
 export const locationPages: LocationPage[] = baseLocationPages.map((page) => ({
   ...page,
-  sections: [...page.sections, ...(locationExtras[page.slug] ?? []), ...(placeTopups[page.slug] ?? [])],
+  sections: [
+    ...page.sections,
+    ...(locationExtras[page.slug] ?? []),
+    ...(placeTopups[page.slug] ?? []),
+    ...(finalExtras[`locations/${page.slug}`] ?? []),
+  ],
 }));
 
 export function getLocationPage(slug: string) {

@@ -1,3 +1,4 @@
+import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/ui/DetailPage";
@@ -63,7 +64,7 @@ export default async function AirportDetailPage({ params }: PageParams) {
         areas: [page.city],
       })}
       ctaTitle={`Book Your ${page.city} Airport Transfer`}
-      ctaDescription="Share your flight details and destination and we will confirm the vehicle and price before you travel."
+      ctaDescription={ctaLines[`airports/${slug}`]}
     />
   );
 }

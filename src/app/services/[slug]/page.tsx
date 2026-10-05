@@ -1,3 +1,4 @@
+import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/ui/DetailPage";
@@ -63,7 +64,7 @@ export default async function ServiceDetailPage({ params }: PageParams) {
         path: `/services/${slug}`,
       })}
       ctaTitle={`Book ${service.title}`}
-      ctaDescription="Send your plans and we will confirm the vehicle and price before you travel. Our booking line is open 24 hours a day."
+      ctaDescription={ctaLines[`services/${slug}`]}
     />
   );
 }

@@ -1,5 +1,6 @@
 import { serviceExtras } from "@/lib/content/extra-services";
 import { serviceTopups } from "@/lib/content/extra-topups";
+import { finalExtras } from "@/lib/content/extra-final";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 export type ServicePage = {
@@ -33,7 +34,6 @@ const baseServicePages: ServicePage[] = [
     facts: [
       { label: "Airports", value: "Jeddah (JED), Madinah (MED), Taif (TIF)" },
       { label: "Destinations", value: "Makkah, Madinah, Jeddah and Taif" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -136,9 +136,9 @@ const baseServicePages: ServicePage[] = [
           "Yes. We plan the number of vehicles from your passengers and luggage and coordinate the pickups.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is an airport transfer priced?",
         answer:
-          "It depends on the airport, the destination, the vehicle and the number of passengers. We confirm the price before you travel.",
+          "By the airport, where you are going, the vehicle and the number of passengers. We confirm it before you travel.",
       },
     ],
   },
@@ -155,7 +155,6 @@ const baseServicePages: ServicePage[] = [
     facts: [
       { label: "Cities", value: "Makkah and Madinah" },
       { label: "Format", value: "Private car, planned around your schedule" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -240,7 +239,7 @@ const baseServicePages: ServicePage[] = [
           "Yes. Tell us how long you expect at each place.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is a Ziyarat tour priced?",
         answer:
           "It depends on the places, the time involved and the vehicle. Send us your plans and we will confirm a price before you travel.",
       },
@@ -258,7 +257,6 @@ const baseServicePages: ServicePage[] = [
       "A city taxi here is a short ride at an agreed time, in a cab you booked. It is not the same as an intercity transfer, where the journey is long, or a chauffeur, where one driver stays with you. This page explains when a city taxi is the right choice, why booking ahead matters in these four cities, and what to know about each.",
     facts: [
       { label: "Cities", value: "Makkah, Madinah, Jeddah and Taif" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -338,17 +336,18 @@ const baseServicePages: ServicePage[] = [
       },
       {
         question: "Can I book a taxi at night?",
-        answer: "Yes. Bookings are taken all day and night.",
+        answer:
+          "Yes. Late-evening rides after prayers and early-morning rides before Fajr can be booked in advance. Tell us the time.",
       },
       {
         question: "Do you provide child seats?",
         answer:
-          "Tell us when you book and we will confirm what is available for your vehicle.",
+          "Tell us the age of the child and the ride you need, and we will confirm what is available before you travel.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is a city taxi ride priced?",
         answer:
-          "It depends on the pickup, the destination, the vehicle and the number of passengers. We confirm the price before you travel.",
+          "By the pickup, the destination, the vehicle and the number of passengers. We confirm the price before you go.",
       },
     ],
   },
@@ -453,7 +452,7 @@ const baseServicePages: ServicePage[] = [
           "Yes. Tell us when you book. For example, a Ziyarat stop or a family visit.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is an intercity transfer priced?",
         answer:
           "It depends on the route, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
@@ -472,7 +471,6 @@ const baseServicePages: ServicePage[] = [
     facts: [
       { label: "Hire", value: "By the hour, by the day, or for several days" },
       { label: "Cities", value: "Makkah, Madinah, Jeddah and Taif" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -565,7 +563,6 @@ const baseServicePages: ServicePage[] = [
     facts: [
       { label: "Cities", value: "Makkah, Madinah, Jeddah and Taif" },
       { label: "Transfers", value: "Airport, hotel-to-hotel and departures" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -636,12 +633,13 @@ const baseServicePages: ServicePage[] = [
       },
       {
         question: "Can I book for a late check-in?",
-        answer: "Yes. Bookings are taken all day and night.",
+        answer:
+          "Yes. Give us the time you expect to reach the hotel, and your flight number if you are coming from the airport, and we will plan the pickup around it.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is a hotel transfer priced?",
         answer:
-          "It depends on the pickup, the destination, the vehicle and the number of passengers. We confirm the price before you travel.",
+          "By the pickup and drop-off points, the vehicle and the number of passengers. We confirm the price before you travel.",
       },
     ],
   },
@@ -658,7 +656,6 @@ const baseServicePages: ServicePage[] = [
     facts: [
       { label: "Cities", value: "Makkah, Madinah, Jeddah and Taif" },
       { label: "Suited to", value: "Executives, delegations and events" },
-      { label: "Booking", value: "Available 24 hours a day" },
     ],
     sections: [
       {
@@ -730,7 +727,7 @@ const baseServicePages: ServicePage[] = [
         answer: "Makkah, Madinah, Jeddah and Taif, including airport transfers.",
       },
       {
-        question: "How is the price decided?",
+        question: "How is business transportation priced?",
         answer:
           "It depends on the number of vehicles, the level, the route and the time. We confirm the price before you travel.",
       },
@@ -740,7 +737,12 @@ const baseServicePages: ServicePage[] = [
 
 export const servicePages: ServicePage[] = baseServicePages.map((page) => ({
   ...page,
-  sections: [...page.sections, ...(serviceExtras[page.slug] ?? []), ...(serviceTopups[page.slug] ?? [])],
+  sections: [
+    ...page.sections,
+    ...(serviceExtras[page.slug] ?? []),
+    ...(serviceTopups[page.slug] ?? []),
+    ...(finalExtras[`services/${page.slug}`] ?? []),
+  ],
 }));
 
 export function getServicePage(slug: string) {

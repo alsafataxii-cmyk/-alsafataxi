@@ -1,3 +1,4 @@
+import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/ui/DetailPage";
@@ -51,8 +52,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
         { label: "From", value: page.from },
         { label: "To", value: page.to },
         { label: "Distance", value: page.distance },
-        { label: "Typical journey time", value: page.duration },
-        { label: "Booking", value: "Available 24 hours a day" },
+        { label: "Typical journey time", value: page.duration },
       ]}
       factsTitle="Route at a Glance"
       related={buildRelated({
@@ -74,7 +74,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
         }),
       })}
       ctaTitle={`Book Your ${label} Taxi`}
-      ctaDescription="Send your pickup, drop-off, date and passenger count and we will confirm the vehicle and price before you travel."
+      ctaDescription={ctaLines[`routes/${slug}`]}
     />
   );
 }

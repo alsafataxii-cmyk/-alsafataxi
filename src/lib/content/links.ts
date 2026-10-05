@@ -11,7 +11,7 @@ export function serviceLinks(slugs: string[]): LinkItem[] {
   return slugs.flatMap((slug) => {
     const service = services.find((item) => item.slug === slug);
     return service
-      ? [{ label: service.title, href: `/services/${slug}`, description: service.description }]
+      ? [{ label: service.title, href: `/services/${slug}` }]
       : [];
   });
 }
@@ -52,7 +52,6 @@ export function routeLinks(slugs: string[]): LinkItem[] {
 export const umrahLink: LinkItem = {
   label: "Umrah Transportation",
   href: umrahHref,
-  description: "Airport, hotel, Makkah to Madinah and Ziyarat for your Umrah trip.",
 };
 
 type RelatedInput = {
