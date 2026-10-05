@@ -4,8 +4,7 @@ import { ArrowRight, Briefcase, Building2, Landmark, MapPin, Plane, Route } from
 import Band from "@/components/ui/Band";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { TaifIllustration } from "@/components/icons/LocationIllustrations";
-import { jeddahPhoto, madinahPhoto } from "@/lib/content/airports-hub";
+import { jeddahPhoto, madinahPhoto, taifPhoto } from "@/lib/content/airports-hub";
 import { quickAnswers } from "@/lib/content/home-page";
 import { getRoutePage } from "@/lib/content/routes";
 import { siteConfig } from "@/lib/site-config";
@@ -221,7 +220,7 @@ export function AirportHub() {
       note: "A smaller airport for visitors to the highlands. Flights are fewer, so tell us early if your time changes.",
       cta: "Taif Airport Transfers",
       href: "/airports/taif-airport",
-      image: null,
+      image: taifPhoto("terminal-facade"),
     },
   ];
 
@@ -252,9 +251,7 @@ export function AirportHub() {
                   sizes="(min-width: 768px) 33vw, 100vw"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              ) : (
-                <TaifIllustration className="h-full w-full" />
-              )}
+              ) : null}
               <span className="absolute left-3 top-3 bg-brand-dark px-3 py-1 text-sm font-bold tracking-widest text-brand-gold">
                 {airport.code}
               </span>

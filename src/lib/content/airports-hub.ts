@@ -2,6 +2,7 @@ import type { Faq } from "@/lib/content/types";
 import type { ContentImage } from "@/lib/content/images";
 import { jeddahAirportPhotos } from "@/lib/content/jeddah-airport-images";
 import { madinahAirportPhotos } from "@/lib/content/madinah-airport-images";
+import { taifAirportPhotos } from "@/lib/content/taif-airport-images";
 
 function find(record: Record<string, ContentImage>, fragment: string): ContentImage {
   const key = Object.keys(record).find((name) => name.includes(fragment));
@@ -10,6 +11,7 @@ function find(record: Record<string, ContentImage>, fragment: string): ContentIm
 }
 
 export const jeddahPhoto = (fragment: string) => find(jeddahAirportPhotos, fragment);
+export const taifPhoto = (fragment: string) => find(taifAirportPhotos, fragment);
 export const madinahPhoto = (fragment: string) => find(madinahAirportPhotos, fragment);
 
 export const airportsHubFaqs: Faq[] = [

@@ -1,10 +1,12 @@
 import { jeddahAirportPagePhotos, type PagePhotos } from "@/lib/content/jeddah-airport-images";
 import { madinahAirportPagePhotos } from "@/lib/content/madinah-airport-images";
+import { taifAirportPagePhotos } from "@/lib/content/taif-airport-images";
 import { extraAirportPhotos } from "@/lib/content/airport-photos-extra";
 
 const base: Record<string, PagePhotos> = {
   ...jeddahAirportPagePhotos,
   ...madinahAirportPagePhotos,
+  ...taifAirportPagePhotos,
 };
 
 // Photos shown on each page, keyed by "type/slug".

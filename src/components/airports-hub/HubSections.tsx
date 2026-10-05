@@ -4,8 +4,7 @@ import { ArrowRight, Plane } from "lucide-react";
 import Band from "@/components/ui/Band";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { TaifIllustration } from "@/components/icons/LocationIllustrations";
-import { jeddahPhoto, madinahPhoto } from "@/lib/content/airports-hub";
+import { jeddahPhoto, madinahPhoto, taifPhoto } from "@/lib/content/airports-hub";
 
 function RouteChip({ href, children }: { href: string; children: string }) {
   return (
@@ -75,6 +74,7 @@ export function AnswerBlock() {
 export function AirportSelector() {
   const jeddah = jeddahPhoto("concourse-white-arches");
   const madinah = madinahPhoto("check-in-counters-e1");
+  const taif = taifPhoto("terminal-facade");
 
   return (
     <Band tone="sand">
@@ -163,8 +163,15 @@ export function AirportSelector() {
         {/* Taif: compact card with the Taif illustration */}
         <article data-reveal className="card-lift flex flex-col gap-4 border border-brand-gray bg-white p-6">
           <div className="flex items-center gap-4">
-            <div className="w-28 shrink-0 overflow-hidden border border-brand-gray">
-              <TaifIllustration className="aspect-[160/100] w-full" />
+            <div className="relative h-20 w-28 shrink-0 overflow-hidden border border-brand-gray">
+              <Image
+                src={taif.src}
+                alt={taif.alt}
+                fill
+                
+                sizes="112px"
+                className="object-cover"
+              />
             </div>
             <div>
               <span className="inline-block bg-brand-dark px-3 py-1 text-sm font-bold tracking-widest text-brand-gold">
