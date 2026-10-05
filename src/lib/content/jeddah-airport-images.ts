@@ -1,7 +1,7 @@
 import type { ContentImage } from "@/lib/content/images";
 
 // Photos of King Abdulaziz International Airport (Jeddah), in /public/jeddah-airport.
-const jeddahAirportPhotos: Record<string, ContentImage> = {
+export const jeddahAirportPhotos: Record<string, ContentImage> = {
   "jeddah-airport-terminal-exterior-night-gates-a2-b1": {
     "src": "/jeddah-airport/jeddah-airport-terminal-exterior-night-gates-a2-b1.webp",
     "alt": "Curved glass facade of King Abdulaziz International Airport in Jeddah at night, with gate entrances A2, B1 and B2 and cars at the kerb.",

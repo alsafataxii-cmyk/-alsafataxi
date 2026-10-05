@@ -2,7 +2,7 @@ import type { ContentImage } from "@/lib/content/images";
 import type { PagePhotos } from "@/lib/content/jeddah-airport-images";
 
 // Photos of Prince Mohammad bin Abdulaziz International Airport (Madinah), in /public/madinah-airport.
-const madinahAirportPhotos: Record<string, ContentImage> = {
+export const madinahAirportPhotos: Record<string, ContentImage> = {
   "madinah-airport-welcome-to-madinah-sign": {
     "src": "/madinah-airport/madinah-airport-welcome-to-madinah-sign.webp",
     "alt": "Illuminated Welcome to Madinah sign in Arabic and English with a drawing of the Prophet's Mosque, beside the baggage claim and exit signs at Madinah Airport.",

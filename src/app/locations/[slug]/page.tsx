@@ -1,3 +1,4 @@
+import { airportPagePhotos } from "@/lib/content/airport-photos";
 import { kaabaNightImage } from "@/lib/content/images";
 import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
@@ -32,6 +33,7 @@ export default async function LocationDetailPage({ params }: PageParams) {
   const { slug } = await params;
   const page = getLocationPage(slug);
   if (!page) notFound();
+  const photos = airportPagePhotos[`locations/${slug}`];
 
   const otherLocations = locationPages.map((item) => item.slug).filter((item) => item !== slug);
   const isHolyCity = slug === "makkah" || slug === "madinah";
@@ -48,6 +50,8 @@ export default async function LocationDetailPage({ params }: PageParams) {
       ]}
       intro={page.intro}
       figure={slug === "makkah" ? kaabaNightImage : undefined}
+      galleryTitle={photos?.galleryTitle}
+      gallery={photos?.gallery}
       sections={page.sections}
       facts={page.facts}
       factsTitle={`${page.name} at a Glance`}
