@@ -6,6 +6,7 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FleetCard from "@/components/ui/FleetCard";
+import FleetModels from "@/components/ui/FleetModels";
 import FaqSection from "@/components/ui/FaqSection";
 import CTASection from "@/components/ui/CTASection";
 import { fleet } from "@/lib/data";
@@ -61,6 +62,8 @@ export default function FleetPage() {
           </div>
         </div>
       </section>
+
+      <FleetModels />
 
       <section className="bg-brand-gray/40">
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
