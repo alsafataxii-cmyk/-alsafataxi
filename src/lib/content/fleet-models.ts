@@ -32,8 +32,8 @@ export const fleetModels: FleetModel[] = [
       src: "/fleet/gmc-yukon-xl-suv.webp",
       alt: "Black GMC Yukon XL full-size SUV seen from the front three-quarter angle",
       title: "GMC Yukon XL SUV",
-      width: 960,
-      height: 541,
+      width: 720,
+      height: 406,
     },
   },
   {
@@ -76,3 +76,10 @@ export const fleetModels: FleetModel[] = [
     },
   },
 ];
+
+// Photo for each fleet class, by class slug. A class without an entry keeps its illustration.
+export const fleetClassPhotos: Record<string, ContentImage> = {
+  "executive-sedan": fleetModels[0].image,
+  "premium-suv": fleetModels[1].image,
+  "luxury-van": fleetModels[2].image,
+};

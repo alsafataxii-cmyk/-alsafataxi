@@ -3,6 +3,8 @@ import { ArrowRight, Check } from "lucide-react";
 import Band from "@/components/ui/Band";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
+import VehiclePhoto from "@/components/ui/VehiclePhoto";
+import { fleetClassPhotos } from "@/lib/content/fleet-models";
 import { siteConfig } from "@/lib/site-config";
 
 const whatsapp = (text: string) =>
@@ -99,10 +101,10 @@ export function BookingChecklist() {
 
 /* Family and group */
 const vehicles = [
-  { name: "Executive Sedan", use: "One to three people with light luggage, or a short onward trip." },
-  { name: "Premium SUV", use: "Families with several bags, or older passengers who want more room." },
-  { name: "Luxury Van", use: "Large families and groups, or anyone carrying a lot of luggage." },
-  { name: "VIP Chauffeur Car", use: "Guests who want a more formal arrival, including business visitors." },
+  { slug: "executive-sedan", name: "Executive Sedan", use: "One to three people with light luggage, or a short onward trip." },
+  { slug: "premium-suv", name: "Premium SUV", use: "Families with several bags, or older passengers who want more room." },
+  { slug: "luxury-van", name: "Luxury Van", use: "Large families and groups, or anyone carrying a lot of luggage." },
+  { slug: "vip-chauffeur", name: "VIP Chauffeur Car", use: "Guests who want a more formal arrival, including business visitors." },
 ];
 
 export function FamilyGroup() {
@@ -129,9 +131,14 @@ export function FamilyGroup() {
         </div>
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {vehicles.map((vehicle) => (
-            <li key={vehicle.name} data-reveal className="card-lift border border-brand-gray bg-white p-5">
+            <li key={vehicle.name} data-reveal className="card-lift group overflow-hidden border border-brand-gray bg-white">
+              {fleetClassPhotos[vehicle.slug] ? (
+                <VehiclePhoto image={fleetClassPhotos[vehicle.slug]} frameClassName="aspect-[16/9] w-full border-b border-brand-gray" />
+              ) : null}
+              <div className="p-5">
               <h3 className="text-base font-bold text-brand-dark">{vehicle.name}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-brand-dark/70">{vehicle.use}</p>
+              </div>
             </li>
           ))}
           <li className="text-xs text-brand-dark/60 sm:col-span-2">

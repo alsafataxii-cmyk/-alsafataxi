@@ -1,5 +1,7 @@
 import { Luggage, Users } from "lucide-react";
 import VehicleIllustration, { fleetKinds } from "@/components/icons/VehicleIllustration";
+import VehiclePhoto from "@/components/ui/VehiclePhoto";
+import { fleetClassPhotos } from "@/lib/content/fleet-models";
 import type { FleetVehicle } from "@/lib/data";
 
 type FleetCardProps = {
@@ -13,9 +15,15 @@ export default function FleetCard({ vehicle }: FleetCardProps) {
       data-reveal
       className="card-lift group flex flex-col border border-brand-gray bg-white scroll-mt-28 hover:border-brand-gold"
     >
-      <div className="bg-brand-beige px-4 pt-6">
-        <VehicleIllustration kind={fleetKinds[vehicle.slug] ?? "sedan"} className="h-auto w-full" />
-      </div>
+      {fleetClassPhotos[vehicle.slug] ? (
+        <div className="border-b border-brand-gray bg-white px-4 pt-4">
+          <VehiclePhoto image={fleetClassPhotos[vehicle.slug]} frameClassName="aspect-[4/3] w-full" />
+        </div>
+      ) : (
+        <div className="bg-brand-beige px-4 pt-6">
+          <VehicleIllustration kind={fleetKinds[vehicle.slug] ?? "sedan"} className="h-auto w-full" />
+        </div>
+      )}
 
       <div className="flex flex-1 flex-col gap-4 p-7">
         <div className="flex items-start justify-between gap-3">

@@ -5,6 +5,8 @@ import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ZiyaratPlanner from "@/components/ziyarat/ZiyaratPlanner";
 import { MadinahIllustration, MakkahIllustration } from "@/components/icons/LocationIllustrations";
+import VehiclePhoto from "@/components/ui/VehiclePhoto";
+import { fleetClassPhotos } from "@/lib/content/fleet-models";
 import { fleet } from "@/lib/data";
 import { madinahSites, makkahSites, type ZiyaratSite } from "@/lib/content/ziyarat-page";
 import { siteConfig } from "@/lib/site-config";
@@ -478,9 +480,13 @@ export function VehiclesAndPricing() {
           const Icon = vehicle.icon;
           return (
             <div key={vehicle.slug} data-reveal className="card-lift flex flex-col gap-3 border border-brand-gray bg-white p-6">
-              <span className="inline-flex h-11 w-11 items-center justify-center bg-brand-primary text-white">
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </span>
+              {fleetClassPhotos[vehicle.slug] ? (
+                <VehiclePhoto image={fleetClassPhotos[vehicle.slug]} frameClassName="aspect-[16/10] w-full border-b border-brand-gray" />
+              ) : (
+                <span className="inline-flex h-11 w-11 items-center justify-center bg-brand-primary text-white">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+              )}
               <h3 className="text-lg font-bold text-brand-dark">{vehicle.name}</h3>
               <p className="text-sm leading-relaxed text-brand-dark/70">{vehicleUse[vehicle.slug]}</p>
             </div>

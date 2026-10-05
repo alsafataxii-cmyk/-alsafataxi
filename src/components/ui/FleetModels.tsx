@@ -1,5 +1,5 @@
-import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
+import VehiclePhoto from "@/components/ui/VehiclePhoto";
 import { fleetModels } from "@/lib/content/fleet-models";
 
 export default function FleetModels() {
@@ -19,20 +19,9 @@ export default function FleetModels() {
               data-reveal
               className="card-lift group flex flex-col overflow-hidden border border-brand-gray bg-white hover:border-brand-gold"
             >
-              <figure className="bg-white px-4 pt-6">
-                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden">
-                  <Image
-                    src={model.image.src}
-                    alt={model.image.alt}
-                    title={model.image.title}
-                    width={model.image.width}
-                    height={model.image.height}
-                    loading="lazy"
-                    sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 90vw"
-                    className="max-h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </figure>
+              <div className="bg-white px-4 pt-4">
+                <VehiclePhoto image={model.image} frameClassName="aspect-[4/3] w-full" sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 90vw" />
+              </div>
               <div className="flex flex-1 flex-col gap-2 border-t border-brand-gray p-6">
                 <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
                   {model.body}

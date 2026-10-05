@@ -3,6 +3,8 @@ import { ArrowRight, Briefcase, Users } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Shell } from "@/components/madinah-airport/ArrivalSections";
+import VehiclePhoto from "@/components/ui/VehiclePhoto";
+import { fleetClassPhotos } from "@/lib/content/fleet-models";
 import { fleet } from "@/lib/data";
 import { siteConfig } from "@/lib/site-config";
 
@@ -170,9 +172,13 @@ export function GroupVehicles() {
           const Icon = vehicle.icon;
           return (
             <div key={vehicle.slug} data-reveal className="card-lift flex flex-col gap-3 border border-brand-gray bg-white p-6">
-              <span className="inline-flex h-11 w-11 items-center justify-center bg-brand-primary text-white">
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </span>
+              {fleetClassPhotos[vehicle.slug] ? (
+                <VehiclePhoto image={fleetClassPhotos[vehicle.slug]} frameClassName="aspect-[16/10] w-full border-b border-brand-gray" />
+              ) : (
+                <span className="inline-flex h-11 w-11 items-center justify-center bg-brand-primary text-white">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+              )}
               <h3 className="text-lg font-bold text-brand-dark">{vehicle.name}</h3>
               <p className="flex items-center gap-2 text-sm text-brand-dark/70">
                 <Users className="h-4 w-4 text-brand-primary" aria-hidden="true" />
