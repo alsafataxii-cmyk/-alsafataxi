@@ -3,6 +3,7 @@ import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/ui/DetailPage";
+import MadinahAirportPage from "@/components/madinah-airport/MadinahAirportPage";
 import { pageMetadata } from "@/lib/seo";
 import { serviceSchema } from "@/lib/schema";
 import { buildRelated } from "@/lib/content/links";
@@ -32,6 +33,7 @@ export default async function AirportDetailPage({ params }: PageParams) {
   const { slug } = await params;
   const page = getAirportPage(slug);
   if (!page) notFound();
+  if (slug === "madinah-airport") return <MadinahAirportPage />;
   const photos = airportPagePhotos[`airports/${slug}`];
 
   const otherAirports = airportPages.map((item) => item.slug).filter((item) => item !== slug);

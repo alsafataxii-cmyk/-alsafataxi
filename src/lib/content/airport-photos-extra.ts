@@ -2,7 +2,7 @@ import type { ContentImage } from "@/lib/content/images";
 import { jeddahAirportPhotos } from "@/lib/content/jeddah-airport-images";
 
 // Further photos supplied for the airport pages, merged into the page galleries.
-const morePhotos: Record<string, ContentImage> = {
+export const morePhotos: Record<string, ContentImage> = {
   "saudia-aircraft-at-airport-gate-ground-crew": {
     "src": "/jeddah-airport/saudia-aircraft-at-airport-gate-ground-crew.webp",
     "alt": "Saudia passenger aircraft parked at an airport gate with a baggage loader and ground crew beside it.",
