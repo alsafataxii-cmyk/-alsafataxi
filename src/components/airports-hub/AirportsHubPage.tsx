@@ -102,7 +102,7 @@ export default function AirportsHubPage() {
             <Button href="/book" variant="gold" size="lg">
               Get My Airport Transfer Quote
             </Button>
-            <Button href={`https://wa.me/${siteConfig.whatsappNumber}`} variant="outline-light" size="lg">
+            <Button href={`https://wa.me/${siteConfig.whatsappNumber}`} variant="whatsapp" size="lg">
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
               WhatsApp Us
             </Button>

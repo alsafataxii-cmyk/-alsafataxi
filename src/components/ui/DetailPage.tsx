@@ -108,7 +108,7 @@ export default function DetailPage({
                 </Button>
                 <Button
                   href={`https://wa.me/${siteConfig.whatsappNumber}`}
-                  variant="outline-light"
+                  variant="whatsapp"
                   className="w-full"
                 >
                   <MessageCircle className="h-4 w-4" aria-hidden="true" />

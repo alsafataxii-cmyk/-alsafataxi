@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-type Variant = "primary" | "gold" | "outline-light" | "outline-dark";
+type Variant = "primary" | "gold" | "outline-light" | "outline-dark" | "whatsapp";
 type Size = "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
@@ -10,6 +10,8 @@ const variantClasses: Record<Variant, string> = {
   gold: "bg-brand-gold text-brand-dark hover:brightness-95",
   "outline-light":
     "border border-white/40 text-white hover:bg-white/10",
+  whatsapp:
+    "border-2 border-[#25D366] bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 hover:border-[#1ebe5a] hover:bg-[#1ebe5a]",
   "outline-dark":
     "border border-brand-dark/30 text-brand-dark hover:bg-brand-dark/5",
 };
@@ -38,7 +40,7 @@ type ButtonAsButton = BaseProps & {
 type ButtonProps = ButtonAsLink | ButtonAsButton;
 
 const baseClasses =
-  "btn-motion inline-flex items-center justify-center gap-2 font-semibold tracking-wide transition-colors duration-200 whitespace-nowrap";
+  "btn-motion inline-flex items-center justify-center gap-2 rounded-lg font-bold tracking-wide transition-colors duration-200 whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold";
 
 export default function Button({
   variant = "primary",

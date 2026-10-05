@@ -121,7 +121,7 @@ export default function MadinahAirportPage() {
             </Button>
             <Button
               href={`https://wa.me/${siteConfig.whatsappNumber}`}
-              variant="outline-light"
+              variant="whatsapp"
               size="lg"
             >
               <MessageCircle className="h-5 w-5" aria-hidden="true" />

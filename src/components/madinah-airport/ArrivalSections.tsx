@@ -116,7 +116,7 @@ export function DestinationCards() {
               </span>
               <h3 className="text-xl font-bold text-brand-dark">{place.title}</h3>
               <p className="text-sm leading-relaxed text-brand-dark/70">{place.copy}</p>
-              <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+              <span className="mt-auto cta-chip">
                 {place.cta}
                 <ArrowRight
                   className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -341,7 +341,7 @@ export function TransferTimes() {
             </p>
             <Link
               href={route.href}
-              className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
+              className="mt-auto cta-chip"
             >
               {route.link}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -25,7 +25,7 @@ export default function LocationCard({ location }: LocationCardProps) {
         </div>
       </div>
       <ArrowUpRight
-        className="h-5 w-5 shrink-0 text-brand-dark/30 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-gold"
+        className="h-8 w-8 shrink-0 rounded-full bg-brand-primary p-1.5 text-white transition-colors group-hover:bg-brand-gold group-hover:text-brand-dark"
         aria-hidden="true"
       />
     </Link>

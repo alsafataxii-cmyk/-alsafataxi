@@ -98,13 +98,13 @@ export default function RouteFinder({ routes, origins }: { routes: FinderRoute[]
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/routes/${match.slug}`}
-                className="btn-motion inline-flex min-h-11 items-center justify-center gap-2 bg-brand-primary px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+                className="btn-motion rounded-lg font-bold inline-flex min-h-11 items-center justify-center gap-2 bg-brand-primary px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
               >
                 View Route
               </Link>
               <Link
                 href="/book"
-                className="btn-motion inline-flex min-h-11 items-center justify-center border border-brand-dark/30 px-5 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-dark/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+                className="btn-motion rounded-lg font-bold inline-flex min-h-11 items-center justify-center border border-brand-dark/30 px-5 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-dark/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
               >
                 Book This Journey
               </Link>

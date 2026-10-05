@@ -40,7 +40,7 @@ export default function ServiceCard({ service, href, detailed = false }: Service
 
       <Link
         href={target}
-        className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-gold"
+        className="mt-auto cta-chip"
       >
         Explore {service.title}
         <ArrowUpRight

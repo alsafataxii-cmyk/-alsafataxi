@@ -202,3 +202,53 @@
     padding-bottom: calc(3.5rem + env(safe-area-inset-bottom));
   }
 }
+
+/* Card call-to-action links styled as small buttons so they read as clickable. */
+.cta-chip,
+.cta-chip-gold,
+.cta-chip-outline {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.cta-chip {
+  background-color: var(--color-brand-primary);
+  color: #fff;
+  box-shadow: 0 6px 16px -6px rgba(10, 77, 54, 0.55);
+}
+.cta-chip:hover,
+.group:hover .cta-chip {
+  background-color: var(--color-brand-dark);
+  color: #fff;
+}
+.cta-chip-gold {
+  background-color: var(--color-brand-gold);
+  color: var(--color-brand-dark);
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5);
+}
+.cta-chip-gold:hover {
+  filter: brightness(1.06);
+}
+.cta-chip-outline {
+  border: 2px solid var(--color-brand-primary);
+  background-color: #fff;
+  color: var(--color-brand-primary);
+}
+.cta-chip-outline:hover {
+  background-color: var(--color-brand-primary);
+  color: #fff;
+}
+.cta-chip:focus-visible,
+.cta-chip-gold:focus-visible,
+.cta-chip-outline:focus-visible {
+  outline: 2px solid var(--color-brand-gold);
+  outline-offset: 2px;
+}

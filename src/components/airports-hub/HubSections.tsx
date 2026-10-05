@@ -21,7 +21,7 @@ function CardLink({ href, children }: { href: string; children: string }) {
   return (
     <Link
       href={href}
-      className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+      className="group cta-chip focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
     >
       {children}
       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -514,7 +514,7 @@ export function UmrahAirports() {
             <li key={route.title} data-reveal className="flex flex-col gap-2 border border-white/15 bg-white/5 p-5">
               <h3 className="text-base font-semibold text-white">{route.title}</h3>
               <p className="text-sm leading-relaxed text-white/70">{route.copy}</p>
-              <Link href={route.href} className="mt-auto inline-flex items-center gap-2 pt-2 text-sm font-semibold text-brand-gold hover:underline">
+              <Link href={route.href} className="mt-auto cta-chip-gold">
                 See this route <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </li>

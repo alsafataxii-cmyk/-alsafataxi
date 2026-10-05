@@ -66,7 +66,7 @@ function InlineCta() {
         </Button>
         <Button
           href={`https://wa.me/${siteConfig.whatsappNumber}`}
-          variant="outline-dark"
+          variant="whatsapp"
           size="md"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />

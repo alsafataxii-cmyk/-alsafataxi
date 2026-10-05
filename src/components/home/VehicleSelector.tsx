@@ -100,7 +100,7 @@ export default function VehicleSelector() {
           href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-motion inline-flex min-h-12 items-center justify-center gap-2 bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+          className="btn-motion rounded-lg font-bold inline-flex min-h-12 items-center justify-center gap-2 bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Ask Us About This

@@ -95,7 +95,7 @@ export function ServiceSelector() {
             <Plane className="h-7 w-7 text-brand-gold" aria-hidden="true" />
             <h3 className="text-2xl font-bold text-white">Airport Transfer</h3>
             <p className="max-w-md text-sm leading-relaxed text-white/75">Arriving at JED, MED or TIF?</p>
-            <span className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-brand-gold">
+            <span className="mt-1 cta-chip-gold">
               Airport Transfers <Arrow />
             </span>
           </div>
@@ -112,7 +112,7 @@ export function ServiceSelector() {
             <p className="text-sm leading-relaxed text-white/75">
               Need transport throughout your Umrah journey?
             </p>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold">
+            <span className="cta-chip-gold">
               Umrah Transportation <Arrow />
             </span>
           </div>
@@ -128,7 +128,7 @@ export function ServiceSelector() {
           <p className="text-sm leading-relaxed text-brand-dark/70">
             Want to visit historical places in Makkah or Madinah?
           </p>
-          <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+          <span className="mt-auto cta-chip">
             Ziyarat Tours <Arrow />
           </span>
         </Link>
@@ -143,7 +143,7 @@ export function ServiceSelector() {
           <p className="text-sm leading-relaxed text-brand-dark/70">
             Traveling between Makkah, Madinah, Jeddah or Taif?
           </p>
-          <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+          <span className="mt-auto cta-chip">
             Intercity Transfers <Arrow />
           </span>
         </Link>
@@ -158,7 +158,7 @@ export function ServiceSelector() {
           <p className="text-sm leading-relaxed text-brand-dark/70">
             Airport, hotel or hotel-to-hotel transportation.
           </p>
-          <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+          <span className="mt-auto cta-chip">
             Hotel Transfers <Arrow />
           </span>
         </Link>
@@ -177,7 +177,7 @@ export function ServiceSelector() {
               </p>
             </div>
           </div>
-          <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+          <span className="cta-chip">
             Private Chauffeur <Arrow />
           </span>
         </Link>
@@ -266,7 +266,7 @@ export function AirportHub() {
                 {airport.to.join(", ")}
               </p>
               <p className="text-sm leading-relaxed text-brand-dark/65">{airport.note}</p>
-              <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+              <span className="mt-auto cta-chip">
                 {airport.cta} <Arrow />
               </span>
             </div>

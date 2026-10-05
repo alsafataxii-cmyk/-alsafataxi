@@ -146,7 +146,7 @@ export default function HubBookingCard() {
 
       <button
         type="submit"
-        className="btn-motion mt-6 inline-flex min-h-12 w-full items-center justify-center bg-brand-primary px-6 py-3 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+        className="btn-motion rounded-lg font-bold mt-6 inline-flex min-h-12 w-full items-center justify-center bg-brand-primary px-6 py-3 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
       >
         Get My Quote
       </button>
@@ -155,7 +155,7 @@ export default function HubBookingCard() {
         href={openChat}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-motion mt-3 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-brand-dark/25 px-6 py-3 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-dark/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+        className="btn-motion rounded-lg font-bold mt-3 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-brand-dark/25 px-6 py-3 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-dark/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
       >
         <MessageCircle className="h-4 w-4" aria-hidden="true" />
         Send Details on WhatsApp

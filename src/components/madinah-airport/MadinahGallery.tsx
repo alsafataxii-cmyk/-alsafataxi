@@ -80,7 +80,7 @@ export default function MadinahGallery({ highlights, more }: MadinahGalleryProps
               onClick={() => setOpen((value) => !value)}
               aria-expanded={open}
               aria-controls="med-more-photos"
-              className="btn-motion inline-flex min-h-11 items-center justify-center border border-brand-dark/30 px-6 py-3 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-dark/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
+              className="btn-motion rounded-lg font-bold inline-flex min-h-11 items-center justify-center border border-brand-dark/30 px-6 py-3 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-dark/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold"
             >
               {open ? "Show fewer photos" : `Show ${more.length} more photos`}
             </button>

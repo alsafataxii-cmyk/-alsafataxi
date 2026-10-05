@@ -56,7 +56,7 @@ export function AnswerAndCities() {
               <p className="text-sm leading-relaxed text-brand-dark/70">
                 Two mountains with caves, the places of the Hajj rites, and the historic cemetery.
               </p>
-              <span className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+              <span className="mt-1 cta-chip">
                 Explore Makkah Ziyarat
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </span>
@@ -75,7 +75,7 @@ export function AnswerAndCities() {
               <p className="text-sm leading-relaxed text-brand-dark/70">
                 Quba, the two qiblas, Uhud, the Seven Mosques area and a good morning of short stops.
               </p>
-              <span className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+              <span className="mt-1 cta-chip">
                 Explore Madinah Ziyarat
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </span>

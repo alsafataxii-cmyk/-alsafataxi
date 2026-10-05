@@ -40,7 +40,7 @@ export default function HomeCities() {
               </p>
               <Link
                 href={`/locations/${location.slug}`}
-                className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition-colors group-hover:text-brand-gold"
+                className="mt-auto cta-chip"
               >
                 Explore {location.name} taxi service
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

@@ -61,7 +61,7 @@ export default function ZiyaratHero() {
             <Button href="#plan-my-ziyarat" variant="gold" size="lg">
               Plan My Ziyarat
             </Button>
-            <Button href={`https://wa.me/${siteConfig.whatsappNumber}`} variant="outline-light" size="lg">
+            <Button href={`https://wa.me/${siteConfig.whatsappNumber}`} variant="whatsapp" size="lg">
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
               WhatsApp Us
             </Button>

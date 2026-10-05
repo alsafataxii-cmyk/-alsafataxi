@@ -204,10 +204,10 @@ export function RouteDirectory() {
                         </dl>
                       ) : null}
                       <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-1">
-                        <Link href={`/routes/${route.slug}`} className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                        <Link href={`/routes/${route.slug}`} className="group cta-chip">
                           View Route <Arrow />
                         </Link>
-                        <Link href="/book" className="text-sm font-medium text-brand-dark/70 underline underline-offset-2 hover:text-brand-primary">
+                        <Link href="/book" className="cta-chip-outline">
                           Book This Journey
                         </Link>
                       </div>
@@ -239,7 +239,7 @@ export function FeaturedRoutes() {
                 {page ? `${dist(page.distance)} · ${page.duration}` : null}
               </p>
               <p className="text-sm leading-relaxed text-brand-dark/75">{item.why}</p>
-              <Link href={`/routes/${item.slug}`} className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+              <Link href={`/routes/${item.slug}`} className="mt-auto cta-chip">
                 {item.title} taxi <Arrow />
               </Link>
             </article>
@@ -275,7 +275,7 @@ export function UmrahRoutes() {
             <li key={item.slug} data-reveal className="flex flex-col gap-2 border border-white/15 bg-white/5 p-5">
               <h3 className="text-base font-semibold text-white">{item.title}</h3>
               <p className="text-sm leading-relaxed text-white/70">{item.copy}</p>
-              <Link href={`/routes/${item.slug}`} className="mt-auto inline-flex items-center gap-2 pt-2 text-sm font-semibold text-brand-gold hover:underline">
+              <Link href={`/routes/${item.slug}`} className="mt-auto cta-chip-gold">
                 {item.title} taxi <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </li>
@@ -437,7 +437,7 @@ export function AirportRoutes() {
                   );
                 })}
               </ul>
-              <Link href={airport.href} className="mt-auto inline-flex items-center gap-2 pt-2 text-sm font-semibold text-brand-primary">
+              <Link href={airport.href} className="mt-auto cta-chip mt-1">
                 {airport.name} transfers <Arrow />
               </Link>
             </div>

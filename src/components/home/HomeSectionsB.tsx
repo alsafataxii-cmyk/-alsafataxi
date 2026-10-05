@@ -55,7 +55,7 @@ export function CityCoverage() {
               <div className="flex flex-1 flex-col gap-3 p-5">
                 <h3 className="text-lg font-bold text-brand-dark">{city.name}</h3>
                 <p className="text-sm leading-relaxed text-brand-dark/70">{city.copy}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                <span className="mt-auto cta-chip">
                   See {city.slug.charAt(0).toUpperCase() + city.slug.slice(1)}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </span>
@@ -234,7 +234,7 @@ export function PracticalNotes() {
           <article key={note.title} data-reveal className="flex flex-col gap-3 border border-brand-gray bg-white p-6">
             <h3 className="text-lg font-bold text-brand-dark">{note.title}</h3>
             <p className="text-sm leading-relaxed text-brand-dark/75">{note.copy}</p>
-            <Link href={note.href} className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+            <Link href={note.href} className="mt-auto cta-chip">
               {note.link}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
