@@ -51,8 +51,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
       ]}
       intro={page.intro}
       figure={slug === "jeddah-airport-to-makkah" ? kaabaNightImage : undefined}
-      galleryTitle={photos?.galleryTitle}
-      gallery={photos?.gallery}
+      photos={photos}
       sections={page.sections}
       facts={[
         { label: "From", value: page.from },

@@ -6,13 +6,14 @@ type ContentGalleryProps = {
   images: ContentImage[];
 };
 
+// Masonry-style mosaic: photos keep their own proportions in three columns.
 export default function ContentGallery({ title, images }: ContentGalleryProps) {
   return (
     <section className="mt-12 flex flex-col gap-5">
       <h2 className="text-2xl font-bold text-brand-dark">{title}</h2>
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <ul className="columns-2 gap-3 sm:columns-3 [&>li]:mb-3">
         {images.map((image) => (
-          <li key={image.src} className="overflow-hidden border border-brand-gray">
+          <li key={image.src} className="break-inside-avoid overflow-hidden">
             <Image
               src={image.src}
               alt={image.alt}
@@ -21,7 +22,7 @@ export default function ContentGallery({ title, images }: ContentGalleryProps) {
               height={image.height}
               loading="lazy"
               sizes="(min-width: 1024px) 230px, 45vw"
-              className="aspect-[3/4] w-full object-cover"
+              className="h-auto w-full"
             />
           </li>
         ))}

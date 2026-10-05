@@ -50,8 +50,7 @@ export default async function LocationDetailPage({ params }: PageParams) {
       ]}
       intro={page.intro}
       figure={slug === "makkah" ? kaabaNightImage : undefined}
-      galleryTitle={photos?.galleryTitle}
-      gallery={photos?.gallery}
+      photos={photos}
       sections={page.sections}
       facts={page.facts}
       factsTitle={`${page.name} at a Glance`}

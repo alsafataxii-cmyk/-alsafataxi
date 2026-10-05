@@ -5,6 +5,8 @@ import ContentBlocks from "@/components/ui/ContentBlocks";
 import ContentFigure from "@/components/ui/ContentFigure";
 import ContentGallery from "@/components/ui/ContentGallery";
 import type { ContentImage } from "@/lib/content/images";
+import { planPhotoLayout } from "@/lib/content/photo-layout";
+import type { PagePhotos } from "@/lib/content/jeddah-airport-images";
 import RelatedLinks, { type RelatedGroup } from "@/components/ui/RelatedLinks";
 import FaqSection from "@/components/ui/FaqSection";
 import CTASection from "@/components/ui/CTASection";
@@ -22,8 +24,7 @@ type DetailPageProps = {
   path: string;
   intro: string;
   figure?: ContentImage;
-  galleryTitle?: string;
-  gallery?: ContentImage[];
+  photos?: PagePhotos;
   sections: ContentSection[];
   facts?: Fact[];
   factsTitle?: string;
@@ -43,8 +44,7 @@ export default function DetailPage({
   path,
   intro,
   figure,
-  galleryTitle,
-  gallery,
+  photos,
   sections,
   facts,
   factsTitle = "At a Glance",
@@ -55,6 +55,8 @@ export default function DetailPage({
   ctaTitle,
   ctaDescription,
 }: DetailPageProps) {
+  const layout = photos ? planPhotoLayout(photos.gallery, sections.length) : undefined;
+
   return (
     <>
       <JsonLd data={webPageSchema({ name: h1, description: heroDescription, path })} />
@@ -66,9 +68,14 @@ export default function DetailPage({
         <div className="mx-auto grid max-w-8xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-3 lg:px-8">
           <article className="lg:col-span-2">
             {figure ? <ContentFigure image={figure} /> : null}
-            <ContentBlocks intro={intro} sections={sections} />
-            {gallery && gallery.length > 0 ? (
-              <ContentGallery title={galleryTitle ?? "Photos"} images={gallery} />
+            <ContentBlocks
+              intro={intro}
+              sections={sections}
+              slider={layout && layout.slider.length > 0 ? { title: photos?.galleryTitle ?? "Photos", images: layout.slider } : undefined}
+              splits={layout?.splits}
+            />
+            {layout && layout.mosaic.length > 0 ? (
+              <ContentGallery title="More photos" images={layout.mosaic} />
             ) : null}
           </article>
 

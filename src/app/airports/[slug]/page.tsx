@@ -48,8 +48,7 @@ export default async function AirportDetailPage({ params }: PageParams) {
       ]}
       intro={page.intro}
       figure={photos?.figure}
-      galleryTitle={photos?.galleryTitle}
-      gallery={photos?.gallery}
+      photos={photos}
       sections={page.sections}
       facts={page.facts}
       factsTitle={`${page.code} at a Glance`}
