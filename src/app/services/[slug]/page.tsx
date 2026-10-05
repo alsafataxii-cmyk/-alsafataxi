@@ -2,6 +2,7 @@ import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/ui/DetailPage";
+import ZiyaratPage from "@/components/ziyarat/ZiyaratPage";
 import { pageMetadata } from "@/lib/seo";
 import { serviceSchema } from "@/lib/schema";
 import { buildRelated } from "@/lib/content/links";
@@ -33,6 +34,7 @@ export default async function ServiceDetailPage({ params }: PageParams) {
   const page = getServicePage(slug);
   const service = services.find((item) => item.slug === slug);
   if (!page || !service) notFound();
+  if (slug === "ziyarat-tours") return <ZiyaratPage />;
 
   const otherServices = services.map((item) => item.slug).filter((item) => item !== slug);
 

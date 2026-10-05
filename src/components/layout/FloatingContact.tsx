@@ -18,7 +18,9 @@ export default function FloatingContact() {
   if (pathname === "/book") return null;
 
   // These pages carry their own sticky Call / WhatsApp bar on small screens.
-  const hasMobileBar = pathname === "/airports" || pathname === "/airports/madinah-airport";
+  const hasMobileBar = pathname === "/airports" ||
+    pathname === "/airports/madinah-airport" ||
+    pathname === "/services/ziyarat-tours";
 
   return (
     <div
