@@ -1,3 +1,4 @@
+import { jeddahAirportPagePhotos } from "@/lib/content/jeddah-airport-images";
 import { kaabaNightImage } from "@/lib/content/images";
 import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
@@ -35,6 +36,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
   if (!page) notFound();
 
   const label = `${page.from} to ${page.to}`;
+  const photos = jeddahAirportPagePhotos[`routes/${slug}`];
   const involvesHolyCity = slug.includes("makkah") || slug.includes("madinah");
 
   return (
@@ -49,6 +51,8 @@ export default async function RouteDetailPage({ params }: PageParams) {
       ]}
       intro={page.intro}
       figure={slug === "jeddah-airport-to-makkah" ? kaabaNightImage : undefined}
+      galleryTitle={photos?.galleryTitle}
+      gallery={photos?.gallery}
       sections={page.sections}
       facts={[
         { label: "From", value: page.from },

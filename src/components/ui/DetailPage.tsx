@@ -3,6 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import ContentBlocks from "@/components/ui/ContentBlocks";
 import ContentFigure from "@/components/ui/ContentFigure";
+import ContentGallery from "@/components/ui/ContentGallery";
 import type { ContentImage } from "@/lib/content/images";
 import RelatedLinks, { type RelatedGroup } from "@/components/ui/RelatedLinks";
 import FaqSection from "@/components/ui/FaqSection";
@@ -21,6 +22,8 @@ type DetailPageProps = {
   path: string;
   intro: string;
   figure?: ContentImage;
+  galleryTitle?: string;
+  gallery?: ContentImage[];
   sections: ContentSection[];
   facts?: Fact[];
   factsTitle?: string;
@@ -40,6 +43,8 @@ export default function DetailPage({
   path,
   intro,
   figure,
+  galleryTitle,
+  gallery,
   sections,
   facts,
   factsTitle = "At a Glance",
@@ -62,6 +67,9 @@ export default function DetailPage({
           <article className="lg:col-span-2">
             {figure ? <ContentFigure image={figure} /> : null}
             <ContentBlocks intro={intro} sections={sections} />
+            {gallery && gallery.length > 0 ? (
+              <ContentGallery title={galleryTitle ?? "Photos"} images={gallery} />
+            ) : null}
           </article>
 
           <aside className="flex flex-col gap-6 lg:sticky lg:top-28 lg:self-start">
