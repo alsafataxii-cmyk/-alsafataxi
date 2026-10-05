@@ -22,7 +22,8 @@ export default function FloatingContact() {
     pathname === "/" ||
     pathname === "/airports" ||
     pathname === "/airports/madinah-airport" ||
-    pathname === "/services/ziyarat-tours";
+    pathname === "/services/ziyarat-tours" ||
+    pathname === "/routes";
 
   return (
     <div
