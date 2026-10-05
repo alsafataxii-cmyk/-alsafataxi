@@ -1,6 +1,5 @@
 import type { ContentImage } from "@/lib/content/images";
 import { jeddahAirportPhotos } from "@/lib/content/jeddah-airport-images";
-import type { PagePhotos } from "@/lib/content/jeddah-airport-images";
 
 // Further photos supplied for the airport pages, merged into the page galleries.
 const morePhotos: Record<string, ContentImage> = {
