@@ -1,19 +1,5 @@
 import type { Metadata } from "next";
-import Hero from "@/components/sections/Hero";
-import TrustHighlights from "@/components/sections/TrustHighlights";
-import HomeIntro from "@/components/sections/HomeIntro";
-import Services from "@/components/sections/Services";
-import HomeCities from "@/components/sections/HomeCities";
-import HomeAirports from "@/components/sections/HomeAirports";
-import HomeUmrah from "@/components/sections/HomeUmrah";
-import Fleet from "@/components/sections/Fleet";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import Routes from "@/components/sections/Routes";
-import HomeHowItWorks from "@/components/sections/HomeHowItWorks";
-import FaqSection from "@/components/ui/FaqSection";
-import CTASection from "@/components/ui/CTASection";
-import { homeFaqs } from "@/lib/content/home";
-import CtaIllustration from "@/components/icons/CtaIllustration";
+import HomePage from "@/components/home/HomePage";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -27,25 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <TrustHighlights />
-      <HomeIntro />
-      <Services />
-      <HomeCities />
-      <HomeAirports />
-      <HomeUmrah />
-      <Fleet />
-      <WhyChooseUs />
-      <Routes />
-      <HomeHowItWorks />
-      <FaqSection faqs={homeFaqs} title="Taxi Service FAQs" />
-      <CTASection
-        illustration={<CtaIllustration className="h-auto w-full" />}
-        title="Book Your Private Taxi"
-        description="Call or message us to arrange your airport transfer, city ride, Umrah trip or intercity journey. Our booking line is open around the clock."
-      />
-    </>
-  );
+  return <HomePage />;
 }
