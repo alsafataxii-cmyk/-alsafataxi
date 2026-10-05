@@ -1,3 +1,4 @@
+import { kaabaNightImage } from "@/lib/content/images";
 import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -46,6 +47,7 @@ export default async function LocationDetailPage({ params }: PageParams) {
         { label: page.name, href: `/locations/${slug}` },
       ]}
       intro={page.intro}
+      figure={slug === "makkah" ? kaabaNightImage : undefined}
       sections={page.sections}
       facts={page.facts}
       factsTitle={`${page.name} at a Glance`}

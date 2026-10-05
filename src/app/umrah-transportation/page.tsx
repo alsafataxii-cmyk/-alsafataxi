@@ -1,3 +1,4 @@
+import { kaabaNightImage } from "@/lib/content/images";
 import type { Metadata } from "next";
 import DetailPage from "@/components/ui/DetailPage";
 import { pageMetadata } from "@/lib/seo";
@@ -20,6 +21,7 @@ export default function UmrahTransportationPage() {
       path={"/umrah-transportation"}
       breadcrumbs={[{ label: "Umrah Transportation", href: "/umrah-transportation" }]}
       intro={umrahPage.intro}
+      figure={kaabaNightImage}
       sections={umrahPage.sections}
       facts={umrahPage.facts}
       factsTitle="Umrah Transport at a Glance"

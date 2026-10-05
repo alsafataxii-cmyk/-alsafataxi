@@ -2,6 +2,8 @@ import { MessageCircle, Phone } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import ContentBlocks from "@/components/ui/ContentBlocks";
+import ContentFigure from "@/components/ui/ContentFigure";
+import type { ContentImage } from "@/lib/content/images";
 import RelatedLinks, { type RelatedGroup } from "@/components/ui/RelatedLinks";
 import FaqSection from "@/components/ui/FaqSection";
 import CTASection from "@/components/ui/CTASection";
@@ -18,6 +20,7 @@ type DetailPageProps = {
   breadcrumbs: { label: string; href: string }[];
   path: string;
   intro: string;
+  figure?: ContentImage;
   sections: ContentSection[];
   facts?: Fact[];
   factsTitle?: string;
@@ -36,6 +39,7 @@ export default function DetailPage({
   breadcrumbs,
   path,
   intro,
+  figure,
   sections,
   facts,
   factsTitle = "At a Glance",
@@ -56,6 +60,7 @@ export default function DetailPage({
       <section className="bg-white">
         <div className="mx-auto grid max-w-8xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-3 lg:px-8">
           <article className="lg:col-span-2">
+            {figure ? <ContentFigure image={figure} /> : null}
             <ContentBlocks intro={intro} sections={sections} />
           </article>
 

@@ -1,3 +1,4 @@
+import { kaabaNightImage } from "@/lib/content/images";
 import { ctaLines } from "@/lib/content/cta-lines";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -47,6 +48,7 @@ export default async function RouteDetailPage({ params }: PageParams) {
         { label, href: `/routes/${slug}` },
       ]}
       intro={page.intro}
+      figure={slug === "jeddah-airport-to-makkah" ? kaabaNightImage : undefined}
       sections={page.sections}
       facts={[
         { label: "From", value: page.from },
