@@ -1,3 +1,5 @@
+import HubArticle from "@/components/ui/HubArticle";
+import { hubExtras } from "@/lib/content/extra-hubs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
@@ -103,6 +105,8 @@ export default function FleetPage() {
           </div>
         </div>
       </section>
+
+      <HubArticle sections={hubExtras.fleet} />
 
       <FaqSection faqs={fleetFaqs} tone="gray" title="Taxi Fleet FAQs" />
 

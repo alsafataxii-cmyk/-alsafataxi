@@ -1,3 +1,5 @@
+import HubArticle from "@/components/ui/HubArticle";
+import { hubExtras } from "@/lib/content/extra-hubs";
 import type { Metadata } from "next";
 import { MessageCircle, Phone } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
@@ -96,6 +98,8 @@ export default function BookPage() {
           </div>
         </div>
       </section>
+
+      <HubArticle sections={hubExtras.book} />
 
       <FaqSection faqs={bookFaqs} title="Booking FAQs" />
     </>

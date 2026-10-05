@@ -1,3 +1,5 @@
+import HubArticle from "@/components/ui/HubArticle";
+import { hubExtras } from "@/lib/content/extra-hubs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -93,6 +95,8 @@ export default function RoutesPage() {
           </p>
         </div>
       </section>
+
+      <HubArticle sections={hubExtras.routes} />
 
       <FaqSection faqs={routesFaqs} tone="gray" title="Taxi Route FAQs" />
 

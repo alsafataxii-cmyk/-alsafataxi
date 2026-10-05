@@ -1,3 +1,5 @@
+import { routeExtras } from "@/lib/content/extra-routes";
+import { routeExtrasMore } from "@/lib/content/extra-routes-more";
 import type { ContentSection, Faq } from "@/lib/content/types";
 
 export type RoutePage = {
@@ -18,7 +20,7 @@ export type RoutePage = {
   faqs: Faq[];
 };
 
-export const routePages: RoutePage[] = [
+const baseRoutePages: RoutePage[] = [
   {
     slug: "jeddah-airport-to-makkah",
     from: "Jeddah Airport",
@@ -1255,6 +1257,11 @@ export const routePages: RoutePage[] = [
     ],
   },
 ];
+
+export const routePages: RoutePage[] = baseRoutePages.map((page) => ({
+  ...page,
+  sections: [...page.sections, ...(routeExtras[page.slug] ?? []), ...(routeExtrasMore[page.slug] ?? [])],
+}));
 
 export function getRoutePage(slug: string) {
   return routePages.find((route) => route.slug === slug);

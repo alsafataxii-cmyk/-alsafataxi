@@ -1,3 +1,5 @@
+import { locationExtras } from "@/lib/content/extra-places";
+import { placeTopups } from "@/lib/content/extra-topups";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 export type LocationPage = {
@@ -16,7 +18,7 @@ export type LocationPage = {
   faqs: Faq[];
 };
 
-export const locationPages: LocationPage[] = [
+const baseLocationPages: LocationPage[] = [
   {
     slug: "makkah",
     name: "Makkah",
@@ -449,6 +451,11 @@ export const locationPages: LocationPage[] = [
     ],
   },
 ];
+
+export const locationPages: LocationPage[] = baseLocationPages.map((page) => ({
+  ...page,
+  sections: [...page.sections, ...(locationExtras[page.slug] ?? []), ...(placeTopups[page.slug] ?? [])],
+}));
 
 export function getLocationPage(slug: string) {
   return locationPages.find((location) => location.slug === slug);

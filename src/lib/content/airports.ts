@@ -1,3 +1,5 @@
+import { airportExtras } from "@/lib/content/extra-places";
+import { airportTopups } from "@/lib/content/extra-topups";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 export type AirportPage = {
@@ -17,7 +19,7 @@ export type AirportPage = {
   faqs: Faq[];
 };
 
-export const airportPages: AirportPage[] = [
+const baseAirportPages: AirportPage[] = [
   {
     slug: "jeddah-airport",
     name: "King Abdulaziz International Airport",
@@ -378,6 +380,11 @@ export const airportPages: AirportPage[] = [
     ],
   },
 ];
+
+export const airportPages: AirportPage[] = baseAirportPages.map((page) => ({
+  ...page,
+  sections: [...page.sections, ...(airportExtras[page.slug] ?? []), ...(airportTopups[page.slug] ?? [])],
+}));
 
 export function getAirportPage(slug: string) {
   return airportPages.find((airport) => airport.slug === slug);

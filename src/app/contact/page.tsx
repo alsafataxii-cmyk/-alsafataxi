@@ -1,3 +1,5 @@
+import HubArticle from "@/components/ui/HubArticle";
+import { hubExtras } from "@/lib/content/extra-hubs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
@@ -170,6 +172,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <HubArticle sections={hubExtras.contact} />
+
     </>
   );
 }

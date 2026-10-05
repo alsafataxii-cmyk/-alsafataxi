@@ -1,3 +1,5 @@
+import { serviceExtras } from "@/lib/content/extra-services";
+import { serviceTopups } from "@/lib/content/extra-topups";
 import type { ContentSection, Fact, Faq } from "@/lib/content/types";
 
 export type ServicePage = {
@@ -17,7 +19,7 @@ export type ServicePage = {
 
 const allLocations = ["makkah", "madinah", "jeddah", "taif"];
 
-export const servicePages: ServicePage[] = [
+const baseServicePages: ServicePage[] = [
   {
     slug: "airport-transfers",
     metaTitle: "Airport Transfers in Jeddah, Madinah & Taif",
@@ -735,6 +737,11 @@ export const servicePages: ServicePage[] = [
     ],
   },
 ];
+
+export const servicePages: ServicePage[] = baseServicePages.map((page) => ({
+  ...page,
+  sections: [...page.sections, ...(serviceExtras[page.slug] ?? []), ...(serviceTopups[page.slug] ?? [])],
+}));
 
 export function getServicePage(slug: string) {
   return servicePages.find((service) => service.slug === slug);
